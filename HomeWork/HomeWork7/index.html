@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW7</title>
+</head>
+<body>
+    <video controls width="400" poster="image/img.jpg">
+        <source src="video/Innerbloom_(Official_Video).mp4" type="video/mp4">
+        <source src="video/Innerbloom_(Official_Video).webm" type="video/webm">
+        <source src="video/Innerbloom_(Official_Video).ogv" type="video/ogv">
+    </video>
+    <video autoplay muted width="400">        
+        <source src="video/Innerbloom_(Official_Video).mp4" type="video/mp4">
+        <source src="video/Innerbloom_(Official_Video).webm" type="video/webm">
+        <source src="video/Innerbloom_(Official_Video).ogv" type="video/ogv">
+    </video>
+    <p><audio controls>
+        <source src="audio/Stone_Sour_-_Through_Glass_[OFFICIAL_VIDEO].mp3" type="audio/mpeg">
+        <source src="audio/Stone_Sour_-_Through_Glass_[OFFICIAL_VIDEO].ogg" type="audio/ogg">
+    </audio></p>
+    <form action="/contact.php">
+        <h3>Оформление заказа</h3>
+        <fieldset style="width: 400px">            
+            <p title="Обязательное поле для заполнения"> Ваше имя:
+            <input type="text" name="firstName" size="55" required></p>
+            <p> Фамилия: <input type="text" name="lastName" size="55"></p>
+            <p title="Обязательное поле для заполнения"> Телефон:
+            <input type="tel" name="phone" size="55" placeholder="+38 ( --- )  ---  --  --" required></p>
+            <fieldset style="width: 370px">
+                <legend>Выберите размер:</legend>                
+                <p><input type="checkbox"> 38 </p>
+                <p><input type="checkbox"> 39 </p>
+                <p><input type="checkbox" checked> 40 </p>
+                <p><input type="checkbox"> 41 </p>
+                <p><input type="checkbox"> 42 </p>
+                <p><input type="checkbox"> 43 </p>
+                <p><input type="checkbox"> 44 </p>
+                <p><input type="checkbox"> 45 </p>
+            </fieldset>
+            <details>
+                <summary>Таблица размеров</summary>
+                <img src="image/unnamed.jpg">
+            </details>            
+            <p><textarea name="message" cols="48" rows="10" maxlength="200" placeholder="Комментарий к заказу:"></textarea></p>
+            <p><input type="submit"></p>
+        </fieldset>
+    </form>
+</body>
+</html>
