@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Libre+Baskerville&family=M+PLUS+2:wght@300&family=Montagu+Slab:wght@300&family=Montserrat:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Libre+Baskerville&family=M+PLUS+2:wght@300&family=Montagu+Slab:wght@300&family=Montserrat:ital@1&family=Roboto&display=swap");
+
+.pageNotFound {
+  display: flex;
+  flex-direction: row;
+}
+
+.gif {
+  max-width: 700px;
+  margin: 30px 0 50px 0;
+}
+
+.message h1 {
+  font-family: "Barlow", sans-serif;
+  font-size: 150px;
+  color: hsl(253, 58%, 20%);
+  font-weight: bold;
+  margin: 40px auto;
+}
+
+.message {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #778899;
+  padding-bottom: 40px;
+}
+
+.message p:nth-child(2) {
+  color: #191970;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.button button {
+  width: 195px;
+  height: 50px;
+  border-radius: 30px;
+  border-width: 3px;
+  border-color: #b0c4de;
+  margin: 0 0 40px 25px;
+  cursor: pointer;
+  background: linear-gradient(30deg, #ccd8e7, #93cce2);
+}
+
+.button button a {
+  text-decoration: none;
+  color: #191970;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.footer {
+  background: linear-gradient(30deg, #ccd8e7, #93cce2);
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+}
+
+.contacts li,
+.contacts li a {
+  display: inline;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #191970;
+  padding-left: 20px;
+}
+
+.mainContainer {
+  max-width: 1200px;
+  margin: auto;
+}
