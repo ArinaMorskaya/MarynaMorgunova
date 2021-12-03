@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Доставка подарков | site.com </title>
+</head>
+<body>
+    <main>
+        <section class="mainContainer background">
+            <div class="infoSection">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque odit delectus odio libero veniam eligendi maxime illum facere, autem, labore ut ea aliquam.</p>
+                <h1>Доставка новогодних подарков для Вас и Ваших близких</h1>
+                <button class="button"><a href="#">Выбрать подарок</a></button>
+            </div>
+            <div class="contacts">
+                <h2>Оформление заказа</h2>
+                <form action="/contact.php">
+                    <div class="contactsForm">
+                        <label for="name">Имя получателя:</label>
+                        <input type="text" name="firstName" required></p>
+                    </div>
+                    <div class="contactsForm">
+                        <label for="lastName">Фамилия получателя:</label>
+                        <input type="text" name="lastName" required>
+                    </div>
+                    <div class="contactsForm">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" name="phone" placeholder="" required>
+                    </div>
+                    <div class="contactsForm">
+                        <label for="adress">Адресс доставки:</label>
+                        <input type="text" name="adress" required>
+                    </div>
+                    <div class="contactsForm">
+                        <label for="message"> Текст открытки:</label>
+                        <textarea name="message" maxlength="1000" placeholder=""></textarea>
+                    </div>
+                    <div>
+                        <input class="button" type="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
