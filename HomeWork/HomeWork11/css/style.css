@@ -1,13 +1,101 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-.mainContainer {
-  display: flex;
-  flex-direction: row;
-}
-
 .background {
   background-image: url(../image/1616531152_13-p-novogodnii-fon-21.jpg);
   background-size: cover;
+}
+
+nav {
+  display: flex;
+  margin: 0 auto 1px;
+}
+
+ul.mainMenu,
+.logo {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #3b5214;
+  width: 80%;
+  box-shadow: 0px 3px 3px 0px #314421;
+}
+
+ul.mainMenu > li {
+  display: inline-block;
+  width: 16.3%;
+  position: relative;
+}
+
+ul.mainMenu li.itemMenu > a,
+.logo {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 1em;
+  display: block;
+  color: #74924c;
+  border-right: 1px solid #bad78b;
+  background: rgba(186, 215, 139, 0.3);
+  text-align: center;
+}
+
+.mainMenu > li:hover {
+  background: #bad78b;
+}
+
+.logo {
+  width: 20%;
+  background: #3b5214;
+  font-size: 2.5em;
+  padding: 0;
+  text-align: center;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.itemMenu:hover .subMenu {
+  display: block;
+}
+
+ul.subMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ul.subMenu li a {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 1em;
+  color: #bad78b;
+  border-top: 2px solid #bad78b;
+  text-transform: lowercase;
+  background: #3b5214;
+}
+
+ul.subMenu li a:hover {
+  background: #bad78b;
+  color: #3b5214;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-top: 2px solid #3b5214;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
 }
 
 .mainContainer > div {

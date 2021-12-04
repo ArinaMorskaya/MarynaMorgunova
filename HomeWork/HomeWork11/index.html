@@ -1,17 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <title>Доставка подарков | site.com </title>
+    <title> Доставка подарков | site.com </title>
 </head>
 <body>
     <main>
+        <header>
+            <nav class="nav">
+                <ul class="mainMenu">
+                    <li class="itemMenu"><a href="#"> Home </a>
+                        <ul class="subMenu">
+                            <li><a href="#"> Каждый </a></li>
+                            <li><a href="#"> охотник </a></li>
+                            <li><a href=""> желает знать </a></li>
+                            <li><a href=""> где сидит </a></li>
+                            <li><a href=""> фазан </a></li>
+                        </ul>
+                    </li>
+                    <li class="itemMenu"><a href="#"> About </a>
+                        <ul class="subMenu">
+                            <li><a href="#"> О нас </a></li>
+                            <li><a href="#"> История </a></li>
+                            <li><a href=""> Команда </a></li>
+                            <li><a href=""> Награды </a></li>
+                        </ul>
+                    </li>
+                    <li class="itemMenu"><a href="#"> Gallery </a>
+                        <ul class="subMenu">
+                            <li><a href="#">Категории</a></li>
+                            <li><a href="#">Автор</a></li>
+                            <li><a href="#">Архив</a></li>
+                            <li><a href="#">Разное</a></li>
+                        </ul>
+                    </li>
+                    <li class="itemMenu"><a href="#"> Work </a>
+                        <ul class="subMenu">
+                            <li><a href="#">Раздел 1</a></li>
+                            <li><a href="#">Раздел 2</a></li>
+                            <li><a href="#">Раздел 3</a></li>
+                            <li><a href="#">Разное</a></li>
+                        </ul>
+                    </li>
+                    <li class="itemMenu"><a href="#"> Blog </a>
+                        <ul class="subMenu">
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Обсуждения</a></li>
+                            <li><a href="#">Популярное</a></li>
+                            <li><a href="#">Архив</a></li>
+                        </ul>
+                    </li>
+                    <li class="itemMenu"><a href="#"> Contacts </a></li>
+                </ul>
+                <div class="logo">
+                    <span> LOGO </span>
+                </div>
+            </nav>
+        </header>
         <section class="mainContainer background">
             <div class="infoSection">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque odit delectus odio libero veniam eligendi maxime illum facere, autem, labore ut ea aliquam.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque odit delectus odio libero veniam
+                    eligendi maxime illum facere, autem, labore ut ea aliquam.</p>
                 <h1>Доставка новогодних подарков для Вас и Ваших близких</h1>
                 <button class="button"><a href="#">Выбрать подарок</a></button>
             </div>
@@ -20,26 +73,26 @@
                 <form action="/contact.php">
                     <div class="contactsForm">
                         <label for="name">Имя получателя:</label>
-                        <input type="text" name="firstName" required></p>
+                        <input type="text" name="firstName" id="name" required></p>
                     </div>
                     <div class="contactsForm">
                         <label for="lastName">Фамилия получателя:</label>
-                        <input type="text" name="lastName" required>
+                        <input type="text" name="lastName" id="lastName" required>
                     </div>
                     <div class="contactsForm">
                         <label for="phone">Телефон:</label>
-                        <input type="tel" name="phone" placeholder="" required>
+                        <input type="tel" name="phone" id="phone" placeholder="" required>
                     </div>
                     <div class="contactsForm">
                         <label for="adress">Адресс доставки:</label>
-                        <input type="text" name="adress" required>
+                        <input type="text" name="adress" id="adress" required>
                     </div>
                     <div class="contactsForm">
                         <label for="message"> Текст открытки:</label>
-                        <textarea name="message" maxlength="1000" placeholder=""></textarea>
+                        <textarea name="message" maxlength="1000" id="message" placeholder=""></textarea>
                     </div>
                     <div>
-                        <input class="button" type="submit">
+                        <input class="button" type="submit" value="оформить заказ">
                     </div>
                 </form>
             </div>
