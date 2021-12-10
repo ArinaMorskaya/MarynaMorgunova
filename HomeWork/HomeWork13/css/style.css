@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Codystar&family=Julius+Sans+One&family=Khula&family=Poiret+One&family=Pontano+Sans&family=Thasadith&display=swap");
+
+:root {
+  --blockBg: linear-gradient(to bottom right, #d8d4d4 0%, #008b8b 100%);
+  --blockBd2: #696969;
+  --bg2: black;
+  --bg: #f5f5f5;
+  --font: "Julius Sans One", sans-serif;
+  --fontColor: #4e6868;
+  --fontColor2: #008080;
+}
+
+.mainConteiner {
+  display: flex;
+  direction: row;
+}
+
+.conteiner {
+  background: var(--bg);
+  box-shadow: 1px 1px 10px 1px darkslategrey;
+  z-index: 1;
+}
+
+.conteiner .header img {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.conteiner .header h1 {
+  position: absolute;
+  right: 250px;
+  top: 135px;
+  font-size: 3.5em;
+}
+
+.conteiner .line h2 {
+  border-bottom: 2px solid var(--fontColor);
+  width: 90%;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.conteiner .line h2::before {
+  width: 30%;
+  content: " ";
+  border-bottom: 15px solid var(--fontColor);
+  position: absolute;
+  top: 35px;
+}
+
+.line,
+.design,
+.malevichSquare,
+.dance,
+footer {
+  min-height: 300px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.styleText h1,
+h2,
+h3 {
+  font-family: var(--font);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  line-height: 1.2em;
+  color: var(--fontColor);
+  text-shadow: 2px 1px 2px darkslategrey, 0 0 1em lightslategray;
+}
+
+.styleText h2 {
+  font-size: 2em;
+  margin: 5px 50px 20px 50px;
+}
+
+.styleText h3 {
+  color: var(--fontColor2);
+  margin: 0px 50px 0px 50px;
+}
+
+.styleText p {
+  font-family: "Poiret One", sans-serif;
+  text-shadow: 2px 1px 2px darkslategrey, 0 0 1em lightslategray;
+  margin: 0 50px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.content {
+  display: flex;
+  direction: row;
+  position: absolute;
+  top: 35px;
+  z-index: 9;
+}
+
+.content .contentDescription {
+  margin: 60px 30px;
+}
+
+.blockBg {
+  background: var(--blockBg);
+  box-shadow: 2px 0px 2px 1px darkslategray;
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  height: 150px;
+  width: 90%;
+  z-index: 3;
+}
+
+.border {
+  background: var(--blockBd2);
+  box-shadow: 1px 0px 2px 1px rgb(61, 63, 63);
+  position: absolute;
+  top: 100px;
+  left: 70px;
+  height: 150px;
+  width: 90%;
+  z-index: 2;
+}
+
+.line .videoLine {
+  height: 250px;
+  width: auto;
+  margin: 15px 80px 0px 0px;
+}
+
+.line .videoLine video {
+  height: 250px;
+  width: auto;
+  border: 2px solid var(--fontColor);
+  box-shadow: 1px 0px 2px 1px rgb(61, 63, 63);
+  background-size: cover;
+  opacity: 80%;
+}
+
+.malevichSquare img {
+  max-height: 250px;
+  width: auto;
+  border: 2px solid var(--fontColor);
+  box-shadow: 1px 0px 2px 1px rgb(61, 63, 63);
+  margin: 20px 30px 0px 100px;
+}
+
+.imgDesign img {
+  height: 250px;
+  width: auto;
+  border: 2px solid var(--fontColor);
+  box-shadow: 1px 0px 2px 1px rgb(61, 63, 63);
+  margin: 0px 80px 0px 0px;
+  opacity: 85%;
+}
+
+.dance {
+  min-height: 450px;
+}
+
+.content .ballerina {
+  width: 100%;
+  margin: 80px 0px 0px 100px;
+}
+
+.ballerina img {
+  width: 25%;
+  border: 2px solid var(--fontColor);
+  box-shadow: 1px 0px 2px 1px rgb(61, 63, 63);
+  margin: 0px 15px 0px 15px;
+  opacity: 90%;
+}
+
+.dance .blockBg,
+.dance .border {
+  margin-top: 70px;
+}
+
+aside {
+  min-width: 200px;
+  background: transparent;
+}
+
+footer {
+  min-height: 200px;
+  background: var(--blockBd2);
+  z-index: 1;
+  margin: 0;
+  padding: 30px 90px;
+  opacity: 90%;
+}
+
+footer p {
+  font-family: "Codystar", cursive;
+  font-size: 40px;
+  color: #ccc;
+  text-align: center;
+}
+
+footer p:nth-child(2) {
+  font-size: 20px;
+  text-align: right;
+}
+
+.videoBg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0;
+  background: #ccc;
+  background-size: cover;
+  opacity: 70%;
+}
+
+.videoBg > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
