@@ -83,7 +83,7 @@ h3 {
 .styleText p {
   font-family: "Poiret One", sans-serif;
   text-shadow: 2px 1px 2px darkslategrey, 0 0 1em lightslategray;
-  margin: 0 50px;
+  margin: 10px 50px;
   font-size: 20px;
   text-align: justify;
 }
@@ -160,7 +160,7 @@ h3 {
 
 .content .ballerina {
   width: 100%;
-  margin: 80px 0px 0px 100px;
+  margin: 60px 0px 0px 100px;
 }
 
 .ballerina img {
@@ -173,7 +173,7 @@ h3 {
 
 .dance .blockBg,
 .dance .border {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 aside {
@@ -212,7 +212,6 @@ footer p:nth-child(2) {
   z-index: 0;
   background: #ccc;
   background-size: cover;
-  opacity: 70%;
 }
 
 .videoBg > video {
