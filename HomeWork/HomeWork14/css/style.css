@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+:root {
+  --mainBg: rgb(10, 10, 10, 0.3);
+  --bg1: rgb(30, 30, 30, 0.7);
+  --bg2: rgb(30, 30, 30);
+  --bg3: rgb(201, 201, 201, 0.2);
+
+  --font: "Poiret One", sans-serif;
+  --font1: "Roboto", sans-serif;
+  --fontColor: #1e90ff;
+  --fontColor1: lightslategray;
+  --text-shadow: 2px -2px 2px darkslategrey, 0 0 1em var(--fontColor);
+  --box-shadow: inset 0px 0px 5px 0px var(--fontColor),
+    0px 0px 10px 0px var(--fontColor);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.styleText {
+  font-family: var(--font);
+  letter-spacing: 0.3em;
+  text-shadow: 4px -3px 2px darkslategrey, 0 0 1em lightslategray;
+  text-transform: uppercase;
+  color: var(--fontColor);
+}
+
+.styleText h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.styleText p {
+  font-size: 25px;
+  text-align: justify;
+  padding: 20px;
+  background: var(--mainBg);
+  color: var(--fontColor1);
+  text-transform: lowercase;
+  margin-bottom: 30px;
+}
+
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 9;
+  background: var(--mainBg);
+}
+
+.headerContent {
+  padding: 10px;
+}
+
+.mainContainer {
+  max-width: 1200px;
+  margin: 50px auto 0px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+}
+
+.container,
+aside {
+  flex-basis: 300px;
+}
+
+.mainContainer .container {
+  margin: 0 auto;
+  padding: 15px 40px;
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.mainContainer aside {
+  margin: 0 auto;
+  flex-grow: 0;
+  background: transparent;
+}
+
+/* .aside {
+  position: fixed;
+  width: 300px;
+} */
+
+.asideContent {
+  width: 90%;
+  /* position: absolute;
+  top: 10px;
+  right: 0;
+  left: 0; */
+  margin: 0 auto;
+  background: var(--mainBg);
+}
+
+.navigation h2 {
+  padding: 10px 0px;
+  line-height: 2;
+  margin-bottom: 10px;
+  border: 2px solid #1e90ff;
+  border-radius: 7px;
+  box-shadow: inset 0px 0px 10px 1px #1e90ff, 0px 0px 10px 1px #1e90ff;
+  text-align: center;
+}
+
+.feedbackForm a {
+  text-decoration: none;
+  color: var(--fontColor);
+  font-size: 14px;
+}
+
+.feedbackForm h2:hover {
+  border: 3px solid var(--fontColor);
+  box-shadow: var(--box-shadow);
+}
+
+.feedbackForm a:focus .modal {
+  display: block;
+}
+
+.modal {
+  width: 400px;
+  height: 500px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -250px;
+  background: var(--bg2);
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.modal h3 {
+  text-align: center;
+  text-shadow: 2px -2px 2px darkslategrey, 0 0 1em var(--fontColor);
+  margin-bottom: 15px;
+}
+
+form {
+  min-height: 100%;
+  box-shadow: 0px 0px 10px 0px var(--fontColor);
+  border-radius: 3px;
+  padding: 25px;
+}
+
+.modal input:not(.x input, .btn),
+.modal textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal .x {
+  position: relative;
+}
+
+.modal .x input {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -10px;
+  right: 0%;
+  border: 2px solid var(--fontColor1);
+  border-radius: 2px;
+  outline: none;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal .x input:hover {
+  font-size: 1.6em;
+  border: 3px solid var(--fontColor1);
+  font-weight: bold;
+}
+
+.modal textarea {
+  resize: none;
+  height: 100px;
+}
+
+.modal input:hover:not(.x input, .btn),
+.modal textarea:hover {
+  box-shadow: 0px 0px 10px 1px var(--fontColor);
+}
+
+.modal .btn {
+  width: 70%;
+  padding: 10px;
+  background: var(--bg1);
+  border: 2px solid var(--fontColor);
+  box-shadow: 0px 0px 10px 1px var(--fontColor);
+  border-radius: 4px;
+  color: var(--fontColor3);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.modal .btn:hover {
+  font-size: 1.2em;
+  background-color: var(--bg2);
+  border: 2px solid var(--fontColor);
+  text-shadow: var(--text-shadow);
+}
+
+.mainMenu > li,
+.feedbackForm h2 {
+  line-height: 3;
+  margin-bottom: 5px;
+  border: 2px solid lightslategray;
+  border-radius: 5px;
+  box-sizing: border-box;
+  list-style: none;
+  text-shadow: 2px -2px 2px darkslategrey, 0 0 1em var(--fontColor);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.mainMenu li img {
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  right: 40px;
+}
+
+.mainMenu .subMenu {
+  display: none;
+  list-style: none;
+}
+
+.mainMenu > li:hover {
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 2px solid var(--fontColor);
+  box-shadow: var(--box-shadow);
+  color: var(--fontColor);
+}
+
+.mainMenu li:hover .subMenu {
+  display: block;
+  width: 80%;
+  position: absolute;
+  top: 0%;
+  left: 102%;
+  background: var(--bg1);
+}
+
+.subMenu > li {
+  border: 2px solid var(--fontColor1);
+  border-radius: 5px;
+  background: var(--bg1);
+  line-height: 2;
+  box-sizing: border-box;
+  margin-bottom: 2px;
+  text-align: center;
+  text-shadow: none;
+  font-size: 16px;
+}
+
+.subMenu li a {
+  text-decoration: none;
+  color: var(--fontColor1);
+}
+
+.subMenu li:hover {
+  border: 2px solid var(--fontColor);
+}
+
+.subMenu li:hover a {
+  color: var(--fontColor);
+  font-size: 1.2em;
+  text-shadow: 0 0 0.7em var(--fontColor);
+}
+
+footer {
+  max-width: 1200px;
+  min-height: 10%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 15px;
+  z-index: 9;
+  display: flex;
+}
+
+.footerContent {
+  padding: 10px;
+}
+/* footer .footerImg {
+  margin-left: 500px;
+} */
+
+/* footer img {
+  margin-left: 20px;
+} */
+
+.mainBg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.mainBgImg {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: url(../img/bg7.jpg);
+  background-repeat: repeat-x;
+  animation: bgImg 20s linear infinite;
+}
+
+@keyframes bgImg {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
