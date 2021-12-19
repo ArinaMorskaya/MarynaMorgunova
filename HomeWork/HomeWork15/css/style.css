@@ -60,7 +60,7 @@ body {
   font-family: var(--font);
   color: var(--fontColor2);
   text-transform: uppercase;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
 }
 
 h1 {
@@ -103,6 +103,13 @@ h2 {
   padding: 20px 0px;
 }
 
+.headerContacts {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .headerContacts a {
   font-weight: bold;
   font-size: 20px;
@@ -112,8 +119,14 @@ h2 {
   transition: all 0.3s ease;
 }
 
+.headerContacts a:nth-child(2) {
+  font-size: 19px;
+}
+
 .headerContacts .material-icons {
-  font-size: 1.5em;
+  font-size: 2.5em;
+  margin-right: 10px;
+  text-shadow: -2px 2px 2px darkslategrey, 0 0 0em lightslategrey;
 }
 
 .headerContacts a:hover {
@@ -384,4 +397,111 @@ footer {
 .back:hover a {
   font-size: 20px;
   color: var(--fontColor3);
+}
+
+.modal {
+  position: absolute;
+  z-index: 10;
+  top: 85px;
+  left: -20px;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-dialog {
+  width: 300px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--fontColor2);
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.close:focus,
+.close:hover {
+  color: var(--fontColor2);
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.modal-body {
+  display: block;
+  padding: 15px;
+}
+
+.modal-body input:not(.btn),
+.modal-body textarea {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #eceeef;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+.modal-body input:not(.btn):hover,
+.modal-body input:not(.btn):focus,
+textarea:hover {
+  background: rgb(119, 136, 153, 0.4);
+  border-radius: 4px;
+}
+
+.modal-body .btn {
+  width: 270px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: var(--bg2);
+  color: #14213d;
+  text-shadow: -1px -1px 1px rgb(6, 15, 24), 2px 2px 1px #203a55;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 16px;
+}
+
+.modal-body .btn:hover {
+  cursor: pointer;
+  font-size: 17px;
 }

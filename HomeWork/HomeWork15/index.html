@@ -22,8 +22,35 @@
                         <p>Every great design begins with an even better story</p>
                     </div>
                     <div class="headerContacts">
-                        <a href="tel:+388001234567" type="tel"><i class="material-icons">phone_in_talk</i>
-                        8 800 123 45 67</a>
+                        <div>
+                            <i class="material-icons">phone_in_talk</i>
+                        </div>
+                        <div>
+                            <a href="tel:+388001234567" type="tel">8 800 123 45 67</a>
+                            <a href="#openModal">Request a call</a>
+                        </div>
+            
+                        <div id="openModal" class="modal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title">Enter your data</h3>
+                                        <a href="#close" title="Close" class="close">×</a>
+                                    </div>
+                                    <form class="modal-body" action="/contact.php">
+                                        <div>
+                                            <input type="text" name="firstName" id="name" placeholder="Name" required>
+                                            <input type="text" name="lastName" id="lastName" placeholder="Last name" required>
+                                            <input type="tel" name="phone" id="phone" placeholder="Phone" required>
+                                            <textarea name="message" maxlength="1000" id="message" placeholder="Message"></textarea>
+                                        </div>
+                                        <div>
+                                            <input class="btn" type="submit" value="Request a call">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <nav class="navigate">
@@ -121,7 +148,7 @@
                         <p><a href="https://goo.gl/maps/1H2yoiQiY6thUXwY6" target="_blank"><i class="material-icons">location_on</i> Open in Google maps</a></p>
                     </div>
                     <div class="icons">
-                        <h3>SOCIAL MEDIA </h3>
+                        <h3>Social media</h3>
                         <a href="#"><img src="img/facebook_icon-icons.com_61257.png" alt=""></a>
                         <a href="#"><img src="img/whatsapp_icon-icons.com_61251.png" alt=""></a>
                         <a href="#"><img src="img/instagram_icon-icons.com_61256.png" alt=""></a>
