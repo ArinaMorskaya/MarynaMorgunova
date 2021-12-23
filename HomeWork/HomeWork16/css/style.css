@@ -198,7 +198,7 @@
         letter-spacing: 0.1em;
     }
     .footerContent > div:not(.icons) {
-        border-right: 1px solid var(--fontColor2);
+        border-right: 1px solid #14213d;
     }
 
     .footerContent a,
