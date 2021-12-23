@@ -21,8 +21,7 @@
     .mainConteiner {
         padding-bottom: 244px;
         background-image: url(../img/snezhinki_png_na_prozrachnom_fone_dly_photoshop_11.png);
-        /* background: var(--mainBg); */
-        /* overflow: hidden; */
+        overflow: hidden;
         animation: animeBg 50s linear infinite;
         scroll-behavior: smooth;
     }
