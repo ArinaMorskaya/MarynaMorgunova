@@ -11,7 +11,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../img/bg13.png);
+  background-image: url(../img/bg22.png);
   overflow: auto;
 }
 .mainContainer {
@@ -277,18 +277,18 @@ span:nth-child(14) {
 }
 .task5 div:nth-child(2) {
   background: radial-gradient(
-    circle closest-corner at 20px 50px,
-    rgb(85, 219, 254),
-    rgb(2, 129, 182) 50%
+    circle at 10% 20%,
+    rgb(85, 219, 254) 1%,
+    rgb(2, 129, 182) 15%
   );
 }
 .task6 div {
   background: rgb(47, 46, 53);
   background: radial-gradient(
     circle,
-    rgba(51, 51, 51, 1) 4%,
-    white 17%,
-    rgb(252, 255, 255) 25%,
-    rgba(8, 170, 40, 1) 30%
+    rgb(51, 51, 51, 1) 5%,
+    rgb(252, 255, 255) 17%,
+    rgb(252, 255, 255) 24%,
+    rgb(8, 170, 40, 1) 30%
   );
 }
