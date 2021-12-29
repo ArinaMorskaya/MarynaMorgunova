@@ -190,52 +190,51 @@
 }
 
 .box2022 {
-  animation: newYearBox 5s linear 5s forwards;
+  animation: newYearBox 6s linear 5s forwards;
 }
 @keyframes newYearBox {
   0% {
     transform: scale3d(1, 1, 1);
   }
-  10% {
+  8% {
     transform-origin: top;
     transform: scale3d(2, 1.5, 1);
     perspective: 200px;
     perspective-origin: 25% 25%;
   }
-  15% {
+  12% {
     transform-origin: top;
     transform: scale3d(2, 1.5, 1);
     perspective: 200px;
     perspective-origin: 25% 25%;
   }
-  20% {
+  16% {
     transform-origin: top;
     perspective: 200px;
     perspective-origin: 25% 25%;
     transform: scale3d(1, 1, 1);
   }
-  25% {
+  20% {
     transform-origin: top;
     perspective: 500px;
     perspective-origin: 100% -150%;
     transform: scale3d(1, 1, 1);
   }
+  25% {
+    transform: scale3d(1, 1, 1);
+    perspective-origin: 100% -150%;
+  }
   30% {
     transform: scale3d(1, 1, 1);
     perspective-origin: 100% -150%;
   }
-  50% {
-    transform: scale3d(1, 1, 1);
-    perspective-origin: 100% -150%;
-  }
-  80% {
+  75% {
     transform: scale3d(2, 2, 2) translate3d(0, 160px, 0);
-    perspective: 200px;
+    perspective: 150px;
     perspective-origin: 25% 25%;
   }
-  90% {
+  85% {
     transform: scale3d(2, 2, 2) translate3d(0, 160px, 0);
-    perspective: 100px;
     perspective-origin: 25% 25%;
   }
   100% {
@@ -247,35 +246,35 @@
 .box2022 .yearNumber {
   transform: translateZ(50px);
   -webkit-transform: translateZ(50px);
-  animation: animateYear 8s linear 10s forwards;
+  animation: animateYear 8s linear 11s forwards;
 }
 .box2022 .back {
   background: rgba(255, 255, 255, 0.5);
   transform: rotateY(180deg) translateZ(50px);
   -webkit-transform: rotateY(180deg) translateZ(50px);
-  animation: animateBack 8s linear 10s forwards;
+  animation: animateBack 8s linear 11s forwards;
 }
 .box2022 .winter {
   background: rgba(255, 255, 255, 0.7);
   transform: rotateY(90deg) translateZ(50px);
   -webkit-transform: rotateY(90deg) translateZ(50px);
-  animation: animateWinter 8s linear 10s forwards;
+  animation: animateWinter 8s linear 11s forwards;
 }
 .box2022 .summer {
   background: rgba(255, 255, 255, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
   -webkit-transform: rotateY(-90deg) translateZ(50px);
-  animation: animateSummer 8s linear 10s forwards;
+  animation: animateSummer 9s linear 11s forwards;
 }
 .box2022 .spring {
   background: rgba(255, 255, 255, 0.7);
   transform: rotateX(90deg) translateZ(50px);
-  animation: animateSpring 8s linear 10s forwards;
+  animation: animateSpring 8s linear 11s forwards;
 }
 .box2022 .autumn {
   background: rgba(255, 255, 255, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
-  animation: animateAutumn 8s linear 10s forwards;
+  animation: animateAutumn 9s linear 11s forwards;
 }
 @keyframes animateYear {
   0% {
@@ -286,7 +285,7 @@
     perspective: 200px;
     perspective-origin: 25% 25%;
   }
-  50% {
+  40% {
     transform: translateZ(-100px);
     perspective: 200px;
     perspective-origin: 100% -150%;
@@ -309,7 +308,7 @@
     perspective-origin: 25% 25%;
     visibility: hidden;
   }
-  50% {
+  40% {
     transform: rotateY(180deg) translateZ(-100px);
     perspective: 500px;
     perspective-origin: 50% 50%;
@@ -328,7 +327,7 @@
     perspective: 200px;
     perspective-origin: 25% 25%;
   }
-  50% {
+  40% {
     transform: rotateY(90deg) translateZ(-100px);
     perspective: 500px;
     perspective-origin: 50% 50%;
@@ -351,7 +350,7 @@
     perspective: 200px;
     perspective-origin: 25% 25%;
   }
-  50% {
+  36% {
     transform: rotateY(-90deg) translateZ(-100px);
     perspective: 500px;
     perspective-origin: 50% 50%;
@@ -374,7 +373,7 @@
     perspective-origin: 25% 25%;
     perspective: 200px;
   }
-  50% {
+  40% {
     transform: rotateX(90deg) translateZ(-100px);
     perspective-origin: 50% 50%;
     perspective: 500px;
@@ -397,7 +396,7 @@
     perspective-origin: 25% 25%;
     perspective: 200px;
   }
-  50% {
+  36% {
     transform: rotateX(-90deg) translateZ(-100px);
     perspective-origin: 50% 50%;
     perspective: 500px;
