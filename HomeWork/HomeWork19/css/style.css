@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+}
+.page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.mainContainer {
+  min-height: 100%;
+  min-width: 100%;
+  background: black;
+  position: relative;
+}
+.animationPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  animation: stopAnimation 1s 7s forwards;
+}
+@keyframes stopAnimation {
+  0% {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  10% {
+    top: 49%;
+    left: 0;
+    right: 0;
+    bottom: 49%;
+  }
+  40% {
+    top: 49%;
+    left: 40%;
+    right: 40%;
+    bottom: 49%;
+  }
+  70% {
+    top: 49%;
+    left: 49%;
+    right: 49%;
+    bottom: 49%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+  }
+}
+.matrixBg {
+  min-height: 100%;
+  min-width: 100%;
+  background-image: url(../img/NvL.gif);
+  background-size: contain;
+}
+.loading,
+.error {
+  width: 400px;
+  height: 120px;
+  padding: 10px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(0, 0, 0, 0.9);
+  border-radius: 10px;
+  color: green;
+  text-shadow: 0px 0px 6px rgb(0, 128, 0);
+  font-family: "Source Code Pro", monospace;
+  font-size: 25px;
+  letter-spacing: 0.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  visibility: hidden;
+}
+.loading {
+  animation: visible 5s 1s;
+}
+.error {
+  animation: visible 0.5s 6s;
+  font-size: 50px;
+}
+@keyframes visible {
+  100% {
+    visibility: visible;
+  }
+}
+.loadingLine {
+  width: 90%;
+  height: 10px;
+  box-shadow: 1px 0px 0.5px green, 1px 0px 0.5px green, 0px 1px 0.5px green,
+    0px -1px 0.5px green, -1px 0px 0.5px green;
+  border-radius: 10px;
+}
+.loadingLine .processing {
+  width: 0%;
+  height: 100%;
+  background: green;
+  border-radius: 10px;
+  animation: processing 2s 1s forwards;
+}
+@keyframes processing {
+  1% {
+    width: 1%;
+  }
+  20% {
+    width: 20%;
+  }
+  30% {
+    width: 30%;
+  }
+  50% {
+    width: 50%;
+  }
+  70% {
+    width: 70%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.loading div:nth-child(3) {
+  color: black;
+  text-shadow: 1px 0px 0.5px green, 1px 0px 0.5px green, 0px 1px 0.5px green,
+    0px -1px 0.5px green, -1px 0px 0.5px green;
+  animation: loading 1s infinite;
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+.container > div {
+  flex-basis: 50%;
+  background: black;
+  text-align: center;
+}
+.container > div:nth-child(1) {
+  order: 2;
+}
+.container .contentNotFound {
+  display: block;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(29, 166, 170);
+  padding: 100px 50px 0px;
+}
+.contentNotFound h1 {
+  font-size: 100px;
+  margin-bottom: 30px;
+  text-shadow: 1px 0px 0.5px white, 1px 0px 0.5px white, 0px 1px 0.5px white,
+    0px -1px 0.5px white, -1px 0px 0.5px white;
+}
+.contentNotFound p:nth-child(2) {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 40px;
+  text-shadow: 1px 0px 1px rgb(29, 166, 170), 1px 0px 1px rgb(29, 166, 170),
+    0px 1px 1px rgb(29, 166, 170), 0px -1px 1px rgb(29, 166, 170),
+    -1px 0px 1px rgb(29, 166, 170);
+}
+.contentNotFound p:nth-child(3) {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 80px;
+}
+.contentNotFound .btn {
+  width: 200px;
+  margin: 0 auto 30px;
+  padding: 15px;
+  background: black;
+  border-radius: 10px;
+  border: 1px solid rgb(29, 166, 170);
+}
+.contentNotFound .btn a {
+  text-decoration: none;
+  color: rgb(29, 166, 170);
+  font-size: 20px;
+}
+.contentNotFound .btn:hover {
+  background: rgb(29, 166, 170);
+  border: 1px solid white;
+}
+.contentNotFound .btn:hover a {
+  color: white;
+}
+.container .gifNotFound {
+  width: 550px;
+  height: 650px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: 0px 0px;
+  animation: gif 10s steps(68) infinite;
+}
+@keyframes gif {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -37400px;
+  }
+}
