@@ -24,4 +24,10 @@
         width: 80%;
         margin-top: -50px;
     }
+    @media screen and (max-width: 576px) {
+        .projects img {
+            display: block;
+            margin: 10px auto;
+        }
+    }
 }
