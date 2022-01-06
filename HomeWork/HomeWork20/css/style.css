@@ -6,6 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -21,6 +24,10 @@ img {
 }
 .header .logo img{
     margin-bottom: 30px;
+    transition: 0.3s;
+}
+.header .logo img:hover {
+    transform: scale(1.2);
 }
 .banner {
     background: #eeeff1;
@@ -83,6 +90,7 @@ p {
     background: #34547A;
     border: none;
     padding: 20px 40px;
+    transition: 0.2s;
 }
 .btn {
     margin-left: -10px;
@@ -103,6 +111,10 @@ p {
 }
 .projects img {
     margin-bottom: 10px;
+    transition: 0.3s;
+}
+.projects img:hover {
+    transform: scale(1.2);
 }
 .skills {
     padding: 100px 0;
@@ -150,20 +162,26 @@ p {
     max-width: 100px;
     height: auto;
 }
-.gallery > div {
+.gallery .imagesBlock {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    overflow: hidden;
 }
-.gallery img {
-    max-width: 480px;
+.gallery .imagesBlock>div {
+    flex-basis: 25%;
 }
-.gallery>div>div {
+.gallery .imagesBlock>div img:first-child {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+.gallery .imagesBlock>div {
     position: relative;
 }
-.gallery >div>div::before {
+.gallery .imagesBlock>div::before {
     content: " ";
     position: absolute;
     top: 0;
@@ -173,19 +191,19 @@ p {
     height: 100%;
     display: none;
 }
-.gallery>div>div:hover:before{
+.gallery .imagesBlock>div:hover:before {
     display: block;
 }
-.gallery .description {
+.gallery .imagesBlock .description {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 100px;
+    width: 21%;
     height: auto;
     display: none;
 }
-.gallery>div>div:hover .description {
+.gallery .imagesBlock>div:hover .description {
     display: block;
 }
 .microsoft {
@@ -217,11 +235,12 @@ p {
 }
 .orderForm button {
     padding: 15px 40px;
+    cursor: pointer;
 }
 .orderForm button:focus {
     outline: none;
 }
-input:hover {
+input:hover, textarea:hover {
     border-bottom: 1px solid rgba(114, 114, 114, 0.5);
 }
 footer {
@@ -244,5 +263,8 @@ footer .contacts {
 }
 footer .social{
     text-align: right;
+}
+footer .social img {
+    margin-right: 10px;
 }
  
