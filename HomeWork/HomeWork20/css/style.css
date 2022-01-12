@@ -29,6 +29,9 @@ img {
 .header .logo img:hover {
     transform: scale(1.2);
 }
+.header .responsiveMenu {
+    display: none;
+}
 .banner {
     background: #eeeff1;
     padding-bottom: 145px;
@@ -73,13 +76,13 @@ p {
     font-size: 16px;
     line-height: 26px;
 }
-.wrap h3, .about_me h3 {
+.workContent h3, .about_me h3, .skillsWrapper h3, .orderFormContent h3 {
     font-size: 32px;
     font-weight: 500;
     line-height: 37px;
     margin-bottom: 50px;
 }
-.btn a, .orderForm button {
+.button a, .orderForm button {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1.9px;
@@ -92,13 +95,10 @@ p {
     padding: 20px 40px;
     transition: 0.2s;
 }
-.btn {
-    margin-left: -10px;
-}
-.btn:hover a, button:hover {
-    color: rgb(255, 255, 255, 0.7);
+.button:hover a, button:hover {
+    color: white;
     text-decoration: none;
-
+    background: #02c2cfe6;
 }
 .about {
     background: #F9F9F9;
@@ -148,63 +148,92 @@ p {
     text-align: center;
     padding: 100px 0;
 }
-.work .wrap {
-    margin-bottom: 50px;
+.work .workContent {
+    margin-bottom: 57px;
 }
-.work .video {
+.video {
+    width: 100%;
+    height: 600px;
+}
+.youtube {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
-}
-.work .video img:nth-child(2) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100px;
-    height: auto;
-}
-.gallery .imagesBlock {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    display: inline-block;
+    overflow: hidden;
+    transition: all 200ms ease-out;
+    cursor: pointer;
+    height: 100%;
     width: 100%;
 }
-.gallery .imagesBlock>div {
-    flex-basis: 25%;
+.video iframe {
+   width: 100%;
+   height: 100%;
 }
-.gallery .imagesBlock>div img:first-child {
+.youtube .play {
+    background: url('../img/youtube-play-btn.png') no-repeat;
+    background-position: 0 -50px;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    transition: none;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+.youtube:hover .play {
+    background-position: 0 0;
+}
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery .galleryImg {
+    width: 25%;
+    position: relative;
+}
+.gallery .galleryImg::before {
+    content: " ";
+    transition: 0.5s ease;
+}
+.gallery .galleryImg::after {
+    content: " ";
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.gallery .galleryImg img {
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
     object-fit: cover;
 }
-.gallery .imagesBlock>div {
-    position: relative;
-}
-.gallery .imagesBlock>div::before {
+.gallery .galleryImg:hover::before  {
     content: " ";
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(52, 84, 122, 0.8);
+    background:  rgba(52, 84, 122, 0.8);
     width: 100%;
     height: 100%;
-    display: none;
 }
-.gallery .imagesBlock>div:hover:before {
-    display: block;
-}
-.gallery .imagesBlock .description {
+.gallery .galleryImg:hover::after {
+    content: " ";
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 35%;
+    height: 35%;
     transform: translate(-50%, -50%);
-    width: 21%;
-    height: auto;
-    display: none;
-}
-.gallery .imagesBlock>div:hover .description {
-    display: block;
+    background: url(../img/eye.png) no-repeat;
+    background-size: contain;
+    opacity: 1;
 }
 .microsoft {
     padding: 100px 0;
@@ -215,7 +244,7 @@ p {
     text-align: center;
     padding: 100px 0;
 }
-.orderForm .wrap {
+.orderForm .orderFormContent {
     margin-bottom: 50px;
 }
 .orderForm input, textarea {

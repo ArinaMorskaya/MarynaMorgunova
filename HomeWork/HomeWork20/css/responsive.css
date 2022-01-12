@@ -3,52 +3,100 @@
         max-width: 1110px;
     }
 }
-@media screen and (max-width: 1000px) {
-    .banner img {
+@media (max-width: 1199px) {
+    .video {
+        height: 520px;
+    }
+}
+@media (max-width: 991px) {
+    .header {
+        padding-top: 50px;
+    }
+    .responsiveMenuWrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header .responsiveMenu {
+        display: block;
+    }
+    .responsiveMenu i {
+        font-size: 35px;
+        color: #34547A;
+        transition: 0.3s;
+    }
+    .responsiveMenu i:hover {
+        color: #00D5E4;
+    }
+    .nav-menu{
         display: none;
     }
-}
-@media screen and (max-width: 768px) {
-    .header {
-        position: relative;
+    .banner {
+        padding-bottom: 70px;
     }
-    .header .nav-menu ul.sub-menu {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 0px;
-        z-index: 9;
+    .banner img {
+        margin: 10px auto 40px;
     }
-    .banner img{
-        display: block;
-        padding: 0px 0px 50px 100px;
-        width: 80%;
-        margin-top: -50px;
+    .parentTextBanner h2, .button{
+        text-align: center;
     }
-    .gallery .imagesBlock>div {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+    .parentTextBanner p {
+        padding: 30px 0 50px;
+        text-align: justify;
     }
-    .gallery .imagesBlock>div {
-        flex-basis: 50%;
+    .about, .projects, .work, .skills, .orderForm, .microsoft {
+        padding: 50px 0;
     }
-    .gallery .imagesBlock>div:nth-child(3) {
-        order: 5;
+    .skillsWrapper {
+        margin-bottom: 25px;
     }
-    .gallery .imagesBlock>div:nth-child(4) {
-        order: 6;
-    }
-    .gallery .imagesBlock>div:nth-child(5) {
-        order: 7;
-    }
-    .gallery .imagesBlock>div:nth-child(6) {
-        order: 8;
+    .video {
+        height: 380px;
     }
 }
-@media screen and (max-width: 576px) {
-    .projects img {
+@media (max-width: 767px) {
+    .video {
+        height: 285px;
+    }
+    .gallery .galleryImg {
+        width: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .parentTextBanner h2{
+        font-size: 35px;
+    }
+    .about, .projects, .work, .skills, .orderForm, .microsoft {
+        padding: 30px 0;
+    }
+    .projects img, .microsoft img {
         display: block;
         margin: 10px auto;
+    }
+    .video {
+        height: 260px;
+    }
+    .skills img, .skills_List {
+        max-width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+    .workContent h3, .about_me h3, .skillsWrapper h3, .orderFormContent h3 {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    .video {
+        height: 250px;
+    }
+}
+@media (max-width: 470px) {
+    .video {
+        height: 200px;
+    }
+    .gallery .galleryImg {
+        width: 100%;
     }
 }
