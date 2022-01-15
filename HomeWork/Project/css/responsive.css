@@ -1,0 +1,148 @@
+@media (min-width: 1200px) {
+    .for_page .container {
+        max-width: 1110px;
+    }
+}
+@media (max-width: 1199px) {
+    .video {
+        height: 520px;
+    }
+}
+@media (max-width: 991px) {
+    .header {
+        padding-top: 50px;
+    }
+    .responsiveMenuWrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header .responsiveMenu {
+        display: block;
+        position: relative;
+    }
+    .header .responsiveMenu button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+    .responsiveMenu i {
+        font-size: 35px;
+        color: #34547A;
+        transition: 0.3s;
+    }
+    .responsiveMenu i:hover, .active i{
+        color: #00D5E4;
+    }
+    .nav-menu{
+        position: absolute;
+        top: -250px;
+        right: 50px;
+        transition: 0.7s ;
+    }
+    .show {
+        top: -70px;
+        right: 50px;
+        transition: 0.7s ;
+    }
+    .nav-menu .sub-menu{
+        flex-direction: column;
+    }
+    .banner {
+        padding-bottom: 70px;
+        transition: 0.7s;
+    }
+   .dropBelow {
+        padding-top: 70px;
+        transition: 0.7s;
+    }
+    .banner img {
+        margin: 10px auto 40px;
+    }
+    .banner .btn-primary {
+        display: block;
+        margin: 0 auto;
+    }
+    .parentTextBanner h2{
+        text-align: center;
+    }
+    .parentTextBanner p {
+        padding: 30px 0 50px;
+        text-align: justify;
+    }
+    .about, .projects, .work, .skills, .orderForm, .slider {
+        padding: 50px 0;
+    }
+    .skills .skillsWrapper {
+        padding-right: 0;
+    }
+    .skills .skillsWrapper h3 {
+        text-align: center;
+    }
+    .skills img {
+        margin-bottom: 50px;
+    }
+    .video {
+        height: 380px;
+    }
+}
+@media (max-width: 767px) {
+    .header {
+        padding-top: 30px;
+    }
+    .video {
+        height: 285px;
+    }
+    .gallery .galleryImg {
+        width: 50%;
+    }
+    .orderForm .btn-primary,
+    .banner .btn-primary,
+    .modal .btn-secondary  {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 576px) {
+    .parentTextBanner h2{
+        font-size: 35px;
+    }
+    .about, .projects, .work, .skills, .orderForm, .slider {
+        padding: 30px 0;
+    }
+    .projects img {
+        display: block;
+        margin: 10px auto;
+    }
+    .video {
+        height: 260px;
+    }
+    .skills img {
+        margin-bottom: 30px;
+    }
+    .workContent h3, .about_me h3, .skillsWrapper h3, .orderFormContent h3 {
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    footer {
+        padding: 30px 0;
+    }
+    footer .contacts, footer .social {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+@media (max-width: 500px) {
+    .video {
+        height: 250px;
+    }
+}
+@media (max-width: 470px) {
+    .video {
+        height: 200px;
+    }
+    .gallery .galleryImg {
+        width: 100%;
+    }
+}
