@@ -1,5 +1,420 @@
+@cyan: #99EFD0;
+@orange: #F2994A;
+@fontColor_Violet: #8476AA;
+@fontColor_Gray: #8D8D8D;
+@fontColor_lightViolet: #95A1BB;
+
 @media (min-width: 1200px){
-    .page .container {
-        max-width: 1200px;
+    .page {
+        .container {
+            max-width: 1130px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    body {
+        .page {
+            .header {
+                padding: 50px 0;
+            }
+           .banner {
+               .container {
+                   .content {
+                       h1 {
+                           font-size: 40px;
+                       }
+                       .videoParent {
+                           .video {
+                            iframe {
+                                top: 50px;
+                                left: 140px;
+                                transform: scale(3, 3) ;
+                               }
+                           }
+                           
+                       }
+                   }
+               }
+           } 
+           .yourChoice, .businessTraffic, .simpleWays, .investProperty, .help, footer {
+               .container {
+                   padding: 0 20px;
+               }
+           }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        .heading {
+            font-size: 35px;
+        }
+        .page {
+            .header {
+                padding-bottom: 30px;
+                .container {
+                    .logo {
+                        display: none;
+                    }
+                    .responsiveMenu {
+                        display: block;
+                    }
+                    .active {
+                        background: @orange;
+                        border: 1px solid @orange;
+                        box-shadow: -11px 18px 36px rgba(242, 153, 74, 0.13);
+                        a {
+                            svg {
+                                fill: #fff;
+                            }
+                        }
+                    }
+                    .mainMenu {
+                        display: flex;
+                        flex-direction: column;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: 400ms ease;
+                        .itemMenu {
+                            line-height: 30px;
+                        }
+                    }
+                    .showMenu {
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+                }
+            }
+            .banner {
+                padding: 0 0 50px;
+                &::before, &:after {
+                    width: 47%;
+                    background-position: left bottom;
+                    pointer-events: none;
+                }
+                .container {
+                    .content {
+                        .videoParent {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            width: 50%;
+                            padding-top: 30px;
+                            .video {
+                                max-width: 350px;
+                                height: 194px;
+                                iframe {
+                                    transform: scale(1);
+                                    top: 0;
+                                    left: 0;
+                                }
+                            }
+                            .videoDesc {
+                                flex-basis: 50%;
+                                padding: 20px;
+
+                            }
+                        }
+                    }
+                }
+            }
+            .businessTraffic {
+                padding: 0;
+                .container {
+                    text-align: center;
+                    .content {
+                        padding: 0 0 50px;
+                    }
+                }
+            }
+            .simpleWays {
+                .container {
+                    h4 {
+                        font-size: 28px;
+                    }
+                }
+            }
+            .nextProject {
+                padding-top: 50px;
+            }
+            .investProperty {
+                padding: 50px 0;
+                background-position: right bottom;
+                background-size: 100% auto;
+                .container {
+                    text-align: center;
+                    img {
+                        padding: 50px 0;
+                    }
+                }
+            }
+            .help {
+                &:after {
+                    background-position: right bottom;
+                }
+                .container {
+                    .content {
+                        text-align: center;
+                        margin-bottom: 60px;
+                        h3 {
+                            font-size: 35px;
+                        }
+                        .mainDesc {
+                            max-width: 100%;  
+                        }
+                    }
+                }
+            }
+            .feedbackForm {
+                padding: 100px 0 50px;
+                background-size: cover;
+                .container {
+                    padding: 0 20px;
+                }
+            }
+            footer {
+                padding-bottom: 70px;
+                .container {
+                    .subMenuParent {
+                        padding: 70px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    
+    body {
+        .heading {
+            font-size: 28px;
+            line-height: 40px;
+        }
+        .page {
+            .banner {
+                &::after, &::before {
+                    content: " ";
+                    width: 0;
+                }
+                .container {
+                    text-align: center;
+                    .content {
+                        .videoParent {
+                            width: 100%;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+            .simpleWays {
+                .container {
+                    a {
+                        .mainDesc {
+                            margin: 0 auto 40px;
+                        }
+                    }
+                }
+            }
+            .businessTraffic {
+                margin-top: -20px;
+                &::after {
+                    top: 100%;
+                }
+            }
+            .nextProject {
+                padding: 20px 0 270px;
+                background-size: contain;
+                background-position: center 75%;
+            }
+            .investProperty {
+                padding-top: 0;
+            }
+            .help {
+                .container {
+                    .content {
+                        h3 {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+            .feedbackForm {
+                .container {
+                    padding: 0 20px;
+                    .content {
+                        h2 {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+            footer {
+                .container {
+                    .subMenuParent {
+                        padding: 50px 0;
+                        h4{ 
+                            color: @fontColor_Violet;
+                        }
+                        .subMenu {
+                            li {
+                                a {
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    color: @fontColor_Violet;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        .page {
+            .header {
+                .container {
+                    .row {
+                        display: flex;
+                        align-items: flex-start;
+                        div {
+                            flex-basis: 5%;
+                            .mainMenu {
+                                li {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        .header-buttons {
+                            flex-basis: 60%;
+                        }
+                    }
+                }
+            }
+            .banner {
+                .container{
+                    .content {
+                        h1 {
+                            font-size: 32px;
+                        }
+                    }
+                }
+            }
+            .yourChoice {
+                .container {
+                    .app {
+                        display: flex;
+                        div {
+                            flex-basis: 50%;
+                        }
+                    }
+                    .features {
+                        .featuresElem:not(:last-child) {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+            .nextProject {
+                padding: 0 0 200px;
+                background-position: center 75%;
+            }
+            .feedbackForm {
+                .container {
+                    .content {
+                        h2 {
+                            font-size: 26px;
+                            line-height: 36px;
+                        }
+                    }
+                }
+            }
+            footer {
+                text-align: center;
+                .container {
+                    .content {
+                        display: flex;
+                        div {
+                            flex-basis: 50%;
+                        }
+                    }
+                    .subMenuParent {
+                        display: flex;
+                        div {
+                            flex-basis: 50%;
+                            &:nth-child(1) {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    body {
+        .page {
+            .header {
+                .container {
+                    .row {
+                        div {
+                            flex-basis: 5%;
+                        }
+                        .header-buttons {
+                            flex-basis: 50%;
+                            .button {
+                                width: 70px;
+                                &:nth-child(1) {
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .help {
+                .container {
+                    .content {
+                        h3 {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+            .feedbackForm {
+                .container {
+                    padding: 0 20px;
+                    .content {
+                        form {
+                            input {
+                                max-width: 288px;
+                                padding: 10px 0 10px 10px;
+                            }
+                            .button {
+                                width: 100px;
+                                height: 43px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            footer {
+                .container {
+                    .social {
+                        img {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

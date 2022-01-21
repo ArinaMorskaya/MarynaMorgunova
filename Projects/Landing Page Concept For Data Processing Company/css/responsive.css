@@ -1,5 +1,282 @@
 @media (min-width: 1200px) {
   .page .container {
-    max-width: 1200px;
+    max-width: 1130px;
+  }
+}
+@media (max-width: 1100px) {
+  body .page .header {
+    padding: 50px 0;
+  }
+  body .page .banner .container .content h1 {
+    font-size: 40px;
+  }
+  body .page .banner .container .content .videoParent .video iframe {
+    top: 50px;
+    left: 140px;
+    transform: scale(3, 3);
+  }
+  body .page .yourChoice .container,
+  body .page .businessTraffic .container,
+  body .page .simpleWays .container,
+  body .page .investProperty .container,
+  body .page .help .container,
+  body .page footer .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 992px) {
+  body .heading {
+    font-size: 35px;
+  }
+  body .page .header {
+    padding-bottom: 30px;
+  }
+  body .page .header .container .logo {
+    display: none;
+  }
+  body .page .header .container .responsiveMenu {
+    display: block;
+  }
+  body .page .header .container .active {
+    background: #f2994a;
+    border: 1px solid #f2994a;
+    box-shadow: -11px 18px 36px rgba(242, 153, 74, 0.13);
+  }
+  body .page .header .container .active a svg {
+    fill: #fff;
+  }
+  body .page .header .container .mainMenu {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms ease;
+  }
+  body .page .header .container .mainMenu .itemMenu {
+    line-height: 30px;
+  }
+  body .page .header .container .showMenu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  body .page .banner {
+    padding: 0 0 50px;
+  }
+  body .page .banner::before,
+  body .page .banner:after {
+    width: 47%;
+    background-position: left bottom;
+    pointer-events: none;
+  }
+  body .page .banner .container .content .videoParent {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    padding-top: 30px;
+  }
+  body .page .banner .container .content .videoParent .video {
+    max-width: 350px;
+    height: 194px;
+  }
+  body .page .banner .container .content .videoParent .video iframe {
+    transform: scale(1);
+    top: 0;
+    left: 0;
+  }
+  body .page .banner .container .content .videoParent .videoDesc {
+    flex-basis: 50%;
+    padding: 20px;
+  }
+  body .page .businessTraffic {
+    padding: 0;
+  }
+  body .page .businessTraffic .container {
+    text-align: center;
+  }
+  body .page .businessTraffic .container .content {
+    padding: 0 0 50px;
+  }
+  body .page .simpleWays .container h4 {
+    font-size: 28px;
+  }
+  body .page .nextProject {
+    padding-top: 50px;
+  }
+  body .page .investProperty {
+    padding: 50px 0;
+    background-position: right bottom;
+    background-size: 100% auto;
+  }
+  body .page .investProperty .container {
+    text-align: center;
+  }
+  body .page .investProperty .container img {
+    padding: 50px 0;
+  }
+  body .page .help:after {
+    background-position: right bottom;
+  }
+  body .page .help .container .content {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  body .page .help .container .content h3 {
+    font-size: 35px;
+  }
+  body .page .help .container .content .mainDesc {
+    max-width: 100%;
+  }
+  body .page .feedbackForm {
+    padding: 100px 0 50px;
+    background-size: cover;
+  }
+  body .page .feedbackForm .container {
+    padding: 0 20px;
+  }
+  body .page footer {
+    padding-bottom: 70px;
+  }
+  body .page footer .container .subMenuParent {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 767px) {
+  body .heading {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  body .page .banner::after,
+  body .page .banner::before {
+    content: " ";
+    width: 0;
+  }
+  body .page .banner .container {
+    text-align: center;
+  }
+  body .page .banner .container .content .videoParent {
+    width: 100%;
+    align-items: center;
+  }
+  body .page .simpleWays .container a .mainDesc {
+    margin: 0 auto 40px;
+  }
+  body .page .businessTraffic {
+    margin-top: -20px;
+  }
+  body .page .businessTraffic::after {
+    top: 100%;
+  }
+  body .page .nextProject {
+    padding: 20px 0 270px;
+    background-size: contain;
+    background-position: center 75%;
+  }
+  body .page .investProperty {
+    padding-top: 0;
+  }
+  body .page .help .container .content h3 {
+    font-size: 28px;
+  }
+  body .page .feedbackForm .container {
+    padding: 0 20px;
+  }
+  body .page .feedbackForm .container .content h2 {
+    font-size: 28px;
+  }
+  body .page footer .container .subMenuParent {
+    padding: 50px 0;
+  }
+  body .page footer .container .subMenuParent h4 {
+    color: #8476aa;
+  }
+  body .page footer .container .subMenuParent .subMenu li a {
+    font-size: 14px;
+    line-height: 20px;
+    color: #8476aa;
+  }
+}
+@media (max-width: 576px) {
+  body .page .header .container .row {
+    display: flex;
+    align-items: flex-start;
+  }
+  body .page .header .container .row div {
+    flex-basis: 5%;
+  }
+  body .page .header .container .row div .mainMenu li {
+    margin-right: 0;
+  }
+  body .page .header .container .row .header-buttons {
+    flex-basis: 60%;
+  }
+  body .page .banner .container .content h1 {
+    font-size: 32px;
+  }
+  body .page .yourChoice .container .app {
+    display: flex;
+  }
+  body .page .yourChoice .container .app div {
+    flex-basis: 50%;
+  }
+  body .page .yourChoice .container .features .featuresElem:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  body .page .nextProject {
+    padding: 0 0 200px;
+    background-position: center 75%;
+  }
+  body .page .feedbackForm .container .content h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  body .page footer {
+    text-align: center;
+  }
+  body .page footer .container .content {
+    display: flex;
+  }
+  body .page footer .container .content div {
+    flex-basis: 50%;
+  }
+  body .page footer .container .subMenuParent {
+    display: flex;
+  }
+  body .page footer .container .subMenuParent div {
+    flex-basis: 50%;
+  }
+  body .page footer .container .subMenuParent div:nth-child(1) {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 470px) {
+  body .page .header .container .row div {
+    flex-basis: 5%;
+  }
+  body .page .header .container .row .header-buttons {
+    flex-basis: 50%;
+  }
+  body .page .header .container .row .header-buttons .button {
+    width: 70px;
+  }
+  body .page .header .container .row .header-buttons .button:nth-child(1) {
+    margin-right: 5px;
+  }
+  body .page .help .container .content h3 {
+    font-size: 24px;
+  }
+  body .page .feedbackForm .container {
+    padding: 0 20px;
+  }
+  body .page .feedbackForm .container .content form input {
+    max-width: 288px;
+    padding: 10px 0 10px 10px;
+  }
+  body .page .feedbackForm .container .content form .button {
+    width: 100px;
+    height: 43px;
+  }
+  body .page footer .container .social img {
+    margin-left: 5px;
   }
 }
