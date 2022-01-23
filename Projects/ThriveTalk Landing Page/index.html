@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThriveTalk Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"/>
+    <link type="text/css" rel="stylesheet" href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/larsseit.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <main class="page">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container">
+                <div class="row justify-content-lg-between align-items-lg-center align-items-sm-start">
+                    <div class="col-xl-4 col-lg-4 col-md-3 col-sm-4">
+                        <div class="responsiveMenu">
+                            <a href="#" class="logo">Thrivetalk</a>
+                            <a href="#" id="responsiveMenuIcon" class="responsiveMenuIcon" onclick="showMenu()"><i class="material-icons">menu</i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-2 col-sm-3 text-sm-left">
+                        <ul id="mainMenu" class="mainMenu">
+                            <li class="itemMenu"><a href="#">Home</a></li>
+                            <li class="itemMenu"><a href="#aboutUs">About</a></li>
+                            <li class="itemMenu"><a href="#services">Services</a></li>
+                            <li class="itemMenu"><a href="#blog">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-7 col-sm-5 text-sm-right">
+                        <button type="button" class="contact" data-toggle="modal" data-target="#modalContactUs">CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- BANNER -->
+        <section class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12">
+                        <div class="content">
+                            <a href="#">Thrivetalk</a>
+                            <h1>HELPING YOU THRIVE IN ALL AREAS OF LIFE</h1>
+                            <p>Our highly talented therapists can help you with a range of issues including relationships, sex, PTSD, depression, social anxiety, or even just caring for yourself more.</p>
+                            <button type="button" class="button">WHO AM I</button>
+                            <button type="button" class="button">WHAT DO I DO</button>
+                        </div>    
+                    </div>   
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY THRIVE? -->
+        <section class="whyThrive">
+            <div class="container">
+                <div class="row justify-content-lg-start justify-content-sm-end">
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12">
+                        <h2>Why Thrive?</h2>
+                        <p>Want to improve your well-being from the comfort of your own couch? Are you having trouble finding the right therapist? <span>Here at ThriveTalk, our licensed therapists provide the same quality care you would get in office from anywhere you can access your laptop or mobile phone. Become your best self with ThriveTalk.  Start therapy now with a licensed therapist!</span> </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US  -->
+        <section class="aboutUs" id="aboutUs">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12" >
+                        <h3>ABOUT US</h3>
+                    </div>
+                    <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12" >
+                        <p>We want to help you thrive! Whether you are just looking for someone to talk to, or are struggling with a mental wellness issue we’re here to help.  Our highly talented therapists can help you with a range of issues including relationships, sex, PTSD, depression, social anxiety, or even just caring for yourself more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WE CAN HELP YOU WITH -->
+        <section class="weCanHelp">
+            <h3>WE CAN HELP YOU WITH</h3>
+            <div class="owl-carousel owl-theme" id="slider_WeCanHelp">
+                <div class="slide slide1">
+                    <h2>Weight Lifting</h2>
+                </div>
+                <div class="slide slide2">
+                    <h2>Running  & Spinning</h2>
+                </div>
+                <div class="slide slide3">
+                    <h2>Pumping Iron</h2>
+                </div>
+                <div class="slide slide4">
+                    <h2>Pumping Iron</h2>
+                </div>
+                <div class="slide slide1">
+                    <h2>Weight Lifting</h2>
+                </div>
+                <div class="slide slide2">
+                    <h2>Running  & Spinning</h2>
+                </div>
+                <div class="slide slide3">
+                    <h2>Pumping Iron</h2>
+                </div>
+                <div class="slide slide4">
+                    <h2>Pumping Iron</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SERVICES -->        
+        <section class="services" id="services">
+            <div class="servicesItem">
+                <h2>Physical Health</h2>
+            </div>
+            <div class="servicesItem">
+                <h2>Mental Health</h2>
+            </div>
+            <div class="servicesItem">
+                <h2>Nutrition</h2>
+            </div>
+            <div class="servicesItem">
+                <h2>Gymnastics</h2>
+            </div>
+            <div class="servicesItem">
+                <h2>Crossfit</h2>
+            </div>
+            <div class="servicesItem">
+                <h2>Aerobics</h2>
+            </div>
+        </section>
+
+        <!-- SERVICES FEATURES -->
+        <section class="servicesFeatures" id="blog">
+            <div class="container">
+                <div class="row justify-content-between ">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 content" >
+                        <h3>Nutritional Plans</h3>
+                        <p>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 content" >
+                        <h3>Weight Loss</h3>
+                        <p>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 content" >
+                        <h3>Mental Peace</h3>
+                        <p>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 content" >
+                        <h3>Home Training</h3>
+                        <p>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 content" >
+                        <h3>Work/Life Balance</h3>
+                        <p>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 content" >
+                        <h3>Cardio</h3>
+                        <p>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YOU SHOULD ALSO KNOW -->
+        <section class="youShouldKnow">
+            <div class="container">
+                <div class="row justify-content-lg-around justify-content-sm-end">
+                    <div class="col-xl-3 col-lg-2">
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-8 col-sm-12" >
+                        <h3>YOU SHOULD ALSO KNOW</h3>
+                        <p>MDD affects more than 16.1 million American adults, or about 6.7%of the U.S. population age 18 and older in a given year. We at <span>ThriveTalk</span> can help you.</p>
+                        <button type="button" class="button">GET HELP NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT US -->
+        <section class="contactUs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7 col-md-8 col-sm-8" >
+                        <h3>CONTACT US</h3>
+                        <h2>Ready. Set. Smile</h2>
+                        <p>Take the free online assessment to see if you are a candidate and get started on your journey.</p>
+                        <button type="button" class="button">GET HELP NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODAL -->
+        <div class="modal fade" id="modalContactUs" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <form action="contacts.php">
+                        <input type="text" name="name" placeholder="Name" />
+                        <input type="text" name="name" placeholder="Last name" />
+                        <input type="email" name="email" placeholder="Your Email" />
+                        <input id="phone" type="phone" placeholder="Your Phone">
+                        <textarea name="message" id="message" rows="5" placeholder="Your message"></textarea>
+                    </form>
+                    <button type="button" class="button">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="row justify-content-between ">
+                    <div class="col-xl-5 col-lg-4">
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 content" >
+                        <h4>SOME INFO</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 content" >
+                        <h4>ENFOLD HEALTH</h4>
+                        <p>Main Street 1, Olcott <br> Buffalo, United States</p>
+                        <a href="tel:+555283784333" type="tel">+555 283 784 333</a>
+                        <p><a class="email" href="mailto:office@enfold-health.com" type="email">office@enfold-health.com</a></p>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 content" >
+                        <h4>OFFICE HOURS</h4>
+                        <p>Mo-Fr: 8:00-19:00</p>
+                        <p>Sa: 8:00-14:00</p>
+                        <p>Su: closed</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

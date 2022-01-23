@@ -1,0 +1,265 @@
+@media (min-width: 1300px) {
+  .page .container {
+    max-width: 1270px;
+  }
+}
+@media (max-width: 1199px) {
+  body .page .header .container {
+    padding: 0 10px;
+  }
+  body .page .banner {
+    padding-top: 180px;
+  }
+  body .page .banner::after {
+    background: linear-gradient(230deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, #ffffff 70%, #ffffff 100%), url(../img/bg_banner.png) no-repeat, url(../img/bg_banner_back.png) no-repeat;
+    background-position: bottom, top 15px right, top right;
+  }
+  body .page .banner .container {
+    padding: 0 10px;
+  }
+  body .page .banner .container .content h1 {
+    font-size: 40px;
+    margin: 35px 0;
+  }
+  body .page .whyThrive .container {
+    padding: 95px 10px;
+  }
+  body .page .aboutUs {
+    padding: 75px 0;
+  }
+  body .page .services .servicesItem {
+    width: 50%;
+  }
+  body .page .servicesFeatures .container .content {
+    padding: 35px;
+  }
+  body .page .youShouldKnow {
+    padding: 50px 0;
+  }
+  body .page .youShouldKnow .container h3 {
+    margin-bottom: 100px;
+  }
+  body .page .youShouldKnow .container p {
+    margin-bottom: 100px;
+  }
+  body .page .contactUs {
+    padding: 50px 0;
+  }
+  body .page .contactUs .container {
+    padding: 0 10px;
+  }
+  body .page .contactUs .container h3 {
+    margin-bottom: 100px;
+  }
+  body .page .contactUs .container h2 {
+    margin-bottom: 50px;
+  }
+  body .page footer::after {
+    width: 35%;
+  }
+}
+@media (max-width: 992px) {
+  body .page .header .container .responsiveMenu .responsiveMenuIcon {
+    display: block;
+  }
+  body .page .header .container .responsiveMenu .active {
+    opacity: 30%;
+  }
+  body .page .header .container .mainMenu {
+    opacity: 0;
+    pointer-events: none;
+    flex-direction: column;
+    width: 60%;
+  }
+  body .page .header .container .mainMenu li:not(:first-child) {
+    padding-top: 5px;
+  }
+  body .page .header .container .mainMenu li:hover::after {
+    top: 100%;
+  }
+  body .page .header .container .showMenu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  body .page .whyThrive {
+    background: url(../img/bg_WhyThrive.png) center / cover no-repeat, #62d0df;
+  }
+  body .page .whyThrive .container {
+    padding: 75px 10px;
+  }
+  body .page .aboutUs .container h3 {
+    margin-bottom: 30px;
+  }
+  body .page .weCanHelp .owl-carousel .slide h2 {
+    font-size: 30px;
+  }
+  body .page .services .servicesItem h2 {
+    font-size: 30px;
+    padding-bottom: 230px;
+  }
+  body .page .servicesFeatures .container .content {
+    padding: 20px;
+  }
+  body .page .youShouldKnow .container h3 {
+    margin-bottom: 75px;
+  }
+  body .page .youShouldKnow .container p {
+    font-size: 30px;
+    margin-bottom: 75px;
+  }
+  body .page .contactUs .container h3 {
+    margin-bottom: 75px;
+  }
+  body .page .contactUs .container h2 {
+    font-size: 50px;
+  }
+  body .page .contactUs .container p {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  body .page footer::after {
+    width: 0;
+  }
+  body .page footer .container {
+    padding: 70px 0 150px;
+  }
+  body .page footer .container .content h4 {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  body .page .banner .container .content h1 {
+    font-size: 35px;
+  }
+  body .page .banner .container .content p {
+    font-size: 22px;
+    line-height: 35px;
+  }
+  body .page .whyThrive {
+    backdrop-filter: blur(5px);
+  }
+  body .page .whyThrive .container h2 {
+    backdrop-filter: blur(3px);
+  }
+  body .page .whyThrive .container p {
+    backdrop-filter: blur(3px);
+  }
+  body .page .weCanHelp .owl-carousel .slide h2 {
+    font-size: 28px;
+  }
+  body .page .services .servicesItem h2 {
+    font-size: 28px;
+    padding-bottom: 200px;
+  }
+  body .page .youShouldKnow::after {
+    width: 100%;
+    opacity: 0.3;
+  }
+  body .page .youShouldKnow .container {
+    position: relative;
+    z-index: 9;
+  }
+  body .page .youShouldKnow .container h3 {
+    margin-bottom: 50px;
+  }
+  body .page .youShouldKnow .container p {
+    font-size: 26px;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 1px rgba(34, 53, 111, 0.5);
+  }
+  body .page .youShouldKnow .container p span {
+    text-shadow: 1px 1px 1px #22356f;
+  }
+  body .page .contactUs .container h3 {
+    margin-bottom: 50px;
+  }
+  body .page .contactUs .container h2 {
+    font-size: 33px;
+    margin-bottom: 50px;
+  }
+  body .page .contactUs .container p {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 576px) {
+  body .page .header .container div:first-child {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  body .page .header .container div:first-child div {
+    position: relative;
+  }
+  body .page .header .container div:first-child div:nth-child(1),
+  body .page .header .container div:first-child div:nth-child(3) {
+    width: 45%;
+  }
+  body .page .header .container div:first-child div:nth-child(2) {
+    width: 25%;
+    position: absolute;
+    top: 65%;
+    left: 0%;
+  }
+  body .page .banner {
+    padding-top: 200px;
+  }
+  body .page .banner .container .content a {
+    font-size: 22px;
+  }
+  body .page .banner .container .content h1 {
+    font-size: 33px;
+  }
+  body .page .whyThrive .container {
+    padding: 50px 10px;
+  }
+  body .page .whyThrive .container h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  body .page .whyThrive .container p {
+    font-size: 22px;
+  }
+  body .page .whyThrive .container p span {
+    font-size: 18px;
+  }
+  body .page .aboutUs {
+    padding: 50px 10px;
+  }
+  body .page .aboutUs .container p {
+    font-size: 22px;
+  }
+  body .page .services .servicesItem {
+    width: 100%;
+  }
+  body .page .servicesFeatures .container .content h3 {
+    text-align: center;
+  }
+  body .page .contactUs::after {
+    width: 0;
+  }
+  body .page .contactUs .container {
+    text-align: center;
+  }
+  body .page .contactUs .container h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  body .page .contactUs .container p {
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 30px;
+  }
+  body .page footer .container {
+    padding: 40px 0 70px;
+  }
+  body .page footer .container .content {
+    width: 60%;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  body .page footer .container .content p {
+    line-height: 20px;
+  }
+}

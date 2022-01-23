@@ -1,0 +1,602 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.button {
+  background: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #fab63e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  transition: 400ms ease-in-out;
+}
+.button:hover {
+  background: #fab63e;
+  color: white;
+}
+.button:focus {
+  outline: none;
+}
+body .page {
+  font-family: 'Larsseit', sans-serif;
+  background: white;
+}
+body .page .header {
+  padding: 30px 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+body .page .header .container {
+  padding: 0 30px 0 80px;
+}
+body .page .header .container .responsiveMenu {
+  display: flex;
+  align-items: center;
+}
+body .page .header .container .responsiveMenu .logo {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: #62d0df;
+  letter-spacing: -0.5px;
+  line-height: 20px;
+  transition: 400ms ease;
+}
+body .page .header .container .responsiveMenu .logo:hover {
+  transform: scale(1.05) translate(4px);
+}
+body .page .header .container .responsiveMenu .responsiveMenuIcon {
+  padding-left: 15px;
+  display: none;
+  transition: 400ms ease;
+}
+body .page .header .container .responsiveMenu .responsiveMenuIcon i {
+  vertical-align: middle;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #62d0df;
+}
+body .page .header .container .responsiveMenu .responsiveMenuIcon:hover {
+  transform: scale(1.1) translate(0, -2px);
+}
+body .page .header .container .mainMenu {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
+body .page .header .container .mainMenu li {
+  position: relative;
+  transition: 400ms ease;
+}
+body .page .header .container .mainMenu li a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 95%;
+  color: #22356f;
+  padding: 5px;
+  font-family: 'Larsseit', sans-serif;
+}
+body .page .header .container .mainMenu li:hover a {
+  font-weight: 500;
+}
+body .page .header .container .mainMenu li:hover::after {
+  content: " ";
+  width: 0%;
+  border-bottom: 1.5px solid #22356f;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  animation: lineMove 0.3s linear forwards;
+}
+@keyframes lineMove {
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+body .page .header .container .contact {
+  width: 150px;
+  background: #62d0df;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 35px;
+  outline: none;
+  padding: 16px 10px;
+  cursor: pointer;
+  transition: 400ms ease-in-out;
+}
+body .page .header .container .contact:hover {
+  background: #22356f;
+}
+body .page .header .container .contact:focus {
+  outline: none;
+}
+body .page .banner {
+  padding: 240px 0 80px;
+  position: relative;
+}
+body .page .banner::before {
+  width: 78%;
+  height: 100%;
+  content: " ";
+  background: #F4F9E2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+body .page .banner::after {
+  width: 100%;
+  height: 100%;
+  content: " ";
+  background: url(../img/bg_banner.png) no-repeat, url(../img/bg_banner_back.png) no-repeat;
+  background-position: top 15px right, top right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+body .page .banner .container {
+  padding: 0 80px;
+}
+body .page .banner .container .content {
+  position: relative;
+  z-index: 8;
+}
+body .page .banner .container .content a {
+  text-decoration: none;
+  color: #62d0df;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 27px;
+  transition: 400ms ease;
+}
+body .page .banner .container .content h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 53px;
+  color: #22356f;
+  margin-bottom: 20px;
+  margin: 40px 0;
+}
+body .page .banner .container .content p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 42px;
+  color: #22356f;
+  margin: 60px 0;
+}
+body .page .whyThrive {
+  background: url(../img/bg_WhyThrive.png) right / auto 100% no-repeat, #62d0df;
+}
+body .page .whyThrive .container {
+  padding: 150px 80px 95px;
+  color: white;
+}
+body .page .whyThrive .container h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 27px;
+  margin-bottom: 75px;
+}
+body .page .whyThrive .container p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+}
+body .page .whyThrive .container p span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+}
+body .page .aboutUs {
+  padding: 150px 0 75px;
+}
+body .page .aboutUs .container {
+  color: #22356f;
+}
+body .page .aboutUs .container h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+body .page .aboutUs .container p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0.5px;
+}
+body .page .weCanHelp {
+  padding-bottom: 80px;
+}
+body .page .weCanHelp h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1px;
+  color: rgba(34, 53, 111, 0.5);
+  margin-bottom: 25px;
+}
+body .page .weCanHelp .owl-carousel .slide {
+  width: auto;
+  padding: 95px 70px 0;
+  background: #22356f;
+  height: 360px;
+}
+body .page .weCanHelp .owl-carousel .slide:hover h2::after {
+  animation: line 0.7s linear;
+}
+@keyframes line {
+  0% {
+    width: 110%;
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+body .page .weCanHelp .owl-carousel .slide h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 33px;
+  color: white;
+  position: relative;
+}
+body .page .weCanHelp .owl-carousel .slide h2::before {
+  content: ".";
+  color: #E9B730;
+  position: absolute;
+  top: -12px;
+  left: -20px;
+  font-size: 50px;
+}
+body .page .weCanHelp .owl-carousel .slide h2::after {
+  content: " ";
+  width: 120%;
+  border-top: 1px solid white;
+  position: absolute;
+  top: -23px;
+  left: -10%;
+}
+body .page .weCanHelp .owl-carousel .slide1,
+body .page .weCanHelp .owl-carousel .slide5 {
+  background: #FFE2DE;
+}
+body .page .weCanHelp .owl-carousel .slide2,
+body .page .weCanHelp .owl-carousel .slide6 {
+  background: #C4E769;
+}
+body .page .weCanHelp .owl-carousel .slide3,
+body .page .weCanHelp .owl-carousel .slide7 {
+  background: #62d0df;
+}
+body .page .weCanHelp .owl-carousel .slide4,
+body .page .weCanHelp .owl-carousel .slide8 {
+  background: #0052C1;
+}
+body .page .weCanHelp .owl-theme .owl-dots .owl-dot.active span {
+  background: rgba(34, 53, 111, 0.6);
+}
+body .page .weCanHelp .owl-theme .owl-dots .owl-dot:hover span {
+  background: rgba(34, 53, 111, 0.6);
+}
+body .page .weCanHelp .owl-theme .owl-dots .owl-dot:focus {
+  outline: none;
+}
+body .page .services {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .page .services .servicesItem {
+  position: relative;
+  width: 33%;
+  background: url(../img/nutrition.jpg) center / cover no-repeat;
+  overflow: hidden;
+  transition: 400ms ease;
+}
+body .page .services .servicesItem h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 33px;
+  color: white;
+  padding: 130px 0px 290px 100px;
+  position: relative;
+  z-index: 9;
+}
+body .page .services .servicesItem h2::before {
+  content: ".";
+  color: #E9B730;
+  position: absolute;
+  top: 110px;
+  left: 70px;
+  font-size: 70px;
+}
+body .page .services .servicesItem h2::after {
+  content: " ";
+  width: 76%;
+  border-top: 1px solid white;
+  position: absolute;
+  top: 100px;
+  left: 12%;
+}
+body .page .services .servicesItem::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 400ms ease-in-out;
+}
+body .page .services .servicesItem:nth-child(1)::after {
+  background: #22356f;
+}
+body .page .services .servicesItem:nth-child(2)::after {
+  background: #0052C1;
+}
+body .page .services .servicesItem:nth-child(3)::after {
+  background: #76B58B;
+}
+body .page .services .servicesItem:nth-child(4)::after {
+  background: #62d0df;
+}
+body .page .services .servicesItem:nth-child(5)::after {
+  background: #DEE1FF;
+}
+body .page .services .servicesItem:nth-child(6)::after {
+  background: #8F00FF;
+}
+body .page .services .servicesItem:hover::after {
+  animation: bgMove 0.7s linear forwards;
+}
+@keyframes bgMove {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+body .page .servicesFeatures {
+  padding: 40px 0;
+}
+body .page .servicesFeatures .container .content {
+  padding: 37px 50px;
+}
+body .page .servicesFeatures .container .content h3 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33px;
+  color: #22356f;
+  margin-bottom: 28px;
+}
+body .page .servicesFeatures .container .content p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba(34, 53, 111, 0.5);
+}
+body .page .youShouldKnow {
+  padding: 100px 0 50px;
+  position: relative;
+}
+body .page .youShouldKnow::after {
+  width: 35%;
+  height: 100%;
+  content: "";
+  background: url(../img/bg_YouShouldAlsoKnow.jpg) center center / cover no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .page .youShouldKnow .container {
+  color: #22356f;
+}
+body .page .youShouldKnow .container h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 12px;
+  margin-bottom: 220px;
+}
+body .page .youShouldKnow .container p {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 52px;
+  margin-bottom: 150px;
+}
+body .page .youShouldKnow .container p span {
+  color: #62d0df;
+}
+body .page .contactUs {
+  padding: 100px 0 40px;
+  background: #22356f;
+  position: relative;
+}
+body .page .contactUs::after {
+  width: 34%;
+  height: 100%;
+  content: "";
+  background: url(../img/bg_ContactUs.jpg) center center / cover no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .page .contactUs .container {
+  padding: 0 80px;
+  color: white;
+}
+body .page .contactUs .container h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 12px;
+  margin-bottom: 230px;
+}
+body .page .contactUs .container h2 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 94px;
+  margin-bottom: 75px;
+}
+body .page .contactUs .container p {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 52px;
+  margin-bottom: 70px;
+}
+body .page .contactUs .container .button {
+  color: inherit;
+}
+body .page .contactUs .container .button:hover {
+  background: white;
+  color: #22356f;
+}
+body .page footer {
+  position: relative;
+}
+body .page footer::before {
+  content: "© Copyright - ThriveTalk  2017";
+  width: 100%;
+  height: 80px;
+  background: #62d0df;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 30px 0 30px 80px;
+  z-index: 9;
+}
+body .page footer::after {
+  width: 40%;
+  height: 85%;
+  content: "";
+  background: url(../img/bg_footer.jpg) center top / cover no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .page footer .container {
+  padding: 100px 0 180px;
+}
+body .page footer .container .content h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 11px;
+  color: #22356f;
+  margin-bottom: 50px;
+}
+body .page footer .container .content p,
+body .page footer .container .content a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  color: rgba(34, 53, 111, 0.5);
+}
+body .page footer .container .content a {
+  text-decoration: none;
+  transition: 400ms ease;
+}
+body .page footer .container .content a:hover {
+  font-size: 15px;
+  color: rgba(34, 53, 111, 0.7);
+}
+body .page footer .container .content .email {
+  color: #006DFF;
+}
+body .page .modal .modal-content {
+  background: #22356f;
+  padding: 0 15px;
+}
+body .page .modal .modal-content .close {
+  color: white;
+  opacity: 1;
+  text-shadow: none;
+  margin-bottom: 20px;
+  transition: transform 400ms ease;
+}
+body .page .modal .modal-content .close:focus,
+body .page .modal .modal-content .close:hover {
+  transform: scale(1.2);
+}
+body .page .modal .modal-content .close:not(:disabled):not(.disabled) {
+  outline: none;
+}
+body .page .modal .modal-content .close:not(:disabled):not(.disabled) span {
+  outline: none;
+}
+body .page .modal .modal-content form {
+  display: block;
+}
+body .page .modal .modal-content form input,
+body .page .modal .modal-content form textarea {
+  width: 100%;
+  background: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  padding: 5px 0 5px 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .page .modal .modal-content form input::placeholder,
+body .page .modal .modal-content form textarea::placeholder {
+  color: rgba(34, 53, 111, 0.8);
+  transition: 0.3s;
+}
+body .page .modal .modal-content form input:hover::placeholder,
+body .page .modal .modal-content form textarea:hover::placeholder {
+  color: rgba(34, 53, 111, 0.5);
+}
+body .page .modal .modal-content form textarea {
+  resize: none;
+}
+body .page .modal .modal-content .button {
+  width: 120px;
+  height: 40px;
+  padding: 10px 30px;
+  margin: 20px 0;
+  color: #22356f;
+  background: white;
+}
+body .page .modal .modal-content .button:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+body .page .fade {
+  transition: backdrop-filter 400ms ease;
+  backdrop-filter: blur(5px);
+}
+body .modal-backdrop {
+  background-color: transparent;
+}
