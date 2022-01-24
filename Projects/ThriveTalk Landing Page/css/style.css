@@ -249,6 +249,7 @@ body .page .weCanHelp .owl-carousel .slide {
   padding: 95px 70px 0;
   background: #22356f;
   height: 360px;
+  overflow: hidden;
 }
 body .page .weCanHelp .owl-carousel .slide:hover h2::after {
   animation: line 0.7s linear;
