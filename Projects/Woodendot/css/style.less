@@ -1,0 +1,790 @@
+@main_bg: #F7F7F7;
+@fontColor_grey52: #525252;
+@fontColor_grey54: #54595F;
+@fontColor_grey45: #454545;
+@fontColor_grey3A: #3A3A3A;
+@fontColor_black: #020202;
+@fontColor_red: #BC1414;
+@cardo: 'Cardo';
+@roboto: 'Roboto';
+@palatino: 'PalatinoLinotype';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.catalogCard {
+    h2 {
+        font-family: @roboto;
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 56px;
+        color: black;
+    }
+    .model {
+        font-family: @cardo;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 37px;
+        color: black;
+    }
+    .price {
+        font-family: @cardo;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 27px;
+        color: black;
+    }
+    .description {
+        font-family: @cardo;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: @fontColor_grey52;
+    }
+    .options {
+        font-family: @cardo;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        color: @fontColor_grey54;
+        text-decoration: none;
+        display: block;
+        transition: 400ms ease;
+        &:hover {
+            color: @fontColor_grey3A;
+            font-size: 16.5px;
+        }
+    }
+    .btn_shopNow {
+        background: transparent;
+        font-family: @roboto;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        color: black;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+        cursor: pointer;
+        transition: 400ms ease-in-out;
+        &:hover {
+            color: rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .new {
+        font-family: @cardo;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 14px;
+        line-height: 29px;
+        color: @fontColor_red;
+    }
+}
+
+body {
+    .page {
+        background: @main_bg;
+
+        // HEADER
+        .header {
+            padding: 20px;
+            border-bottom: 1px solid rgb(204, 204, 204, 0.3);
+            margin-bottom: 40px;
+            .container {
+                nav {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .mainMenu {
+                        display: flex;
+                        list-style: none;
+                        transition: 400ms ease;
+                        .itemMenu {
+                            &:not(:last-child) {
+                                margin-right: 20px;
+                            }
+                            a {
+                                text-decoration: none;
+                                font-family: @cardo;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 23px;
+                                color: black;
+                            }
+                            &:hover a {
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                    .responsiveMenu {
+                        text-decoration: none;
+                        color: @fontColor_black;
+                        font-size: 28px;
+                        font-weight: 700;
+                        transition: 400ms ease;
+                        display: none;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    .active {
+                        color: @fontColor_grey54;
+                    }
+                }
+            }
+            .logo {
+                text-decoration: none;
+                img {
+                    transition: 400ms ease;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+       
+        // BANNER
+        .banner {
+            padding: 255px 20px 0 20px;
+            background: url(../img/bg_banner.jpg) center /cover no-repeat;
+            position: relative;
+            .container {
+                h1 {
+                    font-family: @roboto;
+                    font-weight: 700;
+                    font-size: 27px;
+                    line-height: 38px;
+                    letter-spacing: 0.2px;
+                    color: white;
+                    margin-bottom: 30px;
+                }
+                .btn_DiscoverNow {
+                    background: transparent;
+                    padding: 5.5px 38px;
+                    font-family: @cardo;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 20px;
+                    color: white;
+                    border: 1px solid white;
+                    outline: none;
+                    cursor: pointer;
+                    transition: 400ms ease-in-out;
+                    margin-bottom: 245px;
+                    &:hover {
+                        background: rgba(50, 50, 50, 0.3);
+                        color: rgba(250, 250, 250, 0.7);
+                        border: 1px solid rgba(250, 250, 250, 0.7);
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .btn_DecorStyle {
+                    background: #050505;
+                    padding: 15px 30px;
+                    font-family: @palatino;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 20px;
+                    color: white;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    transition: 400ms ease;
+                    &:hover {
+                        color: rgba(250, 250, 250, 0.7);
+                    }
+                }
+            }
+        }
+
+        // FEATURES
+        .features {
+            padding: 35px 20px;
+            .container {
+                .featureWrapper {
+                    padding: 20px 0;
+                    span {
+                        font-family: @roboto;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 23px;
+                        letter-spacing: 0.2px;
+                        color: black;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        // GALLERY
+        .gallery {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 85px;
+            .galleryImg {
+                width: 25%;
+                overflow: hidden;
+                img {
+                    min-width: 100%;
+                    min-height: 100%;
+                    width: auto;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+        
+        // CLOE
+        .cloe {
+            margin: 30px 0;
+            position: relative;
+            padding: 45px 0 157px;
+            &::after {
+                width: 62%;
+                height: 100%;
+                content: "";
+                background: url(../img/cloe.jpg) center right / auto 100% no-repeat;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .container {
+                .catalogCard {
+                    position: relative;
+                    z-index: 9;
+                    .description {
+                        margin-bottom: 65px;
+                    }
+                }
+            }
+        }
+
+        // PELICAN
+        .pelican {
+            margin: 30px 0;
+            position: relative;
+            padding: 95px 0 65px;
+            &::after {
+                width: 62%;
+                height: 100%;
+                content: "";
+                background: url(../img/pelican.jpg) center left / auto 100% no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .container {
+                .catalogCard {
+                    position: relative;
+                    z-index: 9;
+                    .price {
+                        margin-bottom: 20px;
+                    }
+                    .description {
+                        margin-bottom: 25px;
+                    }
+                    .options {
+                        margin-bottom: 45px;
+                    }
+                }
+            }
+        }
+
+        // ALADA
+        .alada {
+            margin: 30px 0;
+            position: relative;
+            padding: 45px 0 40px;
+            &::after {
+                width: 62%;
+                height: 100%;
+                content: "";
+                background: url(../img/alada.jpg) center right / auto 100% no-repeat;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .container {
+                .catalogCard {
+                    position: relative;
+                    z-index: 9;
+                    .price {
+                        margin-bottom: 45px;
+                    }
+                    .description {
+                        margin-bottom: 25px;
+                    }
+                    .options {
+                        margin-bottom: 45px;
+                    }
+                }
+            }
+        }
+
+        // ALBA
+        .alba {
+            margin: 30px 0;
+            position: relative;
+            padding-top: 48px;
+            &::after {
+                width: 62%;
+                height: 100%;
+                content: "";
+                background: url(../img/alba.jpg) center left / auto 100% no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .container {
+                .catalogCard {
+                    position: relative;
+                    z-index: 9;
+                    .price {
+                        margin-bottom: 20px;
+                    }
+                    .description {
+                        margin-bottom: 25px;
+                    }
+                    .options {
+                        margin-bottom: 45px;
+                    }
+                    .btn_shopNow {
+                        margin-bottom: 55px;
+                    }
+                }
+            }
+        }
+
+        // BATEA
+        .batea {
+            margin: 30px 0;
+            position: relative;
+            padding: 95px 0 30px;
+            &::after {
+                width: 62%;
+                height: 100%;
+                content: "";
+                background: url(../img/batea.jpg) center right / auto 100% no-repeat;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .container {
+                .catalogCard {
+                    position: relative;
+                    z-index: 9;
+                    .price {
+                        margin-bottom: 45px;
+                    }
+                    .description {
+                        margin-bottom: 25px;
+                    }
+                    .options {
+                        margin-bottom: 45px;
+                    }
+                }
+            }
+        }
+
+        // OUR PRODUCTS
+        .ourProducts {
+            padding: 30px 160px;
+            text-align: center;
+            h3 {
+                font-family: @cardo;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 39px;
+                color: @fontColor_grey3A;
+                margin-bottom: 20px;
+            }
+            p {
+                font-family: @cardo;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 33px;
+                color: black;
+                margin-bottom: 35px;
+            }
+            .owl-carousel {
+                .slide {
+                    width: auto;
+                    max-height: 550px;
+                    overflow: hidden;
+                    position: relative;
+                    img {
+                        min-width: 100%;
+                        height: auto;
+                        width: auto;
+                        margin: 0 auto;
+                    }
+                    a {
+                        text-decoration: none;
+                        font-family: @cardo;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 27px;
+                        color: white;
+                        position: absolute;
+                        top: 40px;
+                        right: 20px;
+                        z-index: 9;
+                        transition: 400ms ease;
+                        i {
+                            color: white;
+                            font-size: 14px;
+                            transition: 400ms ease;
+                            vertical-align: middle;
+                        }
+                    }
+                    &:hover a, &:hover i {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .owl-theme {
+                .owl-dots {
+                    .owl-dot.active span {
+                            background: rgba(0, 0, 0, 0.5); 
+                        }
+                    .owl-dot {
+                        span {
+                            width: 9px;
+                            height: 9px;
+                            background: black;
+                            border-radius: 0px;
+                            margin: 5px 3px;
+                        }
+                        &:hover span {
+                            transform: scale(1.2);
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }    
+                }
+            }
+        }
+
+        // REWIEWS
+        .reviews {
+            padding: 80px 100px;
+            text-align: center;
+            background: #F6F6F6;
+            .feedback {
+                font-family: @cardo;
+                font-weight: 400;
+                font-style: italic;
+                font-size: 20px;
+                line-height: 30px;
+                color: @fontColor_black;
+                margin-bottom: 45px;
+            }
+            .author {
+                font-family: @cardo;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 21px;
+                color: black;
+                margin-bottom: 45px;
+            }
+            .owl-carousel {
+                .slide {
+                    width: auto;
+                    overflow: hidden;
+                }
+            }
+            .owl-theme {
+                .owl-dots {
+                    .owl-dot.active span {
+                            transform: scale(3); 
+                        }
+                        .owl-dot.active + .owl-dot span{
+                            transform: scale(2);
+                        }    
+                        // .owl-dot.active + .owl-dot + .owl-dot span{
+                        //     transform: scale(1.7);
+                        // }    
+                    .owl-dot {
+                        span {
+                            width: 4px;
+                            height: 4px;
+                            background: black;
+                            border-radius: 0px;
+                            margin: 5px 10px;
+                            transition: 1.5s ease;
+                        }
+                        &:hover span {
+                            background: rgba(0, 0, 0, 0.5);
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }    
+                }
+            }
+        }
+
+        // BLOG
+        .blog {
+            background: white;
+            display: flex;
+            flex-wrap: wrap;
+            .article {
+                width: 25%;
+                padding: 50px 30px;
+                text-align: center;
+                font-family: @cardo;
+                font-weight: 400;
+                color: black;
+                img {
+                    max-width: 97px;
+                    height: auto;
+                    width: auto;
+                    margin-bottom: 35px;
+                }
+                h3 {
+                    font-size: 24px;
+                    line-height: 35px;
+                    margin-bottom: 10px;
+                }
+                .desc {
+                    font-size: 15px;
+                    line-height: 27px;
+                    margin-bottom: 25px;
+                }
+                .btn_learnMore {
+                    background: transparent;
+                    font-size: 15px;
+                    line-height: 15px;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    outline: none;
+                    cursor: pointer;
+                    transition: 400ms ease-in-out;
+                    &:hover {
+                        color: rgba(0, 0, 0, 0.5);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            .footprint, .wood {
+                background: #F8F8F8;
+            }
+        }
+
+        // OUR CUSTOMERS
+        .customers {
+            padding: 130px 20px 80px;
+            p {
+                font-family: @cardo;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 26px;
+                letter-spacing: 0.3px;
+                color: @fontColor_grey45;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .customersLogo {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                div {
+                    width: 10%;
+                    transition: 400ms ease;
+                    text-align: center;
+                    img {
+                        max-width: 100%;
+                        width: auto;
+                        height: auto;
+                    }
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        // FOOTER
+        footer {
+            padding: 50px 20px 75px;
+            background: #E9E9E9;
+            .container {
+                font-family: @cardo;
+                font-weight: 400;
+                color: black;
+                h3 {
+                    font-size: 21px;
+                    line-height: 21px;
+                    text-transform: uppercase;
+                    margin-bottom: 40px;   
+                }
+                .subMenu {
+                    list-style: none;
+                    margin-bottom: 25px;
+                    li {
+                        margin-bottom: 10px;
+                        a {
+                            font-size: 15px;
+                            line-height: 20px;
+                            text-decoration: none;
+                            color: black;
+                            padding-bottom: 5px;
+                        }
+                        &:hover a {
+                            color: rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
+                .content {
+                    h4 {
+                        font-size: 15px;
+                        line-height: 27px;
+                        margin-bottom: 20px;
+                    }
+                    .btn_Subscription {
+                        background: white;
+                        padding: 8px 40px;
+                        border: 1px solid black;
+                        font-size: 15px;
+                        line-height: 15px;
+                        cursor: pointer;
+                        outline: none;
+                        display: block;
+                        margin: 0px auto 30px;
+                        &:hover {
+                            border: 1px solid rgba(0, 0, 0, 0.5);
+                            color: rgba(0, 0, 0, 0.5);
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    img {
+                        margin-bottom: 20px;
+                        &:nth-child(3) {
+                            margin-right: 40px;
+                        }
+                    }
+                }
+                .copyright {
+                    font-size: 12px;
+                    line-height: 22px;
+                }
+                .terms {
+                     a {
+                        font-size: 11px;
+                        line-height: 22px;
+                        text-decoration: none;
+                        color: black;
+                        &:hover {
+                            color: rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                    span {
+                        font-size: 11px;
+                        line-height: 22px;
+                        font-family: @cardo;
+                    }
+                }
+            }
+        }
+
+        // MODAL
+        .modal {
+            box-shadow: 1px 1px 10px 1px black;
+            .modal-content {
+                background: linear-gradient(#ccc 0%, #E9E9E9 100%);
+                padding: 0 10px;
+                .close {
+                    color: @fontColor_grey54;
+                    font-size: 20px;
+                    opacity: 1;
+                    text-shadow: none;
+                    margin-bottom: 20px;
+                    transition: transform 400ms ease;
+                    &:focus, &:hover {
+                        transform: scale(1.2);
+                        text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.3);
+                    }
+                    &:not(:disabled):not(.disabled) {
+                        outline: none;
+                    }
+                    &:not(:disabled):not(.disabled) span {
+                        outline: none;
+                    }
+                }
+                form {
+                    display: block;
+                    input, textarea {
+                        width: 100%;
+                        background: rgba(250, 250, 250, 0.8);
+                        border: none;
+                        border-radius: 4px;
+                        outline: none;
+                        padding: 5px 0 5px 20px;
+                        margin-bottom: 12px;
+                        font-size: 14px;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        &::placeholder {
+                            font-family: @cardo;
+                            color: @fontColor_grey54;
+                            transition: 0.3s;
+                        }
+                        &:hover::placeholder {
+                            color: rgba(50, 50, 50, 0.5);
+                        }
+                    }
+                    textarea {
+                        resize: none;
+                    }
+                }
+                .btn_modal {
+                    padding: 5px 40px;
+                    margin: 10px 0;
+                    color: @fontColor_grey54;
+                    font-family: @cardo;
+                    font-weight: 700;
+                    letter-spacing: 0.5px;
+                    background: transparent;
+                    border: 1px solid @fontColor_grey54;
+                    border-radius: 2px;
+                    outline: none;
+                    cursor: pointer;
+                    &:hover {
+                        background: rgba(250, 250, 250, 0.7);
+                    }
+                }
+            }
+        }
+        .fade {
+            transition: backdrop-filter 400ms ease;
+            backdrop-filter: blur(5px);
+        }       
+    }
+    .modal-backdrop {
+        background-color: transparent;
+    }
+}

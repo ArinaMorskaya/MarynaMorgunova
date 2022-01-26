@@ -1,0 +1,62 @@
+@media (min-width: 1440px) {
+  .page .container {
+    max-width: 1440px;
+  }
+}
+@media (max-width: 1199px) {
+  body .page .customers .customersLogo div {
+    width: 15%;
+  }
+}
+@media (max-width: 1099px) {
+  body .page .gallery .galleryImg {
+    width: 50%;
+    padding: 10px;
+  }
+  body .page .blog .article {
+    width: 50%;
+  }
+  body .page .blog .wood {
+    order: 3;
+  }
+  body .page .blog .made {
+    order: 4;
+  }
+}
+@media (max-width: 992px) {
+  body .page .customers .customersLogo div {
+    width: 20%;
+  }
+}
+@media (max-width: 767px) {
+  body .page .header .container nav .mainMenu {
+    opacity: 0;
+    pointer-events: none;
+    flex-direction: column;
+  }
+  body .page .header .container nav .showMenu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  body .page .header .container nav .responsiveMenu {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  body .page .gallery .galleryImg {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  body .page .blog .article {
+    width: 100%;
+  }
+  body .page .blog .made {
+    order: 3;
+  }
+  body .page .blog .wood {
+    order: 4;
+  }
+  body .page .customers .customersLogo div {
+    width: 25%;
+  }
+}
