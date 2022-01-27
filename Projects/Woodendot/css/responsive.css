@@ -4,11 +4,42 @@
   }
 }
 @media (max-width: 1199px) {
+  body .page .header {
+    margin-bottom: 0px;
+  }
+  body .page .banner {
+    padding-top: 230px;
+    padding-bottom: 200px;
+  }
+  body .page .banner .container .btn_DecorStyle {
+    padding: 10px 30px;
+  }
+  body .page .gallery {
+    margin-bottom: 30px;
+  }
+  body .page .cloe::after {
+    background: url(../img/cloe.jpg) center right -70px / cover no-repeat;
+  }
+  body .page .ourProducts {
+    padding: 50px;
+  }
+  body .page .ourProducts .owl-carousel .slide {
+    max-height: 520px;
+  }
+  body .page .reviews {
+    padding: 50px 100px;
+  }
+  body .page .customers {
+    padding-top: 80px;
+  }
   body .page .customers .customersLogo div {
     width: 15%;
   }
 }
 @media (max-width: 1099px) {
+  body .page .gallery {
+    padding: 0px 10px;
+  }
   body .page .gallery .galleryImg {
     width: 50%;
     padding: 10px;
@@ -23,12 +54,69 @@
     order: 4;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
+  body .page .banner {
+    padding-top: 220px;
+    padding-bottom: 170px;
+  }
+  body .page .banner .btn_DecorStyle {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+  body .page .features {
+    padding: 20px;
+  }
+  body .page .cloe {
+    margin: 0;
+  }
+  body .page .cloe::after {
+    width: 50%;
+    background: url(../img/cloe.jpg) center right -100px / auto 100% no-repeat;
+  }
+  body .page .pelican,
+  body .page .alada,
+  body .page .alba,
+  body .page .batea {
+    margin: 0;
+  }
+  body .page .pelican::after,
+  body .page .alada::after,
+  body .page .alba::after,
+  body .page .batea::after {
+    width: 50%;
+  }
+  body .page .alba .container .catalogCard .btn_shopNow {
+    margin-bottom: 30px;
+  }
+  body .page .alba .container .catalogCard img {
+    margin-bottom: 10px;
+  }
+  body .page .reviews {
+    padding: 50px;
+  }
+  body .page .blog .article {
+    padding: 30px;
+  }
+  body .page .customers {
+    padding: 40px 20px;
+  }
   body .page .customers .customersLogo div {
     width: 20%;
   }
+  body .page footer .container img {
+    margin: 10px;
+  }
+  body .page footer .container .content h4 {
+    font-weight: 700;
+  }
+  body .page footer .container .content img:nth-child(3) {
+    margin-right: 0;
+  }
 }
 @media (max-width: 767px) {
+  body .page .header {
+    padding: 10px 20px;
+  }
   body .page .header .container nav .mainMenu {
     opacity: 0;
     pointer-events: none;
@@ -41,11 +129,97 @@
   body .page .header .container nav .responsiveMenu {
     display: block;
   }
+  body .page .gallery {
+    margin-bottom: 0;
+  }
+  body .page .cloe,
+  body .page .alada,
+  body .page .batea {
+    padding: 40px 0;
+    text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+  }
+  body .page .cloe::after,
+  body .page .alada::after,
+  body .page .batea::after {
+    width: 0;
+  }
+  body .page .cloe .container .catalogCard .price,
+  body .page .alada .container .catalogCard .price,
+  body .page .batea .container .catalogCard .price {
+    margin-bottom: 15px;
+  }
+  body .page .cloe .container .catalogCard .new,
+  body .page .alada .container .catalogCard .new,
+  body .page .batea .container .catalogCard .new {
+    position: absolute;
+    top: 17px;
+    right: 125px;
+  }
+  body .page .cloe .container .catalogCard .btn_shopNow,
+  body .page .alada .container .catalogCard .btn_shopNow,
+  body .page .batea .container .catalogCard .btn_shopNow {
+    text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+  }
+  body .page .pelican,
+  body .page .alba {
+    padding: 40px 0;
+    text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+  }
+  body .page .pelican::after,
+  body .page .alba::after {
+    width: 100%;
+    opacity: 0.6;
+  }
+  body .page .pelican .container .catalogCard .description,
+  body .page .alba .container .catalogCard .description {
+    color: #3a3a3a;
+  }
+  body .page .pelican .container .catalogCard .btn_shopNow,
+  body .page .alba .container .catalogCard .btn_shopNow {
+    text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+  }
 }
 @media (max-width: 576px) {
+  body .page .header .container .responsiveMenuWrapper {
+    display: flex;
+  }
+  body .page .header .container .responsiveMenuWrapper div {
+    width: 50%;
+  }
+  body .page .banner .btn_DecorStyle {
+    padding: 5px 25px;
+  }
+  body .page .features .container .featureWrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  body .page .features .container .featureWrapper:not(:last-child) img {
+    transform: scale(0.7);
+  }
+  body .page .features .container .featureWrapper:nth-child(3) img {
+    padding-left: 20px;
+  }
+  body .page .features .container .featureWrapper:last-child {
+    max-width: 100%;
+  }
+  body .page .features .container .featureWrapper span {
+    align-self: center;
+    line-height: 1;
+  }
   body .page .gallery .galleryImg {
     width: 100%;
     padding: 10px 20px;
+  }
+  body .page .ourProducts {
+    padding: 30px;
+  }
+  body .page .reviews {
+    padding: 30px;
+  }
+  body .page .reviews .owl-carousel .slide .author {
+    margin-bottom: 20px;
   }
   body .page .blog .article {
     width: 100%;
@@ -56,7 +230,62 @@
   body .page .blog .wood {
     order: 4;
   }
+  body .page .customers {
+    background: white;
+  }
+  body .page .customers p {
+    margin-bottom: 20px;
+  }
   body .page .customers .customersLogo div {
     width: 25%;
+  }
+  body .page footer {
+    padding: 50px 0px;
+  }
+  body .page footer .container .subMenuWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .page footer .container .subMenuWrapper div {
+    width: 32%;
+  }
+  body .page footer .container .subMenuWrapper div .subMenu li a {
+    font-size: 14px;
+  }
+  body .page footer .container .subMenuWrapper div h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  body .page footer .container .iconsBlock {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  body .page footer .container .iconsBlock .icon {
+    width: 15%;
+    height: auto;
+    margin: 0 0 10px;
+  }
+}
+@media (max-width: 470px) {
+  body .page .header .container nav .mainMenu {
+    margin-left: 15px;
+  }
+  body .page .header .container nav .mainMenu .itemMenu a {
+    font-size: 14px;
+  }
+  body .page .banner {
+    padding-top: 160px;
+    padding-bottom: 140px;
+  }
+  body .page .ourProducts {
+    padding-top: 0px;
+  }
+  body .page .ourProducts h3 {
+    font-size: 27px;
+  }
+  body .page .ourProducts p {
+    line-height: 23px;
   }
 }

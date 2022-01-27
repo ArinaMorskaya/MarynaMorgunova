@@ -47,7 +47,7 @@ jQuery(document).ready(function () {
 				smartSpeed: 1000
 			},
 			
-			767:{
+			700:{
 				items: 2,
 				dots: true,
 				mouseDrag: true,
@@ -55,14 +55,7 @@ jQuery(document).ready(function () {
 				smartSpeed: 1000
 			},
 			991:{
-				items: 2,
-				dots: true,
-				mouseDrag: true,
-				autoplay: true,
-				smartSpeed: 1000
-			},
-			1099:{
-				items: 2,
+				items: 3,
 				dots: true,
 				mouseDrag: true,
 				autoplay: true,
@@ -78,7 +71,6 @@ jQuery(document).ready(function () {
     });
 
 	// REWIEWS
-	
     let carousel_rewiews = jQuery('#slider_reviews');
 	carousel_rewiews.owlCarousel({  
 		items: 1,
@@ -98,8 +90,6 @@ jQuery(document).ready(function () {
 		autoWidth: false,
 		responsiveClass: false
     });
-
-
 });
 
 'use strict';

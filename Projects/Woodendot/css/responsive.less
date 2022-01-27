@@ -1,4 +1,13 @@
-
+@main_bg: #F7F7F7;
+@fontColor_grey52: #525252;
+@fontColor_grey54: #54595F;
+@fontColor_grey45: #454545;
+@fontColor_grey3A: #3A3A3A;
+@fontColor_black: #020202;
+@fontColor_red: #BC1414;
+@cardo: 'Cardo';
+@roboto: 'Roboto';
+@palatino: 'PalatinoLinotype';
 
 @media (min-width: 1440px){
     .page {
@@ -11,9 +20,39 @@
 @media (max-width: 1199px) {
     body {
         .page {
-
-            // background: url(../img/cloe.jpg) center right -100px/ auto 100% no-repeat;
+            .header {
+                margin-bottom: 0px;
+            }
+            .banner {
+                padding-top: 230px;
+                padding-bottom: 200px;
+                .container {
+                    .btn_DecorStyle {
+                        padding: 10px 30px;
+                    }
+                }
+            }
+            .gallery {
+                margin-bottom: 30px;
+            }
+            .cloe {
+                &::after {
+                background: url(../img/cloe.jpg) center right -70px/ cover no-repeat;
+                }
+            }
+            .ourProducts {
+                padding: 50px;
+                .owl-carousel {
+                    .slide {
+                        max-height: 520px;
+                    }
+                }
+            }
+            .reviews {
+                padding: 50px 100px;
+            }
             .customers {
+                padding-top: 80px;
                 .customersLogo {
                     div {
                         width: 15%;
@@ -28,6 +67,7 @@
     body {
         .page {
             .gallery {
+                padding: 0px 10px;
                 .galleryImg {
                     width: 50%;
                     padding: 10px;
@@ -44,25 +84,79 @@
                     order: 4;
                 }
             }
-            
-
-            // background: url(../img/cloe.jpg) center right -100px/ auto 100% no-repeat;
-
-            
         }
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     body {
         .page {
-          
-            // width: 50%;
-            // background: url(../img/cloe.jpg) center right -100px/ auto 100% no-repeat;
+            .banner {
+                padding-top: 220px;
+                padding-bottom: 170px;
+                .btn_DecorStyle {
+                padding: 10px 30px;
+                font-size: 14px;
+                }   
+            }
+            .features {
+                padding: 20px;
+            }
+            .cloe {
+                margin: 0;
+                &::after {
+                    width: 50%;
+                    background: url(../img/cloe.jpg) center right -100px/ auto 100% no-repeat;
+                }
+            }
+            .pelican, .alada, .alba, .batea {
+                margin: 0;
+                &::after {
+                    width: 50%;
+                }
+            }
+            .alba {
+                .container {
+                    .catalogCard {
+                        .btn_shopNow {
+                            margin-bottom: 30px; 
+                        }
+                        img {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            .reviews {
+                padding: 50px;
+            }
+            .blog {
+                .article {
+                    padding: 30px;
+                }
+            }
             .customers {
+                padding: 40px 20px;
                 .customersLogo {
                     div {
                         width: 20%;
+                    }
+                }
+            }
+            footer {
+                .container {
+                    img {
+                        margin: 10px;
+                    }
+                    .content {
+                        h4 {
+                            font-weight: 700;
+                        }
+                        img {
+                            &:nth-child(3) {
+                                margin-right: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -74,6 +168,7 @@
     body {
         .page {
             .header {
+                padding: 10px 20px;
                 .container {
                     nav {
                         .mainMenu {
@@ -91,7 +186,50 @@
                     }
                 }
             }
-            
+            .gallery {
+                margin-bottom: 0;
+            }
+            .cloe, .alada, .batea {
+                padding: 40px 0;
+                text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+                &::after {
+                    width: 0;
+                }
+                .container {
+                    .catalogCard {
+                        .price {
+                            margin-bottom: 15px;
+                        }
+                        .new {
+                            position: absolute;
+                            top: 17px;
+                            right: 125px;
+                        }
+                        .btn_shopNow {
+                            text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+                        }
+                        
+                    }
+                }
+            }
+            .pelican, .alba {
+                padding: 40px 0;
+                text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+                &::after {
+                    width: 100%;
+                    opacity: 0.6;
+                }
+                .container {
+                    .catalogCard {
+                        .description {
+                            color: @fontColor_grey3A;
+                        }
+                        .btn_shopNow {
+                            text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -99,10 +237,65 @@
 @media (max-width: 576px) {
     body {
         .page {
+            .header {
+                .container {
+                    .responsiveMenuWrapper {
+                        display: flex;
+                        div {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .banner {
+                .btn_DecorStyle {
+                    padding: 5px 25px;
+                }
+            }
+            .features {
+                .container {
+                    .featureWrapper {
+                        display: flex;
+                        justify-content: center;
+                        max-width: 50%;
+                        margin: 0 auto;
+                        &:not(:last-child) {
+                            img {
+                                transform: scale(0.7);
+                            }
+                        }
+                        &:nth-child(3) {
+                            img {
+                                padding-left: 20px;
+                            }
+                        }
+                        &:last-child {
+                            max-width: 100%;
+                        }
+                        span {
+                            align-self: center;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
             .gallery {
                 .galleryImg {
                     width: 100%;
                     padding: 10px 20px;
+                }
+            }
+            .ourProducts {
+                padding:  30px;
+            }
+            .reviews {
+                padding: 30px;
+                .owl-carousel {
+                    .slide {
+                        .author {
+                            margin-bottom: 20px;
+                        }
+                    }
                 }
             }
             .blog {
@@ -117,9 +310,48 @@
                 }
             }
             .customers {
+                background: white;
+                p {
+                    margin-bottom: 20px;
+                }
                 .customersLogo {
                     div {
                         width: 25%;
+                    }
+                }
+            }
+            footer {
+                padding: 50px 0px;
+                .container {
+                    .subMenuWrapper {
+                        display: flex;
+                        justify-content: space-between;
+                        div {
+                            width: 32%;
+                            .subMenu {
+                                li {
+                                    a {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            h3 {
+                                margin-bottom: 20px;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    .iconsBlock {
+                        display: flex;
+                        overflow: hidden;
+                        justify-content: space-around;
+                        margin-bottom: 30px;
+                        .icon {
+                            width: 15%;
+                            height: auto;
+                            margin: 0 0 10px;
+                        }
+                        
                     }
                 }
             }
@@ -128,5 +360,36 @@
 }
 
 @media (max-width: 470px) {
+    body {
+        .page {
+            .header {
+                .container {
+                    nav {
+                        .mainMenu {
+                            margin-left: 15px;
+                            .itemMenu {
+                                a {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .banner {
+                padding-top: 160px;
+                padding-bottom: 140px;
+            }
+            .ourProducts {
+                padding-top:  0px;
+                h3 {
+                    font-size: 27px;
+                }
+                p {
+                    line-height: 23px;
+                }
+            }
+        }
+    }
 
 }
