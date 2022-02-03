@@ -1,0 +1,348 @@
+@media (min-width: 1200px) {
+  .page .container {
+    max-width: 1000px;
+  }
+}
+@media (max-width: 1199px) {
+  .page .features .container .phoneWrapper::after {
+    background: url(../img/phone_size.png) bottom 10px right 7px / contain no-repeat;
+  }
+}
+@media (max-width: 991px) {
+  .page .order-block h3 {
+    line-height: 24px;
+  }
+  .page .order-block .timerWrapper .timer .timer-item {
+    font-size: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+  }
+  .page .order-block .timerWrapper .timer .timer-title {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .page .order-block button {
+    font-size: 20px;
+  }
+  .page .header {
+    padding: 20px 20px 0;
+  }
+  .page .header .container .responsiveMenu {
+    width: 40%;
+    align-self: flex-start;
+  }
+  .page .header .container .responsiveMenu .mainMenu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    display: none;
+  }
+  .page .header .container .responsiveMenu .mainMenu li a {
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .page .header .container .responsiveMenu .showMenu {
+    display: block;
+  }
+  .page .header .container .responsiveMenu .responsiveMenuIcon {
+    display: block;
+    margin-right: 10px;
+  }
+  .page .header .container .contacts {
+    width: 40%;
+  }
+  .page .banner .container .img-Wrapper .price {
+    padding: 44px 0 22px;
+  }
+  .page .banner .container .img-Wrapper .price .newPrice {
+    font-size: 20px;
+  }
+  .page .banner .container .img-Wrapper .price .oldPrice {
+    font-size: 16px;
+  }
+  .page .banner .container .img-Wrapper .message {
+    font-size: 15px;
+    left: 53.5%;
+    top: 40.5%;
+  }
+  .page .about .container .content {
+    padding-right: 20px;
+  }
+  .page .about .container .content p {
+    font-size: 16px;
+    text-align: justify;
+  }
+  .page .features {
+    padding-bottom: 30px;
+  }
+  .page .features .container h2 {
+    text-align: center;
+  }
+  .page .features .container .functionBlock-Wrapper {
+    margin-bottom: 30px;
+  }
+  .page .features .container .phoneWrapper::after {
+    background: url(../img/phone_size.png) bottom 10px left 60% / contain no-repeat;
+  }
+  .page .rewiews {
+    padding-bottom: 20px;
+  }
+  .page .rewiews .container .rewiewsParent {
+    display: none;
+  }
+  .page .rewiews .container .owl-carousel {
+    display: block;
+  }
+  .page .rewiews .container .owl-carousel .slide {
+    height: 155px;
+    overflow: hidden;
+  }
+  .page .order .container .order-block .logo {
+    margin-bottom: 10px;
+  }
+  .page .order .container .order-block h1 {
+    font-size: 19px;
+    margin-bottom: 20px;
+  }
+  .page .order .container .order-block h3 {
+    font-size: 14px;
+  }
+  .page .order .container .order-block .timerWrapper .timer .timer-item {
+    font-weight: 400;
+  }
+  .page .order .container .imgParent .price {
+    padding: 44px 0 22px;
+  }
+  .page .order .container .imgParent .price .newPrice {
+    font-size: 20px;
+  }
+  .page .order .container .imgParent .price .oldPrice {
+    font-size: 16px;
+  }
+  .page footer .container a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .page .order-block form input:first-child {
+    margin-bottom: 10px;
+  }
+  .page .order-block form input:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  .page .banner .container .img-Wrapper .price {
+    padding: 40px 0 15px;
+    bottom: 5px;
+  }
+  .page .banner .container .img-Wrapper .price .newPrice {
+    font-size: 18px;
+  }
+  .page .banner .container .img-Wrapper .price .oldPrice {
+    font-size: 14px;
+  }
+  .page .banner .container .img-Wrapper .message {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    top: 40%;
+  }
+  .page .banner .container .img-Wrapper .message span {
+    margin-left: -4px;
+  }
+  .page .about {
+    padding: 30px;
+  }
+  .page .about .container .content {
+    padding-right: 0px;
+    margin-bottom: 20px;
+  }
+  .page .about .container .content h2 {
+    text-align: center;
+  }
+  .page .about .container .content p {
+    margin-bottom: 10px;
+  }
+  .page .features .container h2 {
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+  .page .rewiews {
+    padding: 30px 10px 20px;
+  }
+  .page .rewiews .container h2 {
+    font-size: 28px;
+  }
+  .page .rewiews .container .owl-carousel .slide {
+    height: 200px;
+    overflow: hidden;
+    padding: 15px;
+  }
+  .page .order .container .order-block {
+    margin-bottom: 20px;
+  }
+  .page footer .container a {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .page footer .container p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .page .header .container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .page .header .container .responsiveMenu {
+    order: 1;
+    width: 50%;
+  }
+  .page .header .container .responsiveMenu .responsiveMenuIcon {
+    font-size: 28px;
+  }
+  .page .header .container .vendorCode {
+    order: 3;
+    width: 50%;
+    text-align: center;
+  }
+  .page .header .container .contacts {
+    order: 2;
+    width: 50%;
+    align-self: flex-start;
+  }
+  .page .header .container .contacts a {
+    font-size: 22px;
+  }
+  .page .header .container .contacts p {
+    font-size: 12px;
+  }
+  .page .banner .container .img-Wrapper .price .newPrice {
+    font-size: 17px;
+  }
+  .page .banner .container .img-Wrapper .price .oldPrice {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .page .banner .container .img-Wrapper .message {
+    left: 53%;
+    font-size: 11.5px;
+  }
+  .page .banner .container .img-Wrapper .message span {
+    margin-left: -3px;
+  }
+  .page .about .container .content {
+    margin-bottom: 10px;
+  }
+  .page .features {
+    padding: 15px 10px 0;
+  }
+  .page .features .container .functionBlock-Wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlock {
+    width: 30%;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlock .function {
+    padding: 7px 25px;
+    font-size: 14px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlock .function:first-child {
+    padding: 5px 25px;
+  }
+  .page .features .container .functionBlock-Wrapper:nth-child(2) {
+    width: 40%;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlockRight {
+    padding: 20px 0 10px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlockRight .function:last-child {
+    padding: 7px 5px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlockRight .function::after {
+    border-width: 2px 0 0px 90px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlockLeft {
+    padding: 70px 0 10px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlockLeft .function:nth-child(1):after {
+    border-width: 2px 90px 0px 0px;
+  }
+  .page .features .container .phoneWrapper::after {
+    background: url(../img/phone_size.png) bottom 10px left 69% / contain no-repeat;
+  }
+  .page .order {
+    padding: 30px;
+  }
+  .page footer .container a:not( :nth-child(2)) {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 470px) {
+  .page .header .container .responsiveMenu .mainMenu li a {
+    font-size: 12px;
+  }
+  .page .header .container .contacts a {
+    font-size: 20px;
+  }
+  .page .banner .container .img-Wrapper .price {
+    padding: 25px 0 10px;
+  }
+  .page .banner .container .img-Wrapper .price .newPrice {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .page .banner .container .img-Wrapper .price .oldPrice {
+    font-size: 12px;
+    line-height: 1;
+  }
+  .page .banner .container .img-Wrapper .message {
+    font-weight: 300;
+    font-size: 10px;
+  }
+  .page .features .container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlock {
+    width: 25%;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlock .function {
+    padding: 4px 10px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlock .function:first-child {
+    padding: 3px 10px;
+  }
+  .page .features .container .functionBlock-Wrapper:nth-child(2) {
+    width: 50%;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlockRight .function:last-child {
+    padding: 3px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlockRight .function::after {
+    border-width: 2px 0 0px 60px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlockLeft {
+    padding: 50px 0 5px;
+  }
+  .page .features .container .functionBlock-Wrapper .functionBlockLeft .function:not(:first-child):after {
+    border-width: 2px 50px 0px 0px;
+  }
+  .page .features .container .phoneWrapper::after {
+    background: url(../img/phone_size.png) bottom 10px right -15px / contain no-repeat;
+  }
+  .page .rewiews .container h2 {
+    font-size: 24px;
+  }
+  .page .rewiews .container .owl-carousel .slide {
+    height: 200px;
+    overflow: hidden;
+  }
+  .page .rewiews .container .owl-carousel .slide img {
+    display: none;
+  }
+}

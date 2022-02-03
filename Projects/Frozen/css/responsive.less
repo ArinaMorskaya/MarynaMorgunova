@@ -1,0 +1,518 @@
+@main_bg: white;
+@fontColorBlue: #0082ff;
+@fontColorBlack: #230000;
+@fontColorGrey: #4c4850;
+@rose: #e60378;
+@helveticaNeueCyr: 'HelveticaNeueCyr', sans-serif;
+
+@media (min-width: 1200px){
+    .page {
+        .container {
+            max-width: 1000px;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .page {
+        .features {
+            .container {
+                .phoneWrapper {
+                    &::after {
+                        background: url(../img/phone_size.png) bottom 10px right 7px / contain no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .page {
+        .order-block {
+            h3 {
+                line-height: 24px;
+            }
+            .timerWrapper {
+               .timer {
+                .timer-item {
+                    font-size: 30px;
+                    margin-bottom: 5px;
+                    padding-top: 3px;
+                }
+                .timer-title {
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+               } 
+            }
+            button {
+                font-size: 20px;
+            }
+        }
+        .header {
+            padding: 20px 20px 0;
+            .container {
+                .responsiveMenu {
+                    width: 40%;
+                    align-self: flex-start;
+                    .mainMenu {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 10px;
+                        display: none;
+                        li {
+                            a {
+                                line-height: 20px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .showMenu {
+                        display: block;
+                    }
+                    .responsiveMenuIcon {
+                        display: block;
+                        margin-right: 10px;
+                    }
+                }
+                .contacts {
+                    width: 40%;
+                }
+            }
+        }
+        .banner {
+            .container {
+                .img-Wrapper {
+                    .price {
+                        padding: 44px 0 22px;
+                        .newPrice {
+                            font-size: 20px;
+                        }
+                        .oldPrice {
+                            font-size: 16px;
+                        }
+                    }
+                    .message {
+                        font-size: 15px;
+                        left: 53.5%;
+                        top: 40.5%;
+                    }
+                }
+            }
+        }
+        .about {
+            .container {
+                .content {
+                    padding-right: 20px;
+                    p {
+                        font-size: 16px;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+        .features {
+            padding-bottom: 30px;
+            .container {
+                h2 {
+                    text-align: center;
+                }
+                .functionBlock-Wrapper {
+                    margin-bottom: 30px;
+                }
+                .phoneWrapper {
+                    &::after {
+                        background: url(../img/phone_size.png) bottom 10px left 60% / contain no-repeat;
+                    }
+                }
+            }
+        }
+        .rewiews {
+            padding-bottom: 20px;
+            .container {
+                .rewiewsParent {
+                    display: none;
+                }
+                .owl-carousel {
+                    display: block;
+                    .slide {
+                        height: 155px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        .order {
+            .container {
+                .order-block {
+                    .logo { 
+                        margin-bottom: 10px;
+                    }
+                    h1 {
+                        font-size: 19px;
+                        margin-bottom: 20px;
+                    }
+                    h3 {
+                        font-size: 14px;
+                    }
+                    .timerWrapper {
+                        .timer {
+                            .timer-item {
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .imgParent {
+                    .price {
+                        padding: 44px 0 22px;
+                        .newPrice {
+                            font-size: 20px;
+                        }
+                        .oldPrice {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        footer {
+            .container {
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .page {
+        .order-block {
+            form {
+                input {
+                    &:first-child {
+                        margin-bottom: 10px;
+                    }
+                    &:nth-child(2) {
+                        margin-bottom: 20px;
+                    } 
+                }
+            }
+        }
+        .banner {
+            .container {
+                .img-Wrapper {
+                    .price {
+                        padding: 40px 0 15px;
+                        bottom: 5px;
+                        .newPrice {
+                            font-size: 18px;
+                        }
+                        .oldPrice {
+                            font-size: 14px;
+                        }
+                    }
+                    .message {
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 1;
+                        top: 40%;
+                        span {
+                            margin-left: -4px;
+
+                        }
+                    }
+                }
+            }
+        }
+        .about {
+            padding: 30px;
+            .container {
+                .content {
+                    padding-right: 0px;
+                    margin-bottom: 20px;
+                    h2 {
+                        text-align: center;
+                    }
+                    p {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+       .features {
+           .container {
+               h2 {
+                   font-size: 28px;
+                   line-height: 30px;
+                   margin-bottom: 25px;
+               }
+           }
+       }
+       .rewiews {
+           padding: 30px 10px 20px;
+           .container {
+               h2 {
+                   font-size: 28px;
+               }
+               .owl-carousel {
+                   .slide {
+                       height: 200px;
+                       overflow: hidden;
+                       padding: 15px;
+                   }
+               }
+           }
+       }
+       .order {
+           .container {
+               .order-block {
+                   margin-bottom: 20px;
+               }
+           }
+       }
+       footer {
+        .container {
+            a {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+       }
+    }
+}
+
+@media (max-width: 576px) {
+    .page {
+        .header {
+            .container {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                .responsiveMenu {
+                    order: 1;
+                    width: 50%;
+                    .responsiveMenuIcon {
+                        font-size: 28px;
+                    }
+                }
+                .vendorCode {
+                    order: 3;
+                    width: 50%;
+                    text-align: center;
+                }
+                .contacts {
+                    order: 2;
+                    width: 50%;
+                    align-self: flex-start;
+                    a {
+                        font-size: 22px;
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .banner {
+            .container {
+                .img-Wrapper {
+                    .price {
+                        .newPrice {
+                            font-size: 17px;
+                        }
+                        .oldPrice {
+                            font-size: 13px;
+                            line-height: 1.3;
+                        }
+                    }
+                    .message {
+                        left: 53%;
+                        font-size: 11.5px;
+                        span {
+                            margin-left: -3px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .about {
+            .container {
+                .content {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .features {
+            padding: 15px 10px 0;
+            .container {
+                .functionBlock-Wrapper {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    width: 100%;
+                    margin: 0 auto 30px;
+                    .functionBlock {
+                        width: 30%;
+                        .function {
+                            padding: 7px 25px;
+                            font-size: 14px;
+                            &:first-child {
+                                padding: 5px 25px;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        width: 40%;
+                    }
+                    .functionBlockRight {
+                        padding: 20px 0 10px;
+                        .function {
+                            &:last-child {
+                                padding: 7px 5px;
+                            }
+                            &::after {
+                                border-width: 2px 0 0px 90px;
+                            }
+                        }
+                    }
+                    .functionBlockLeft {
+                        padding: 70px 0 10px;
+                        .function {
+                            &:nth-child(1):after {
+                                border-width: 2px 90px 0px 0px;
+                            }
+                        }
+                    }
+                }
+                .phoneWrapper {
+                    &::after {
+                        background: url(../img/phone_size.png) bottom 10px left 69% / contain no-repeat;
+                    }
+                }
+            }
+        }
+        .order {
+            padding: 30px;
+        }
+        footer {
+            .container {
+                a {
+                    &:not(:nth-child(2)) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .page {
+        .header {
+            .container {
+                .responsiveMenu {
+                    .mainMenu {
+                        li {
+                            a {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+                .contacts {
+                    a {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .banner {
+            .container {
+                .img-Wrapper {
+                    .price {
+                        padding: 25px 0 10px;
+                        .newPrice {
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                        .oldPrice {
+                            font-size: 12px;
+                            line-height: 1;
+                        }
+                    }
+                    .message {
+                        font-weight: 300;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        .features {
+            .container {
+                h2 {
+                    font-size: 24px;
+                    margin-bottom: 15px;
+                }
+                .functionBlock-Wrapper {
+                    .functionBlock {
+                        width: 25%;
+                        .function {
+                            padding: 4px 10px;
+                            &:first-child {
+                                padding: 3px 10px;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        width: 50%;
+                    }
+                    .functionBlockRight {
+                        .function {
+                            &:last-child {
+                                padding: 3px;
+                            }
+                            &::after {
+                                border-width: 2px 0 0px 60px;
+                            }
+                        }
+                    }
+                    .functionBlockLeft {
+                        padding: 50px 0 5px;
+                        .function {
+                            &:not(:first-child):after {
+                                border-width: 2px 50px 0px 0px;
+                            }
+                        }
+                    }
+                }
+                .phoneWrapper {
+                    &::after {
+                        background: url(../img/phone_size.png) bottom 10px right -15px/ contain no-repeat;
+                    }
+                }
+            }
+        }
+        .rewiews {
+            .container {
+                h2 {
+                    font-size: 24px;
+                }
+                .owl-carousel {
+                    .slide {
+                        height: 200px;
+                        overflow: hidden;
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
