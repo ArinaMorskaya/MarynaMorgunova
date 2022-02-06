@@ -1,0 +1,423 @@
+@main_bg: white;
+@bgColor_black: #1B1B1B;
+@fontColor_lightGrey: #A8A8A8;
+@fontColor_mediumGrey: #6B6B6B;
+@fontColor_darkGrey: #333333;
+@rose: #FC0A7E;
+@gothicA1: 'Gothic A1', sans-serif;
+
+@media (min-width: 1280px){
+    .page {
+        .container {
+            max-width: 1240px;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .page {
+        .header {
+            .container {
+                .responsiveMenuParent {
+                    padding: 0 20px;
+                }
+            }
+        }
+        .banner {
+            padding-top: 220px;
+            .container {
+                .content {
+                    margin-bottom: 150px;
+                    padding-left: 20px;
+                }
+            }
+            .imgParent {
+                background: url(../img/banner.png) left 30px center / contain no-repeat;
+            }
+        }
+        .aboutApp {
+            padding-top: 50px;
+            .container {
+                .main-head {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .article1 {
+            padding: 50px 0 30px;
+        }
+        .article2, .article3 {
+            padding: 30px 0;
+        }
+        .article4, .article5 {
+            padding: 30px 0;
+            .container {
+                .content {
+                    padding: 0 20px;
+                }
+            }
+        }
+        .features, .statistics {
+            padding: 50px 0;
+        }
+        .blog {
+            padding: 50px 0;
+            .container {
+                .owl-carousel {
+                    .slide {
+                        margin-bottom: 40px;
+                        img {
+                            max-width: 50px;
+                            margin: 0 auto 40px;
+                        }
+                        .main-desc {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .software {
+            .container {
+                .owl-carousel {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        .registration {
+            padding: 120px 0;
+        }
+        .updates {
+            padding: 110px 0;
+        }
+    }
+   
+}
+
+@media (max-width: 991px) {
+    .page {
+        .button {
+            padding: 15px 40px;
+        }
+        .main-head {
+            font-size: 30px;
+            line-height: 40px;
+        }
+        .banner {
+            .container {
+                .content {
+                    h1 {
+                        font-size: 60px;
+                        line-height: 60px;
+                    }
+                    p {
+                        font-size: 28px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+        .article1, .article2, .article3{
+            .container {
+                .content {
+                    padding: 0 20px;
+                }
+            }
+        }
+        .features {
+            .container {
+                .content {
+                    .main-desc {
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                    img {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+        .statistics {
+            padding: 0;
+            .container {
+                .content {
+                    margin-bottom: 40px;
+                    p {
+                        font-size: 45px;
+                        line-height: 45px;
+                        margin-bottom: 10px;
+                    }
+                    
+                }
+            }
+        }
+        .article4, .article5 {
+            .container {
+                .content {
+                    .main-desc {
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                    h4 {
+                        margin-bottom: 20px;
+                    }
+                    .main-head {
+                        font-size: 27px;
+                        line-height: 38px;
+                    }
+                }
+            }
+        }
+        .software {
+            .container {
+                .owl-carousel {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .updates {
+            .container {
+                form {
+                    input {
+                        padding: 15px;
+                    }
+                }
+                button {
+                    padding: 14px;
+                }
+            }
+        }
+        
+    }
+   
+}
+
+@media (max-width: 767px) {
+    .page {
+        .header {
+            .container {
+                .responsiveMenuParent {
+                    .logo {
+                        align-self: flex-start;
+                    }
+                    nav {
+                        flex-direction: column-reverse;
+                        align-items: flex-end;
+                        .responsiveMenuIcon {
+                            display: block;
+                        }
+                        .mainMenu {
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+                        .showMenu {
+                            opacity: 1;
+                            pointer-events: auto;
+                        }
+                        .active {
+                            margin-bottom: 10px;
+                            i {
+                                color: rgba(255, 255, 255, 0.7);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .banner {
+           
+            .container {
+                .content {
+                    margin-bottom: 280px;
+                }
+            }
+            .imgParent {
+                width: 60%;
+                height: 50%;
+                left: 30%;
+                bottom: 20px;
+                background: url(../img/banner.png) center center / contain no-repeat;
+            }
+        }
+        .article1, .article2, .article3{
+            .container {
+                .content {
+                    text-align: center;
+                    h4 {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .features {
+            padding: 20px 0 ;
+            .container {
+                .content {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .statistics {
+            .container {
+                .content {
+                    p {
+                        font-size: 40px;
+                        line-height: 40px;
+                        margin-bottom: 10px;
+                    }
+                    
+                }
+            }
+        }
+        .article4, .article5 {
+            .container {
+                .content {
+                    h4 {
+                        text-align: center;
+                    }
+                    .main-head {
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                    .main-desc {
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+        .blog {
+            padding: 30px 30px 50px;
+            .container {
+                .owl-carousel {
+                    .slide {
+                        p:not(.main-desc) {
+                            font-size: 22px;
+                            line-height: 36px;
+                        }
+                    }
+                }
+            }
+        }
+        .registration {
+            padding: 100px 0;
+        }
+        .updates {
+            padding: 80px 0;
+        }
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .page {
+        .button {
+            padding: 12px 30px;
+        }
+        .main-head {
+            font-size: 27px;
+            line-height: 38px;
+        }
+        .header {
+            .container {
+                .responsiveMenuParent {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    nav {
+                        .mainMenu {
+                            flex-direction: column;
+                            text-align: right;
+                        }
+                        .responsiveMenuIcon {
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+        }
+        .banner {
+            .container {
+                .content {
+                    margin-bottom: 80px;
+                    text-align: center;
+                    h1 {
+                        font-size: 50px;
+                    }
+                }
+            }
+            .imgParent {
+                display: none;
+            }
+        }
+        .article2 {
+            .container {
+                .content {
+                   order: 1; 
+                }
+                .imgWrapper {
+                    order: 2;
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .article1, .article2, .article3{
+            .container {
+                .content {
+                    .main-head {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .article5 {
+            .container {
+                .content {
+                    order: 1;
+                }
+                .imgWrapper {
+                    order: 2;
+                }
+            }
+        }
+        .blog {
+            .container {
+                .owl-carousel {
+                    .slide {
+                        margin-bottom: 20px;
+                        p:not(.main-desc) {
+                            font-size: 20px;
+                            line-height: 32px;
+                        }
+                    }
+                }
+            }
+        }
+        .registration {
+            padding: 80px 0;
+        }
+    }
+    
+}
+
+@media (max-width: 470px) {
+    .page {
+        .main-head {
+            font-size: 25px;
+        }
+        footer {
+            .container {
+                .contacts {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    a {
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
