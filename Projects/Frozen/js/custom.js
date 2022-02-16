@@ -56,7 +56,7 @@ for (let letter of letters) {
 }
 
 // TIMER
-let deadline = new Date('February 17, 2022');
+let deadline = new Date('February 28, 2022');
 
 let timer_days = document.querySelector('.timer-days');
 let timer_hours = document.querySelector('.timer-hours');
@@ -93,6 +93,7 @@ let step = setInterval(countdownTimer, 1000);
 function showMenu() {
     document.getElementById("mainMenu").classList.toggle("showMenu");
     document.getElementById("responsiveMenuIcon").classList.toggle("active");
+    document.getElementById("header").classList.toggle("responsive");
 }
 
 

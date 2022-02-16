@@ -49,6 +49,27 @@ html {
         outline: none;
     }
 }
+.link {
+    display: inline-block;
+    background: @gradient center top 30% / auto 200%;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 54px;
+    color: white;
+    width: 157px;
+    height: 54px;
+    border-radius: 100px;
+    text-align: center;
+    transition: 0.5s linear;
+    overflow: hidden;
+    &:hover {
+        background: linear-gradient(#281AC8 0%, #FD749B 100%) center bottom 30%/ auto 200%;
+        transition: 0.5s linear;
+        text-decoration: none;
+        color: white;
+    }
+}
 .main-head {
     font-weight: 700;
     font-size: 28px;
@@ -244,10 +265,30 @@ body {
         // BANNER
         .banner {
             padding: 60px 0px 200px;
-            background: url(../img/bg_banner_white.png) center bottom -70px / contain no-repeat, @gradient center bottom 20% / auto 120%;
+            background: @gradient center bottom 20% / auto 120%;
+            position: relative;
+            overflow: hidden;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 300%;
+                height: 168px;
+                background: url(../img/bg_banner_white.png) repeat-x;
+                background-position: 0 0;
+                animation: wawe 20s linear infinite;
+                @keyframes wawe {
+                    100% {
+                        background-position: -300% 0;
+                    }
+                }
+            }
             .content {
                 padding-top: 80px;
                 color: white;
+                position: relative;
+                z-index: 9;
                 h1 {
                     font-weight: 400;
                     font-size: 40px;
@@ -263,8 +304,14 @@ body {
                     line-height: 27px;
                     margin-bottom: 30px;
                 }
-                .button {
-                    background: white;
+                .link {
+                    // background: white;
+                    background: #f0f0f0;
+                    box-shadow:  0 0 0 #cccccc,
+                                 0 0 0 #ffffff,
+                                  12px -12px 10px #cccccc inset,
+                                  10px 10px 10px #ffffff inset,
+                                  1px 1px 20px 1px #6d67af;
                     &::after {
                         content: "GET STARTED";
                         font-size: 14px;
@@ -299,10 +346,21 @@ body {
         // STATISTICS
         .statistics {
             padding: 250px 0 180px;
-            background: url(../img/bg_ourRates.png) center center / cover no-repeat;
-            margin-top: -80px;
+            // margin-top: -80px;
             position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 780px;
+                background: url(../img/bg_ourRates.png)  repeat-x;
+                z-index: 1;
+            }
             .container {
+                position: relative;
+                z-index: 2;
                 .statisticsWrapper {
                     background: white;
                     border-radius: 30px;
@@ -395,7 +453,7 @@ body {
         // TRADE FROM ANYWHERE
         .tradeFromAnyWhere {
             padding: 120px 0;
-            background: url(../img/bg_tradeFromAnyWhere.png) center top / cover  no-repeat;
+            background: url(../img/bg_tradeFromAnyWhere.png) top center / 100% auto no-repeat;
             .container {
                 .contentWrapper {
                     padding: 70px 0 85px;
@@ -461,7 +519,6 @@ body {
         // BLOG
         .blog {
             padding: 20px 0 200px;
-            background: url(../img/bg_rewiews_top.png) center bottom / contain no-repeat, transparent;
             position: relative;
             z-index: 10;
             .container {
@@ -501,11 +558,13 @@ body {
                             margin-bottom: 25px;
                         }
                         .btn_ReadMore {
+                            display: inline-block;
                             background: #888888;
                             font-weight: 700;
                             font-size: 9px;
                             line-height: 13px;
                             color: white;
+                            text-decoration: none;
                             padding: 11px 22px;
                             border: none;
                             border-radius: 100px;
@@ -546,23 +605,20 @@ body {
                             line-height: 27px;
                         }
                         .btn_ReadMore {
+                            display: inline-block;
                             background: @gradient;
                             font-size: 11px;
                             line-height: 16px;
                             color: white;
+                            text-decoration: none;
                             padding: 12px 26px;
-                            border: none;
                             border-radius: 100px;
-                            outline: none;
-                            cursor: pointer;
                             transition: 1s ease-in-out;
                             &:hover {
                                 background: linear-gradient(#281AC8 0%, #FD749B 100%);
                                 transition: 1s ease;
                             }
-                            &:focus {
-                                outline: none;
-                            }
+                            
                         }
                         
                     }
@@ -579,16 +635,12 @@ body {
             margin-top: -200px;
             &:before {
                 content: "";
-                width: 100%;
-                height: 100%;
-                background: url(../img/bg_rewiews_bottom.png), @gradient;
-                background-position: bottom -100px center, top 35% center;
-                background-size: contain, auto 200%;
-                background-repeat: no-repeat;
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background: url(../img/bg_rewiews.png) bottom left / auto 100%  repeat-x;
             }
             &:after {
                 content: "";
@@ -652,7 +704,9 @@ body {
         
         // DOWNLOAD OUR APP 
         .downloadApp {
-            background: url(../img/bubble3.png) bottom 15% left 15% / auto no-repeat, url(../img/bg_download.png) center / 100% auto no-repeat;
+            background: url(../img/bubble3.png) bottom 15% left 15% / auto no-repeat,
+                        url(../img/bg_download_top.png) repeat-x, 
+                        @gradient top 20% center/ auto 170%;
             .container {
                 .main-head {
                     margin-bottom: 35px;
@@ -790,8 +844,14 @@ body {
             .container {
                 .social {
                     padding-top: 20px;
-                    img {
-                        margin-bottom: 35px;
+                    .footer-logo {
+                        img {
+                            margin-bottom: 35px;
+                            transition: 0.3s;
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
                     }
                     p {
                         font-weight: 400;
@@ -911,7 +971,7 @@ body {
                         border: none;
                         border-radius: 4px;
                         outline: none;
-                        padding: 5px 0 5px 20px;
+                        padding: 5px 20px;
                         margin-bottom: 12px;
                         font-size: 14px;
                         cursor: pointer;

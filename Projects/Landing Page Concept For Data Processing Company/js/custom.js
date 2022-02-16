@@ -1,6 +1,8 @@
 jQuery.noConflict();
 jQuery(document).ready(function () {
     'use strict';
+
+    jQuery(".fancybox").fancybox();
 	
 });
 
@@ -49,9 +51,4 @@ r(function(){
 function showMenu() {
     document.getElementById("mainMenu").classList.toggle("showMenu");
     document.getElementById("logo").classList.toggle("active");
-}
-
-// VIDEO
-function showVideo() {
-    document.getElementById("mbSKDPkxRLE").click()
 }

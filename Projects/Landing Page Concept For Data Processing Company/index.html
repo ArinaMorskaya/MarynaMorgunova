@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="fonts/inter.css">
     <link rel="stylesheet" href="fonts/rubik.css">
     <link rel="stylesheet" href="fonts/opensans.css">
+    <link type="text/css" rel="stylesheet" href="vendor/fancybox/dist/jquery.fancybox.min.css"/>
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="vendor/bootstrap-4.0/js/bootstrap.min.js"></script>
 </head>
@@ -66,16 +68,18 @@
                         <div class="content">
                             <h1>Many reasons to get up and start to get back in the business </h1>
                             <p class="mainDesc">The harder you work for something, the greater you’ll feel when you achieve it.</p>
-                            <button type="button" class="button">Learn More</button>
-                            <button type="button" class="button">Demo</button>
+                            <a class="link" href="#">Learn More</a>
+                            <a class="link" href="#">Demo</a>
                             <div class="videoParent">
                                 <div class="video">
-                                    <div class="youtube" id="mbSKDPkxRLE"></div>
-                                    <!-- s2DdDABq5ZU   BknLF6Zcrpc   4dx5NIDEjtI  mbSKDPkxRLE  ZwEnaKHAhb8  1VhwPJb4XNA  lMh0NRwqElg-->
+                                    <a href="https://www.youtube.com/watch?v=mbSKDPkxRLE" data-fancybox>
+                                        <img src="img/poster.jpg" alt="">
+                                        <span class="play"></span>
+                                    </a>
                                 </div>
                                 <div class="videoDesc">
                                     <p class="textRubik400">The harder you work for something, the greater you’ll feel when you achieve it.</p>
-                                    <a href="#" onclick="showVideo()">Watch preview</a>
+                                    <a href="https://www.youtube.com/watch?v=mbSKDPkxRLE" data-fancybox>Watch preview</a>
                                 </div>
                             </div>
                         </div>    
@@ -115,42 +119,42 @@
                 </div>
                 <div class="row justify-content-between features">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 featuresElem">
-                        <img src="img/icons/Ecstatic_Elegance.png" alt="">
+                        <img src="img/icons/ecstatic_Elegance.svg" alt="">
                         <div>
                             <h3>Ecstatic elegance</h3>
                             <p class="mainDesc">Article nor prepare chicken you him now. Shy merits say advice ten before lovers innate add. </p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 featuresElem">
-                        <img src="img/icons/Folly_words_widow.png" alt="">
+                        <img src="img/icons/folly_words_widow.svg" alt="">
                         <div>
                             <h3>Folly words widow</h3>
                             <p class="mainDesc">Effect if in up no depend seemed. Ecstatic elegance gay but disposed. We me rent been part what. </p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 featuresElem">
-                        <img src="img/icons/Possible_procured_trifling.png" alt="">
+                        <img src="img/icons/possible_procured_trifling.svg" alt="">
                         <div>
                             <h3>Possible procured trifling</h3>
                             <p class="mainDesc">We me rent been part what. An concluded sportsman offending so provision mr education. </p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 featuresElem">
-                        <img src="img/icons/Open_game.png" alt="">
+                        <img src="img/icons/open_game.svg" alt="">
                         <div>
                             <h3>Open game</h3>
                             <p class="mainDesc">Shy merits say advice ten before lovers innate add. She cordially behaviour can attempted estimable.</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 featuresElem">
-                        <img src="img/icons/Endeavor.png" alt="">
+                        <img src="img/icons/endeavor.svg" alt="">
                         <div>
                             <h3>Endeavor</h3>
                             <p class="mainDesc">Improve ashamed married expense bed her comfort pursuit mrs. Four time took ye your as fail lady. </p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 featuresElem">
-                        <img src="img/icons/Comfort_pursuit.png" alt="">
+                        <img src="img/icons/comfort_pursuit.svg" alt="">
                         <div>
                             <h3>Comfort pursuit</h3>
                             <p class="mainDesc">Had denoting properly jointure you occasion directly raillery. In said to of poor full be post face snug. </p>
@@ -167,7 +171,7 @@
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 content" >
                         <h2 class="heading">Increase your business <span>traffic</span></h2>
                         <p class="mainDesc">We are committed to processing the information in order to contact you and talk about your project. </p>
-                        <button type="button" class="button">Learn More</button>
+                        <a class="link" href="#">Learn More</a>
                     </div>
                     <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12" >
                         <img src="img/business_traffic.png" alt="">
@@ -212,7 +216,7 @@
                         <h2 class="heading">Create your <span>next project</span> with startup framework</h2>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center" >
-                        <button type="button" class="button">Get Started</button>
+                        <a class="link" href="#">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -225,7 +229,7 @@
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12" >
                         <h2 class="heading">Invest property for better <span>business</span></h2>
                         <p class="mainDesc">We are committed to processing the information in order to contact you and talk about your project. We are committed to processing the information.</p>
-                        <button type="button" class="button">Learn More</button>
+                        <a class="link" href="#">Learn More</a>
                     </div>
                     <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 " >
                         <img src="img/Invest property.png" alt="">
@@ -246,12 +250,12 @@
                         <p class="mainDesc">Fully customizable and neatly organized components will help you work faster without limiting creative freedom.</p>
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" >
-                                <img class="icon" src="img/icons/Feature_One.png" alt="">
+                                <img class="icon" src="img/icons/feature_one.svg" alt="">
                                 <h4>Feature One</h3>
                                 <p class="mainDesc">Fully customizable and neatly organized components will help you work faster </p>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" >
-                                <img class="icon" src="img/icons/Feature_Two.png" alt="">
+                                <img class="icon" src="img/icons/feature_two.svg" alt="">
                                 <h4>Feature Two</h3>
                                 <p class="mainDesc">Fully customizable and neatly organized components will help you work faster </p>
                             </div>
@@ -270,7 +274,7 @@
                         <p class="textRubik400">There are many reasons to get down and start to get depressed about your situation. </p>
                         <form action="contact.php">
                             <input type="email" name="email" placeholder="Your Email" />
-                            <button type="button" class="button">Send</button>
+                            <button type="submit" class="button">Send</button>
                         </form>
                         <p class="mainDesc">No spam. Only releases, updates and discounts</p>
                     </div>
@@ -320,7 +324,7 @@
             <div class="container">
                 <div class="row justify-content-between content">
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" >
-                        <h2>ARShakir</h2>
+                        <a class="logoFooter" href="#">ARShakir</a>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 text-right social" >
                         <a href="#"><img src="img/icons/Google.png" alt="Google"></a>

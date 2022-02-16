@@ -36,6 +36,28 @@ html {
         outline: none;
     }
 }
+.link {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+    color: @orange;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    outline: none;
+    width: 150px;
+    height: 50px;
+    transition: 400ms ease-in-out;
+    &:hover {
+        background: @orange;
+        color: white;
+        text-decoration: none;
+    }
+}
+
 
 body {
     .page {
@@ -138,7 +160,6 @@ body {
                     transition: 400ms ease-in-out;
                     &:hover {
                         background: @darkBlue;
-                        // background: linear-gradient(45deg, #62D0DF, #5ca5cf);
                     }
                     &:focus {
                         outline: none;
@@ -163,24 +184,39 @@ body {
                 z-index: 1;
             }           
             &::after {
-                width: 100%;
+                width: 50%;
                 height: 100%;
                 content: " ";
                 background: url(../img/bg_banner.png) no-repeat,
                         url(../img/bg_banner_back.png) no-repeat;
-                background-position: top 15px right, top right;
+                background-position: center center, top right;
+                background-size: cover, 80% auto;
                 position: absolute;
                 top: 0;
                 right: 0;
+                bottom: 0;
                 pointer-events: none;
                 z-index: 2;
-            }           
+            }
+            // .banner-img {
+            //     width: 50%;
+            //     height: 100%;
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            //     background: url(../img/bg_banner.png) no-repeat,
+            //             url(../img/bg_banner_back.png) no-repeat;
+            //     background-position: center center, top right;
+            //     background-size: cover, 80% auto;
+            //     pointer-events: none;
+            //     z-index: 2;
+            // }           
             .container {
                 padding: 0 80px;
                 .content {
                     position: relative;
                     z-index: 8;
-                    a {
+                    .banner-logo {
                     text-decoration: none;
                     color: @skyBlue;
                     font-size: 24px;
@@ -210,10 +246,23 @@ body {
        
         // WHY THRIVE?
         .whyThrive {
-            background: url(../img/bg_WhyThrive.png) right / auto 100% no-repeat, @skyBlue;
+            background: @skyBlue;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 35%;
+                height: 100%;
+                background: url(../img/bg_WhyThrive.png) center center / cover no-repeat;
+                z-index: 1;
+            }
             .container {
                 padding: 150px 80px 95px;
                 color: white;
+                position: relative;
+                z-index: 2;
                 h2 {
                     font-weight: 700;
                     font-size: 36px;
@@ -424,12 +473,17 @@ body {
             .container {
                 .content {
                     padding: 37px 50px;
-                    h3 {
+                    .article-title {
+                        display: inline-block;
                         font-weight: 400;
                         font-size: 28px;
                         line-height: 33px;
                         color: @darkBlue;
                         margin-bottom: 28px;
+                        text-decoration: none;
+                        &:hover {
+                            color: rgba(34, 53, 111, 0.8);
+                        }
                     }
                     p {
                         font-weight: 400;
@@ -509,7 +563,7 @@ body {
                     line-height: 52px;
                     margin-bottom: 70px;
                 }
-                .button {
+                .link {
                     color: inherit;
                     &:hover {
                         background: white;
@@ -605,7 +659,7 @@ body {
                         border: none;
                         border-radius: 4px;
                         outline: none;
-                        padding: 5px 0 5px 20px;
+                        padding: 5px 20px;
                         margin-bottom: 15px;
                         font-size: 14px;
                         cursor: pointer;

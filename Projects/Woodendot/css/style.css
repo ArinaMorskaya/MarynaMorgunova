@@ -50,25 +50,20 @@ html {
   font-size: 16.5px;
 }
 .catalogCard .btn_shopNow {
-  background: transparent;
+  display: inline-block;
+  text-decoration: none;
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 17px;
   line-height: 22px;
   letter-spacing: 1px;
   color: black;
-  border: none;
   border-bottom: 1px solid black;
-  outline: none;
-  cursor: pointer;
   transition: 400ms ease-in-out;
 }
 .catalogCard .btn_shopNow:hover {
   color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
-.catalogCard .btn_shopNow:focus {
-  outline: none;
 }
 .catalogCard .new {
   font-family: 'Cardo';
@@ -229,7 +224,7 @@ body .page .cloe::after {
   width: 62%;
   height: 100%;
   content: "";
-  background: url(../img/cloe.jpg) center right / auto 100% no-repeat;
+  background: url(../img/cloe.jpg) center center / cover no-repeat;
   position: absolute;
   top: 0;
   right: 0;
@@ -250,7 +245,7 @@ body .page .pelican::after {
   width: 62%;
   height: 100%;
   content: "";
-  background: url(../img/pelican.jpg) center center / auto 100% no-repeat;
+  background: url(../img/pelican.jpg) center center / cover no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -277,7 +272,7 @@ body .page .alada::after {
   width: 62%;
   height: 100%;
   content: "";
-  background: url(../img/alada.jpg) center center / auto 100% no-repeat;
+  background: url(../img/alada.jpg) center center / cover no-repeat;
   position: absolute;
   top: 0;
   right: 0;
@@ -304,7 +299,7 @@ body .page .alba::after {
   width: 62%;
   height: 100%;
   content: "";
-  background: url(../img/alba.jpg) center center / auto 100% no-repeat;
+  background: url(../img/alba.jpg) center center / cover no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -334,7 +329,7 @@ body .page .batea::after {
   width: 62%;
   height: 100%;
   content: "";
-  background: url(../img/batea.jpg) center left / auto 100% no-repeat;
+  background: url(../img/batea.jpg) center center / cover no-repeat;
   position: absolute;
   top: 0;
   right: 0;
@@ -501,21 +496,17 @@ body .page .blog .article .desc {
   margin: 0 auto 25px;
 }
 body .page .blog .article .btn_learnMore {
-  background: transparent;
+  display: inline-block;
+  text-decoration: none;
   font-size: 15px;
   line-height: 15px;
-  border: none;
+  color: inherit;
   border-bottom: 1px solid black;
-  outline: none;
-  cursor: pointer;
   transition: 400ms ease-in-out;
 }
 body .page .blog .article .btn_learnMore:hover {
   color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
-body .page .blog .article .btn_learnMore:focus {
-  outline: none;
 }
 body .page .blog .footprint,
 body .page .blog .wood {
@@ -668,7 +659,7 @@ body .page .modal .modal-content form textarea {
   border: none;
   border-radius: 4px;
   outline: none;
-  padding: 5px 0 5px 20px;
+  padding: 5px 20px;
   margin-bottom: 12px;
   font-size: 14px;
   cursor: pointer;

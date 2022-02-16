@@ -38,6 +38,27 @@ html {
 .button:focus {
   outline: none;
 }
+.link {
+  display: inline-block;
+  background: linear-gradient(#fd749b 0%, #281ac8 100%) center top 30% / auto 200%;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 54px;
+  color: white;
+  width: 157px;
+  height: 54px;
+  border-radius: 100px;
+  text-align: center;
+  transition: 0.5s linear;
+  overflow: hidden;
+}
+.link:hover {
+  background: linear-gradient(#281ac8 0%, #fd749b 100%) center bottom 30% / auto 200%;
+  transition: 0.5s linear;
+  text-decoration: none;
+  color: white;
+}
 .main-head {
   font-weight: 700;
   font-size: 28px;
@@ -223,11 +244,31 @@ body .page .header .container .dropdown .showLink {
 }
 body .page .banner {
   padding: 60px 0px 200px;
-  background: url(../img/bg_banner_white.png) center bottom -70px / contain no-repeat, linear-gradient(#fd749b 0%, #281ac8 100%) center bottom 20% / auto 120%;
+  background: linear-gradient(#fd749b 0%, #281ac8 100%) center bottom 20% / auto 120%;
+  position: relative;
+  overflow: hidden;
+}
+body .page .banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300%;
+  height: 168px;
+  background: url(../img/bg_banner_white.png) repeat-x;
+  background-position: 0 0;
+  animation: wawe 20s linear infinite;
+}
+@keyframes wawe {
+  100% {
+    background-position: -300% 0;
+  }
 }
 body .page .banner .content {
   padding-top: 80px;
   color: white;
+  position: relative;
+  z-index: 9;
 }
 body .page .banner .content h1 {
   font-weight: 400;
@@ -244,17 +285,18 @@ body .page .banner .content p {
   line-height: 27px;
   margin-bottom: 30px;
 }
-body .page .banner .content .button {
-  background: white;
+body .page .banner .content .link {
+  background: #f0f0f0;
+  box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 12px -12px 10px #cccccc inset, 10px 10px 10px #ffffff inset, 1px 1px 20px 1px #6d67af;
 }
-body .page .banner .content .button::after {
+body .page .banner .content .link::after {
   content: "GET STARTED";
   font-size: 14px;
   background: linear-gradient(#fd749b 0%, #281ac8 100%) center top 20% / auto 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-body .page .banner .content .button:hover::after {
+body .page .banner .content .link:hover::after {
   background: linear-gradient(#281ac8 0%, #fd749b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -272,9 +314,21 @@ body .page .welcome .container .content .main-desc {
 }
 body .page .statistics {
   padding: 250px 0 180px;
-  background: url(../img/bg_ourRates.png) center center / cover no-repeat;
-  margin-top: -80px;
   position: relative;
+}
+body .page .statistics::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 780px;
+  background: url(../img/bg_ourRates.png) repeat-x;
+  z-index: 1;
+}
+body .page .statistics .container {
+  position: relative;
+  z-index: 2;
 }
 body .page .statistics .container .statisticsWrapper {
   background: white;
@@ -358,7 +412,7 @@ body .page .experience .container .content .main-desc {
 }
 body .page .tradeFromAnyWhere {
   padding: 120px 0;
-  background: url(../img/bg_tradeFromAnyWhere.png) center top / cover no-repeat;
+  background: url(../img/bg_tradeFromAnyWhere.png) top center / 100% auto no-repeat;
 }
 body .page .tradeFromAnyWhere .container .contentWrapper {
   padding: 70px 0 85px;
@@ -421,7 +475,6 @@ body .page .tradeFromAnyWhere .container .contentWrapper .content a:hover p {
 }
 body .page .blog {
   padding: 20px 0 200px;
-  background: url(../img/bg_rewiews_top.png) center bottom / contain no-repeat, transparent;
   position: relative;
   z-index: 10;
 }
@@ -463,11 +516,13 @@ body .page .blog .container .articlesParent .article .description {
   margin-bottom: 25px;
 }
 body .page .blog .container .articlesParent .article .btn_ReadMore {
+  display: inline-block;
   background: #888888;
   font-weight: 700;
   font-size: 9px;
   line-height: 13px;
   color: white;
+  text-decoration: none;
   padding: 11px 22px;
   border: none;
   border-radius: 100px;
@@ -506,23 +561,19 @@ body .page .blog .container .articlesParent .active .description {
   line-height: 27px;
 }
 body .page .blog .container .articlesParent .active .btn_ReadMore {
+  display: inline-block;
   background: linear-gradient(#fd749b 0%, #281ac8 100%);
   font-size: 11px;
   line-height: 16px;
   color: white;
+  text-decoration: none;
   padding: 12px 26px;
-  border: none;
   border-radius: 100px;
-  outline: none;
-  cursor: pointer;
   transition: 1s ease-in-out;
 }
 body .page .blog .container .articlesParent .active .btn_ReadMore:hover {
   background: linear-gradient(#281ac8 0%, #fd749b 100%);
   transition: 1s ease;
-}
-body .page .blog .container .articlesParent .active .btn_ReadMore:focus {
-  outline: none;
 }
 body .page .rewiews {
   padding: 310px 0 180px;
@@ -532,16 +583,12 @@ body .page .rewiews {
 }
 body .page .rewiews:before {
   content: "";
-  width: 100%;
-  height: 100%;
-  background: url(../img/bg_rewiews_bottom.png), linear-gradient(#fd749b 0%, #281ac8 100%);
-  background-position: bottom -100px center, top 35% center;
-  background-size: contain, auto 200%;
-  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg_rewiews.png) bottom left / auto 100% repeat-x;
 }
 body .page .rewiews:after {
   content: "";
@@ -600,7 +647,7 @@ body .page .rewiews .container .content .message::after {
   background: url(../img/message.png) center / contain no-repeat;
 }
 body .page .downloadApp {
-  background: url(../img/bubble3.png) bottom 15% left 15% / auto no-repeat, url(../img/bg_download.png) center / 100% auto no-repeat;
+  background: url(../img/bubble3.png) bottom 15% left 15% / auto no-repeat, url(../img/bg_download_top.png) repeat-x, linear-gradient(#fd749b 0%, #281ac8 100%) top 20% center / auto 170%;
 }
 body .page .downloadApp .container .main-head {
   margin-bottom: 35px;
@@ -732,8 +779,12 @@ body .page footer {
 body .page footer .container .social {
   padding-top: 20px;
 }
-body .page footer .container .social img {
+body .page footer .container .social .footer-logo img {
   margin-bottom: 35px;
+  transition: 0.3s;
+}
+body .page footer .container .social .footer-logo img:hover {
+  transform: scale(1.1);
 }
 body .page footer .container .social p {
   font-weight: 400;
@@ -849,7 +900,7 @@ body .page .modal .modal-content form textarea {
   border: none;
   border-radius: 4px;
   outline: none;
-  padding: 5px 0 5px 20px;
+  padding: 5px 20px;
   margin-bottom: 12px;
   font-size: 14px;
   cursor: pointer;

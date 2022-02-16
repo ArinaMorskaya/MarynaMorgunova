@@ -41,11 +41,17 @@
   }
   body .page .banner {
     padding: 20px 0 170px;
-    background: url(../img/bg_banner_white.png) center bottom -50px / contain no-repeat, linear-gradient(#fd749b 0%, #281ac8 100%) center bottom 20% / auto 120%;
   }
   body .page .banner .content h1 {
     font-size: 35px;
     line-height: 47px;
+  }
+  body .page .statistics {
+    background: url(../img/bg_ourRates1.png) center center / cover no-repeat;
+    margin-top: -80px;
+  }
+  body .page .statistics::after {
+    width: 0;
   }
   body .page .welcome {
     padding: 0;
@@ -58,6 +64,7 @@
   }
   body .page .tradeFromAnyWhere {
     padding: 70px 0;
+    background: url(../img/bg_tradeFromAnyWhere.png) top center / cover no-repeat;
   }
   body .page .tradeFromAnyWhere .container .contentWrapper {
     padding: 50px 0;
@@ -73,9 +80,6 @@
   }
   body .page .rewiews {
     padding: 270px 0 180px;
-  }
-  body .page .rewiews::before {
-    background-position: bottom -70px center, top 35% center;
   }
   body .page .rewiews .container .content p {
     margin: 0 auto;
@@ -147,7 +151,6 @@
   }
   body .page .banner {
     padding-top: 40px;
-    background: url(../img/bg_banner_white.png) center bottom -40px / contain no-repeat, linear-gradient(#fd749b 0%, #281ac8 100%) center bottom 20% / auto 120%;
   }
   body .page .banner .content {
     padding-top: 30px;
@@ -253,9 +256,7 @@
   }
   body .page .rewiews {
     padding-bottom: 150px;
-  }
-  body .page .rewiews::before {
-    background-position: bottom -50px center, top 35% center;
+    margin-top: -170px;
   }
   body .page .rewiews .container .content h2 {
     max-width: 80%;
@@ -284,7 +285,6 @@
 @media (max-width: 767px) {
   body .page .banner {
     padding: 40px 0 130px;
-    background: url(../img/bg_banner_white.png) center bottom -30px / contain no-repeat, linear-gradient(#fd749b 0%, #281ac8 100%) center bottom 20% / auto 120%;
   }
   body .page .statistics .container .statisticsWrapper .statisticsHeaderWrapper .statisticsHeader {
     line-height: 16px;
@@ -309,9 +309,6 @@
   }
   body .page .tradeFromAnyWhere .container .contentWrapper {
     padding: 30px 0;
-  }
-  body .page .blog {
-    background: url(../img/bg_rewiews_top.png) center bottom 60px / contain no-repeat, transparent;
   }
   body .page .blog .container .main-desc {
     margin-bottom: 30px;
@@ -423,7 +420,6 @@
   }
   body .page .banner {
     padding: 40px 0 100px;
-    background: url(../img/bg_banner_white.png) center bottom -20px / contain no-repeat, linear-gradient(#fd749b 0%, #281ac8 100%) center bottom 20% / auto 120%;
   }
   body .page .banner .content {
     padding-top: 10px;
@@ -515,9 +511,6 @@
   body .page .rewiews {
     padding-top: 180px;
     margin-top: -150px;
-  }
-  body .page .rewiews::before {
-    background-position: bottom -30px center, top 35% center;
   }
   body .page .downloadApp {
     background: url(../img/bubble3.png) bottom 35% left 10% / auto no-repeat, url(../img/bg_download.png) center / auto 70% no-repeat;

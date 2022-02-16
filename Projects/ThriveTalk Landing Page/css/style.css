@@ -29,6 +29,27 @@ html {
 .button:focus {
   outline: none;
 }
+.link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 50px;
+  color: #fab63e;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  transition: 400ms ease-in-out;
+}
+.link:hover {
+  background: #fab63e;
+  color: white;
+  text-decoration: none;
+}
 body .page {
   font-family: 'Larsseit', sans-serif;
   background: white;
@@ -149,14 +170,16 @@ body .page .banner::before {
   z-index: 1;
 }
 body .page .banner::after {
-  width: 100%;
+  width: 50%;
   height: 100%;
   content: " ";
   background: url(../img/bg_banner.png) no-repeat, url(../img/bg_banner_back.png) no-repeat;
-  background-position: top 15px right, top right;
+  background-position: center center, top right;
+  background-size: cover, 80% auto;
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   pointer-events: none;
   z-index: 2;
 }
@@ -167,7 +190,7 @@ body .page .banner .container .content {
   position: relative;
   z-index: 8;
 }
-body .page .banner .container .content a {
+body .page .banner .container .content .banner-logo {
   text-decoration: none;
   color: #62d0df;
   font-size: 24px;
@@ -192,11 +215,24 @@ body .page .banner .container .content p {
   margin: 60px 0;
 }
 body .page .whyThrive {
-  background: url(../img/bg_WhyThrive.png) right / auto 100% no-repeat, #62d0df;
+  background: #62d0df;
+  position: relative;
+}
+body .page .whyThrive::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  background: url(../img/bg_WhyThrive.png) center center / cover no-repeat;
+  z-index: 1;
 }
 body .page .whyThrive .container {
   padding: 150px 80px 95px;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 body .page .whyThrive .container h2 {
   font-weight: 700;
@@ -393,12 +429,17 @@ body .page .servicesFeatures {
 body .page .servicesFeatures .container .content {
   padding: 37px 50px;
 }
-body .page .servicesFeatures .container .content h3 {
+body .page .servicesFeatures .container .content .article-title {
+  display: inline-block;
   font-weight: 400;
   font-size: 28px;
   line-height: 33px;
   color: #22356f;
   margin-bottom: 28px;
+  text-decoration: none;
+}
+body .page .servicesFeatures .container .content .article-title:hover {
+  color: rgba(34, 53, 111, 0.8);
 }
 body .page .servicesFeatures .container .content p {
   font-weight: 400;
@@ -473,10 +514,10 @@ body .page .contactUs .container p {
   line-height: 52px;
   margin-bottom: 70px;
 }
-body .page .contactUs .container .button {
+body .page .contactUs .container .link {
   color: inherit;
 }
-body .page .contactUs .container .button:hover {
+body .page .contactUs .container .link:hover {
   background: white;
   color: #22356f;
 }
@@ -565,7 +606,7 @@ body .page .modal .modal-content form textarea {
   border: none;
   border-radius: 4px;
   outline: none;
-  padding: 5px 0 5px 20px;
+  padding: 5px 20px;
   margin-bottom: 15px;
   font-size: 14px;
   cursor: pointer;

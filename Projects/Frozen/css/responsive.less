@@ -50,26 +50,40 @@
                 font-size: 20px;
             }
         }
+        
         .header {
             padding: 20px 20px 0;
+            position: relative;
+            transition: 0.7s ease;
             .container {
                 .responsiveMenu {
                     width: 40%;
                     align-self: flex-start;
                     .mainMenu {
-                        display: flex;
-                        flex-direction: column;
-                        margin-bottom: 10px;
-                        display: none;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        transform: translateY(-150px);
+                        transition: 0.5s ease-in;
+                        padding: 5px 20px;
+                        margin: 0;
+                        background: rgba(50, 105, 177, 1);
                         li {
                             a {
                                 line-height: 20px;
                                 font-size: 14px;
+                                text-shadow: 1px 1px 1px rgba(35, 35, 185, 0.5), -1px -1px 1px rgba(35, 35, 185, 0.5);
+                                color: white;
+                            }
+                            &:hover a{
+                                color: white;
+                                text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2), -1px -1px 1px rgba(255, 255, 255, 0.2);
                             }
                         }
                     }
                     .showMenu {
-                        display: block;
+                        transform: translateY(0px);
+                        transition: 0.3s ease-out;
                     }
                     .responsiveMenuIcon {
                         display: block;
@@ -80,6 +94,9 @@
                     width: 40%;
                 }
             }
+        }
+        .header.responsive {
+            padding-bottom: 20px;
         }
         .banner {
             .container {
@@ -201,6 +218,15 @@
                 }
             }
         }
+        .header {
+            .container {
+                .responsiveMenu {
+                    .mainMenu {
+                        padding: 5px;
+                    }
+                }
+            }
+        }
         .banner {
             .container {
                 .img-Wrapper {
@@ -299,6 +325,19 @@
                     width: 50%;
                     .responsiveMenuIcon {
                         font-size: 28px;
+                    }
+                    .mainMenu {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        transform: translateY(-120px);
+                        li {
+                            width: auto;
+                            margin: 0 10px;
+                        }
+                    }
+                    .showMenu {
+                        transform: translateY(0px);
+                        transition: 0.3s ease-out;
                     }
                 }
                 .vendorCode {

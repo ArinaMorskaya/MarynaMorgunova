@@ -3,6 +3,24 @@
     max-width: 1440px;
   }
 }
+@media (min-width: 2000px) {
+  .page .cloe::after,
+  .page .pelican::after,
+  .page .alada::after,
+  .page .alba::after,
+  .page .batea::after {
+    max-width: 57%;
+  }
+}
+@media (min-width: 3000px) {
+  .page .cloe::after,
+  .page .pelican::after,
+  .page .alada::after,
+  .page .alba::after,
+  .page .batea::after {
+    max-width: 52%;
+  }
+}
 @media (max-width: 1199px) {
   body .page .header {
     margin-bottom: 0px;
