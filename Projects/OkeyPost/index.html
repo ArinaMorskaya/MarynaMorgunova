@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OkeyPost / Главная</title>
+    <link rel="stylesheet" href="fonts/circe.css">
+    <link rel="stylesheet" href="fonts/gilroy.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0/css/bootstrap-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"/>
+    <link type="text/css" rel="stylesheet" href="vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    
+</head>
+<body>
+    <main class="page">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 logo_parent">
+                  <a href="index.html" class="logo">
+                      <img src="img/logo.svg" alt="OkeyPost logo">
+                  </a> 
+                </div>
+                <div class="col-xl-6 col-lg-7 col-md-3 col-sm-2 header_menu_parent">
+                  <nav id="header_menu" class="header_menu">
+                      <ul class="header_menu_list">
+                          <li class="menu_item"><a href="how_to_buy.html">Как покупать</a></li>
+                          <li class="menu_item"><a href="sale.html">Распродажи</a></li>
+                          <li class="menu_item"><a href="prices.html">Цены</a></li>
+                          <li class="menu_item"><a href="help.html">Помощь</a></li>
+                          <li class="menu_item"><a href="bonuses.html">Бонусы</a></li>
+                          <li class="menu_item"><a href="blog.html">Блог</a></li>
+                          <li class="menu_item"><a href="shops.html">Магазины</a></li>
+                      </ul>
+                      <a href="#" class="responsive_menu-icon" id="responsive_menu_icon" onclick="showMenu()"><i class="fas fa-bars"></i></a>
+                  </nav>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 header_btn_parent">
+                  <button type="button" class="btn_signIn" data-toggle="modal" data-target="#modal_signIn">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 17.5C17.866 17.5 21 14.366 21 10.5C21 6.63401 17.866 3.5 14 3.5C10.134 3.5 7 6.63401 7 10.5C7 14.366 10.134 17.5 14 17.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M3.3894 23.624C4.46517 21.7619 6.01201 20.2158 7.87453 19.1408C9.73704 18.0659 11.8496 17.5 14.0001 17.5C16.1506 17.5 18.2632 18.066 20.1257 19.141C21.9881 20.2159 23.535 21.7621 24.6107 23.6242" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                  <button type="button" class="button btn_contact" data-toggle="modal" data-target="#modal_contact">Связаться с нами</button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- BANNER -->
+        <section class="banner poster">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-6 col lg-6 col-md-6 col-sm-12 content">
+                <h1>Доставка товаров из Великобритании в Россию</h1>
+                <p class="description">Начните экономить до 80% на шопинге. Регистрируйтесь в OkeyPost, чтобы покупать со скидками в UK одежду, обувь, гаджеты известных брендов и безопасно отправлять вещи в Россию.</p>
+                <a class="link banner_link" href="#">Получить адрес в UK</a>
+              </div>
+              <div class="col-xl-6 col lg-6 col-md-6 col-sm-12 banner_img_parent">
+                <img class="planet" src="img/banner/planet.png" alt="">
+                <img class="man" src="img/banner/man.png" alt="">
+                <img class="book" src="img/banner/book.png" alt="">
+                <img class="airplane" src="img/banner/airplane.png" alt="">
+                <img class="banner_logo" src="img/banner/banner_logo.png" alt="">
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!--  PRODUCT CATEGORIES -->
+        <section class="productCategories">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="main_head">Насколько выгодно покупать?</h2>
+                <div class="owl-carousel owl-theme" id="productCategories">
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/cloth.svg" alt="">
+                      <p class="category_title">Одежда</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/electronics.svg" alt="">
+                      <p class="category_title">Электроника</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/accessories.svg" alt="">
+                      <p class="category_title">Аксессуары</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/child.svg" alt="">
+                      <p class="category_title">Для детей</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/sport.svg" alt="">
+                      <p class="category_title">Для спорта</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/cosmetics.svg" alt="">
+                      <p class="category_title">Косметика</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/cloth.svg" alt="">
+                      <p class="category_title">Одежда</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/electronics.svg" alt="">
+                      <p class="category_title">Электроника</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/accessories.svg" alt="">
+                      <p class="category_title">Аксессуары</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/child.svg" alt="">
+                      <p class="category_title">Для детей</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/sport.svg" alt="">
+                      <p class="category_title">Для спорта</p>
+                    </a>
+                  </div>
+                  <div class="slide">
+                    <a class="slide_link" href="#">
+                      <img src="img/slider_productCategories/cosmetics.svg" alt="">
+                      <p class="category_title">Косметика</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BEST SELLERS -->
+        <section class="bestsellers">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 bestseller_item">
+                <div class="row justify-content-between ">
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 bestseller_name">
+                    <h3 class="bestseller_title"><a href="#">Columbia Barlow Pass 550 Turbodown Jacket</a></h3>
+                    <div class="bestseller_price_parent">
+                      <img class="flag" src="img/bestsellers/flag_ru.png" alt="">
+                      <p class="bestseller_price_title">Цена в России</p>
+                      <p class="bestseller_price_ru">7891,46₽</p>
+                      <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 bestseller_img_parent">
+                    <a href="#"><img src="img/bestsellers/jacket.png" alt="jacket"></a>
+                    <div class="bestseller_desc">
+                      <p class="bestseller_delivery_time">Срок доставки примерно 10 дней</p>
+                      <p class="bestseller_title">Вы экономите до <span>$119.56</span></p>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 bestseller_delivery">
+                    <h3 class="bestseller_title"><a href="">Доставка одежды из Великобритании от <span>£7.79</span></a></h3>
+                    <div class="bestseller_price_parent">
+                      <img class="flag" src="img/bestsellers/flag_uk.png" alt="">
+                      <p class="bestseller_price_title">Цена в UK</p>
+                      <p class="bestseller_price_uk">£80.62</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 bestsellers_nav">
+                <div class="bestseller_item_prev">
+                  <a href="#"><img src="img/bestsellers/t-shirt.png" alt=""></a>
+                  <a class="bestsellers_arrow_prev" href="#"><img src="img/icons/arrow-left.svg" alt="arrow left"></a>
+                </div>
+                <div class="bestseller_item_next">
+                  <a class="bestsellers_arrow_next" href="#"><img src="img/icons/arrow-right.svg" alt="arrow right"></a>
+                  <a href="#"><img src="img/bestsellers/pants.png" alt=""></a> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BENEFITS -->
+        <section class="benefits">
+          <div class="container">
+            <div class="row justify-content-between benefit_item_parent">
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 benefit_item">
+                <img src="img/icons/saving.svg" alt="saving">
+                <p class="benefit_title">Экономия <br> до 70%</p>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 benefit_item">
+                <img src="img/icons/original.svg" alt="saving">
+                <p class="benefit_title">Только подлинная продукция</p>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 benefit_item">
+                <img src="img/icons/delivery.svg" alt="saving">
+                <p class="benefit_title">Оперативная доставка</p>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 benefit_item">
+                <img src="img/icons/warehouse.svg" alt="saving">
+                <p class="benefit_title">Огромный выбор товаров</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ORDER -->
+        <section class="order poster">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-4 col-lg-5 col-md-5 col-sm-12">
+               <img src="img/order.png" alt="">
+              </div>
+              <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 content">
+                <h3 class="poster_title">Поручите нашим мастерам шопинга оформить заказы в английских магазинах и освободите время для более важных дел.</h3>
+                <p class="poster_desc">Такой способ покупки также подойдёт, если магазин принимает только английские карты.</p>
+                <a href="#" class="link">Попробовать</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COST CALCULATION -->
+        <section class="cost_calculation">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-8 col-lg-8 col-md-10 ckl-sm-12">
+                <h2 class="main_head">OkeyPost удобная и быстрая доставка посылок из Великобритании </h2>
+                <p class="main_desc">Рассчитайте стоимость доставки из Англии к вам домой. Мы получим ваши посылки на складе, при необходимости объединим несколько доставок в одну и отправим их к вам надежно упакованными.</p>
+              </div>
+              <div class="col-12 form_parent">
+                <form action="cost_calculation.php">
+                  <p class="form_item">Страна:
+                  <select name="user_country" id="user_country">
+                    <option value="russia" selected>Россия</option>
+                    <option value="ukraine">Украина</option>
+                    <option value="kazakhstan">Казахстан</option>
+                  </select>
+                  </p>
+                  <label class="form_item">Город: <input type="text" placeholder="Москва"></label>
+                  <label class="form_item">Индекс: <input type="text" placeholder="Введите индекс"></label>
+                  <label class="form_item">Вес посылки: <input type="number" placeholder="0,5"></label>
+                  <p class="form_item">Дополнительные услуги:
+                    <select name="user_service" id="user_service">
+                      <option disabled selected >Выберите услуги</option>
+                      <option value="user_service_1">Услуга 1</option>
+                      <option value="user_service_2">Услуга 2</option>
+                      <option value="user_service_3">Услуга 3</option>
+                      <option value="user_service_4">Услуга 4</option>
+                    </select>
+                    </p>
+                </form>
+                <button class="button form_btn" type="submit">Рассчитать</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DELIVERY OPTIONS -->
+        <section class="delivery_options">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="main_head">Варианты доставки:</h2>
+                <div class="accordion_parent delivery">
+                  <div class="accordion_item delivery_item_ru">
+                    <div class="accordion_item_title">
+                      <p class="delivery_title">Почта России</p>
+                      <ul class="delivery_criterias_list">
+                        <li class="delivery_criteria">
+                          <p class="criteria_title">Сроки:</p>
+                          <p class="criteria_value">10-14 дней</p>
+                        </li>
+                        <li class=" delivery_criteria">
+                          <p class="criteria_title">Стоимость доставки:</p>
+                          <p class="criteria_value">от £27.00 <a href="#"><img src="img/icons/info.svg" alt=""></a></p>
+                        </li>
+                        <li class="delivery_criteria">
+                          <p class="criteria_title">Итого:</p>
+                          <p class="criteria_value">£41.99</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="accordion_item_content">
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, dolorum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit architecto corrupti atque vel maxime distinctio pariatur earum voluptatibus ipsa iure neque, illum rerum non possimus laudantium debitis, vitae mollitia.</p>
+                    </div>
+                  </div>
+                  <div class="accordion_item delivery_item_ems">
+                    <div class="accordion_item_title">
+                      <p class="delivery_title">EMS ПОЧТА РОССИЯ</p>
+                      <ul class="delivery_criterias_list">
+                        <li class="delivery_criteria">
+                          <p class="criteria_title">Сроки:</p>
+                          <p class="criteria_value">9-12 дней</p>
+                        </li>
+                        <li class=" delivery_criteria">
+                          <p class="criteria_title">Стоимость доставки:</p>
+                          <p class="criteria_value">от £40.00 <a href="#"><img src="img/icons//info.svg" alt=""></a></p>
+                        </li>
+                        <li class="delivery_criteria">
+                          <p class="criteria_title">Итого:</p>
+                          <p class="criteria_value">£54.55</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="accordion_item_content">
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, dolorum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit architecto corrupti atque vel maxime distinctio pariatur earum voluptatibus ipsa iure neque, illum rerum non possimus laudantium debitis, vitae mollitia.</p>
+                    </div>
+                  </div>
+                  <div class="accordion_item delivery_item_ru2">
+                    <div class="accordion_item_title">
+                      <p class="delivery_title">ПОЧТА РОССИИ МЕЛКИЕ ПАКЕТЫ</p>
+                      <ul class="delivery_criterias_list">
+                        <li class="delivery_criteria">
+                          <p class="criteria_title">Сроки:</p>
+                          <p class="criteria_value">10-14 дней</p>
+                        </li>
+                        <li class=" delivery_criteria">
+                          <p class="criteria_title">Стоимость доставки:</p>
+                          <p class="criteria_value">от £13.00 <a href="#"><img src="img/icons//info.svg" alt=""></a></p>
+                        </li>
+                        <li class="delivery_criteria">
+                          <p class="criteria_title">Итого:</p>
+                          <p class="criteria_value">£90.50</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="accordion_item_content">
+                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, dolorum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit architecto corrupti atque vel maxime distinctio pariatur earum voluptatibus ipsa iure neque, illum rerum non possimus laudantium debitis, vitae mollitia.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEPS FOR SHOPPING -->
+        <section class="steps_for_shopping">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12">
+                <h2 class="main_head">4 простых шага для ваших покупок в Великобритании </h2>
+              </div>
+              <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 step">
+                  <img src="img/steps/step1.png" alt="">
+                  <h6 class="step_title">ВЫ ВЫБИРАЕТЕ <br>ТОВАР</h6>
+                  <p class="step_desc">в английском магазине, оплачиваете и указываете <a href="#">адрес склада</a> OkeyPost</p>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 step">
+                  <img src="img/steps/step2.png" alt="">
+                  <h6 class="step_title">ПОКУПКИ ПРИХОДЯТ НА СКЛАД</h6>
+                  <p class="step_desc">и появляются в вашем личном кабинете на нашем сайте</p>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 step">
+                  <img src="img/steps/step3.png" alt="">
+                  <h6 class="step_title">ОТПРАВЛЯЕМ ИХ К ВАМ ДОМОЙ</h6>
+                  <p class="step_desc">в надежной упаковке, по выгодной цене и очень быстроt</p>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 step">
+                  <img src="img/steps/step4.png" alt="">
+                  <h6 class="step_title">ЗАБИРАЕТЕ <br>свою ПОСЫЛКУ</h6>
+                  <p class="step_desc">в пункте выдачи, на почте или с курьером</p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12">
+                <p class="main_desc">Не хотите разбираться самостоятельно, наши мастера шопинга с радостью купят все товары за вас.</p>
+                <a class="link" href="#">Быстрая покупка</a>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        <!-- VIRTUAL TOUR -->
+        <section class="virtual_tour poster">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-4 col-lg-5 col-md-5 col-sm-12">
+                <img src="img/virtual_tour.png" alt="">
+               </div>
+               <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 content">
+                 <h3 class="main_head">Виртуальный тур по нашему складу в реальном времени</h3>
+                 <p class="poster_desc">Вы можете всегда посмотреть на нашу слаженую работу на складе</p>
+                 <a href="#" class="link">Попробовать</a>
+               </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- STATISTICS -->
+        <section class="statistics">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-7 col-lg-8 col-md-10 col-sm-12 content">
+                <h2 class="main_head">120 000 довольных клиентов в России уже сделали свой выбор</h2>
+                <p class="main_desc">За последний год десятки тысяч наших клиентов заказали товары из Англии и оставили 19 633 отзыва</p>
+              </div>
+            </div>
+            <div class="statistics_items">
+              <div class="statistics_item">
+                <img src="img/icons/money.svg" alt="">
+                <h4 class="statistics_title">Больше не значит дороже</h2>
+                <p class="statistics_desc">С ростом веса посылки цена за каждые 0.5 кг уменьшается в прогрессии.</p>
+              </div>
+              <div class="statistics_item">
+                <img src="img/icons/clock.svg" alt="">
+                <h4 class="statistics_title">Быстрая обработка посылок</h2>
+                <p class="statistics_desc">Посылка обрабатывается не дольше 48 часов после поступления на склад.</p>
+              </div>
+              <div class="statistics_item">
+                <img src="img/icons/sms.svg" alt="">
+                <h4 class="statistics_title">SMS-уведомления</h2>
+                <p class="statistics_desc">Отслеживайте весь процесс с помощью sms-уведомлений.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- REWIEWS -->
+        <section class="rewiews">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="rewiews_head">Отзывы и цитаты блогеров:</h3>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 rewiews_item_parent">
+                <div class="rewiew_item">
+                  <img class="rewiew_item_img" src="img/rewiews/1.jpg" alt="Photo label reviews">
+                  <div class="rewiew_item_content">
+                    <p class="person_name">NIKOLAY S</p>
+                    <img class="stars" src="img/rewiews/stars.png" alt="stars">
+                    <p class="rewiew_desc">Ваша доставка самая быстрая и дешёвая!!!</p>
+                    <div class="rewiew_item_info">
+                      <div class="rewiew_title">
+                        <p>Дата:</p>
+                        <p>Город:</p>
+                      </div>
+                      <div class="rewiew_item_values">
+                        <p>16 Ноября 2021</p>
+                        <p>Санкт-Петербург</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 rewiews_item_parent">
+                <div class="rewiew_item">
+                  <img class="rewiew_item_img" src="img/rewiews/2.jpg" alt="Photo label reviews">
+                  <div class="rewiew_item_content">
+                    <p class="person_name">DMITRIY D</p>
+                    <img class="stars" src="img/rewiews/stars.png" alt="stars">
+                    <p class="rewiew_desc">Пуховик Levi’s c eBay. Всё приехало быстро и целым.</p>
+                    <div class="rewiew_item_info">
+                      <div class="rewiew_title">
+                        <p>Дата:</p>
+                        <p>Город:</p>
+                      </div>
+                      <div class="rewiew_item_values">
+                        <p>16 Ноября 2021</p>
+                        <p>Москва</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 rewiews_item_parent">
+                <div class="rewiew_item">
+                  <img class="rewiew_item_img" src="img/rewiews/3.jpg" alt="Photo label reviews">
+                  <div class="rewiew_item_content">
+                    <p class="person_name">VLADIMIR E</p>
+                    <img class="stars" src="img/rewiews/stars.png" alt="stars">
+                    <p class="rewiew_desc">Огонь, как всегда! Отдельное спасибо за доп.упаковку, часики от Apple пришли в простом бумажном пакете )</p>
+                    <div class="rewiew_item_info">
+                      <div class="rewiew_title">
+                        <p>Дата:</p>
+                        <p>Город:</p>
+                      </div>
+                      <div class="rewiew_item_values">
+                        <p>16 Ноября 2021</p>
+                        <p>Санкт-Петербург</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 rewiews_item_parent">
+                <div class="rewiew_item">
+                  <img class="rewiew_item_img" src="img/rewiews/4.jpg" alt="Photo label reviews">
+                  <div class="rewiew_item_content">
+                    <p class="person_name">Оксана</p>
+                    <img class="stars" src="img/rewiews/stars.png" alt="stars">
+                    <p class="rewiew_desc">Очень быстро, надежно! Как всегда большое спасибо за работу!</p>
+                    <div class="rewiew_item_info">
+                      <div class="rewiew_title">
+                        <p>Дата:</p>
+                        <p>Город:</p>
+                      </div>
+                      <div class="rewiew_item_values">
+                        <p>16 Ноября 2021</p>
+                        <p>Odintsovo</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <a class="link" href="#">Все отзывы</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INFO BLOCK -->
+        <section class="info_block">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="main_head">Ваш личный адрес в Великобритании  для покупок</h2>
+                <p class="main_desc">
+                  С нами вы получаете целых два адреса в UK! У нас есть два склада для приема посылок – в Лондоне и Манчестере. Указывайте в магазине тот из них, отправка на который обойдется дешевле (или покупка будет без налогов). Чаще всего в Лондоне наши клиенты заказывают одежду и обувь, а в Манчестер идут гаджеты и всё остальное. С OkeyPost вы всегда получаете максимальную выгоду!
+                </p>
+                <p class="main_desc">
+                  При доставке из UK в Россию все ваши товары обязательно страхуются. Прием посылок на наш склад, их обработка, удаление лишних коробок, хранение сроком до 70 дней – у нас полностью бесплатно. Мы также бесплатно проводим объединение посылок из разных магазинов в одну. Это необходимо для снижения стоимости доставки посылок из UK в Россию.
+                </p>
+                <p class="main_desc">
+                  У нас самая выгодная доставка! От $11.99 за посылку! А если у вас есть какие-то особенные требования, вроде проверки техники или дополнительной пленки для самых хрупких товаров, – операторы нашего склада с радостью выполнят их по спецзапросу.
+                </p>
+                <p class="main_desc">
+                  Okeypost.com – это надежно, быстро и выгодно. А в наших соцсетях вы всегда найдете информацию о лучших скидках наших магазинов. Не обязательно заходить в Черную пятницу или Prime Day, крутые акции проходят каждый день!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section class="contact_form poster">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-xl-4 col-lg-5 col-md-5 col-sm-12">
+                <h2 class="poster_title">Подпишитеть и будьте в курсе всех скидок и акций магазинов Великобритании!</h2>
+              </div>
+              <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 form_parent">
+                <form action="contact.php">
+                  <input type="email" placeholder="Введите ваш email">
+                </form>
+                <button class="button" type="submit">Подписаться</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODAL "ВХОД" -->
+        <div class="modal fade" id="modal_signIn" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="modal-body">
+                  <h5 class="modal-head">Выполните вход в ваш личный кабинет</h5>
+                  <form action="contacts.php">
+                    <label for="userPhone">Номер телефона:</label>
+                    <input id="userPhone" type="phone">
+                    <label for="userEmail">Ваш email:</label>
+                    <input id="userEmail" type="email" />
+                    <label for="userPassword">Ваш пароль:</label>
+                    <input id="userPassword" type="password">
+                  </form>
+                  <p class="modal-links"><a href="#">Восстановление пароля</a> или <a href="#">быстрая регистрация</a></p>
+                  <div class="modal_btn_parent">
+                    <button type="button modal_btn" class="button">Войти</button>
+                    <div class="modal_social">
+                      <a class="social_link" href="#"><img src="img/icons/google.svg" alt=""></a>
+                      <a class="social_link" href="#"><img src="img/icons/facebook.svg" alt=""></a>
+                      <a class="social_link" href="#"><img src="img/icons/vkontakte.svg" alt=""></a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL "СВЯЗАТЬСЯ С НАМИ" -->
+        <div class="modal fade" id="modal_contact" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="modal-body">
+                  <form action="contacts.php">
+                    <label for="userName">Ваше имя:</label>
+                    <input id="userName" type="text" />
+                    <label for="userPhone">Номер телефона:</label>
+                    <input id="userPhone" type="phone">
+                    <label for="userEmail">Ваш email:</label>
+                    <input id="userEmail" type="email" />
+                    <label for="message">Сообщение:</label>
+                    <textarea name="message" id="message" rows="5"></textarea>
+                  </form>
+                  <div class="modal_btn_parent">
+                    <button type="button modal_btn" class="button">Отправить</button>
+                    <div class="modal_social">
+                      <a class="social_link" href="#"><img src="img/icons/google.svg" alt=""></a>
+                      <a class="social_link" href="#"><img src="img/icons/facebook.svg" alt=""></a>
+                      <a class="social_link" href="#"><img src="img/icons/vkontakte.svg" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL "ПОЛУЧИТЬ АДРЕСС В UK" -->
+        <div class="modal fade" id="modal_addressUk" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="modal-body">
+                  <h5 class="modal-head">Начните совершать покупки в английских магазинах</h5>
+                  <form action="contacts.php">
+                    <label for="userName">Имя:</label>
+                    <input id="userName" type="text">
+                    <label for="userLastName">Фамилия:</label>
+                    <input id="userLastName" type="text">
+                    <label for="userEmail">Email:</label>
+                    <input id="userEmail" type="email" />
+                  </form>
+                  <p class="modal-links">Нажимая на кнопку вы соглашаетесь с <a href="#">правилами предоставления услуг</a> и <a href="#">политикой конфиденциальности</a></p>
+                  <div class="modal_btn_parent">
+                    <button type="button modal_btn" class="button">Получить адрес в UK</button>
+                    <p class="modal-links link_signIn">Уже зарегистрированы?
+                    <a href="#">Выполните вход</a></p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 footer_social_parent">
+                      <a class="footer_logo" href="index.html"><img src="img/logo.svg" alt="OkeyPost logo"></a>
+                      <div class="footer_social">
+                        <a href="#"><img src="img/icons/whatsapp.svg" alt="whatsapp"></a>
+                        <a href="#"><img src="img/icons/viber.svg" alt="viber"></a>
+                        <a href="#"><img src="img/icons/chat.svg" alt="chat"></a>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 footer_menu">
+                      <h4 class="footer_menu_title">О компании</h4>
+                      <ul class="footer_menu_list">
+                        <li class="footer_menu_item"><a href="#">Услуги</a></li>
+                        <li class="footer_menu_item"><a href="#">Цены</a></li>
+                        <li class="footer_menu_item"><a href="#">Отзывы</a></li>
+                        <li class="footer_menu_item"><a href="#">Контакты</a></li>
+                        <li class="footer_menu_item"><a href="#">Вакансии</a></li>
+                        <li class="footer_menu_item"><a href="#">Соглашение о персональных данных</a></li>
+                        <li class="footer_menu_item"><a href="#">Условия использования</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 footer_menu">
+                      <h4 class="footer_menu_title">Полезное</h4>
+                      <ul class="footer_menu_list">
+                        <li class="footer_menu_item"><a href="#">Как работает наш сервис</a></li>
+                        <li class="footer_menu_item"><a href="#">Как покупать с оператором</a></li>
+                        <li class="footer_menu_item"><a href="#">Ответы на частые вопросы</a></li>
+                        <li class="footer_menu_item"><a href="#">Популярные магазины</a></li>
+                        <li class="footer_menu_item"><a href="#">Черный список магазинов</a></li>
+                        <li class="footer_menu_item"><a href="#">Актуальные распродажи</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 footer_menu">
+                      <h4 class="footer_menu_title">Спецпроекты</h4>
+                      <ul class="footer_menu_list">
+                        <li class="footer_menu_item"><a href="#">50% на первую доставку</a></li>
+                        <li class="footer_menu_item"><a href="#">Скидки для постоянных клиентов</a></li>
+                        <li class="footer_menu_item"><a href="#">Реферальная программа</a></li>
+                        <li class="footer_menu_item"><a href="#">Кэшбек Mr. Rebates и Rakuten</a></li>
+                        <li class="footer_menu_item"><a href="#">Stop Fraud</a></li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center">
+              <p>© 2021 Okeypost . Все права защищены.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-4.0/js/bootstrap.bundle.min.js"></script>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

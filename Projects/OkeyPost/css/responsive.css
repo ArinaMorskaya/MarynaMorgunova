@@ -1,0 +1,102 @@
+@media (min-width: 1600px) {
+  .page {
+    margin: 0 60px;
+  }
+}
+@media (min-width: 1450px) {
+  .page .container {
+    max-width: 1400px;
+  }
+}
+@media (max-width: 1199px) {
+  .page {
+    padding-bottom: 520px;
+  }
+  .page .header .container .header_menu_parent .header_menu .header_menu_list {
+    justify-content: space-between;
+  }
+  .page .header .container .header_btn_parent {
+    justify-content: flex-end;
+  }
+  .page .header .container .header_btn_parent .btn_signIn::after {
+    font-size: 0px;
+  }
+  .page .header .container .header_btn_parent .button.btn_contact {
+    width: 140px;
+    height: 40px;
+  }
+  .page .contactUs .container .main_head {
+    margin-bottom: 30px;
+  }
+  .page .contactUs .container a img {
+    max-width: 50px;
+  }
+  .page footer .container .footer_social_parent {
+    display: flex;
+    justify-content: space-between;
+  }
+  .page footer .container .footer_menu {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 991px) {
+  .page .header .container .header_menu_parent .header_menu .header_menu_list {
+    display: none;
+  }
+  .page .header .container .header_menu_parent .header_menu .responsive_menu-icon {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .page {
+    padding-bottom: 700px;
+  }
+  .page footer .container .footer_menu .footer_menu_list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  .page footer .container .footer_menu .footer_menu_list .footer_menu_item {
+    min-width: 49%;
+    padding-bottom: 5px;
+  }
+  .page footer .container .footer_menu .footer_menu_list .footer_menu_item:nth-child(6) {
+    order: 7;
+  }
+}
+@media (max-width: 576px) {
+  .page .header {
+    padding: 20px 0;
+    position: relative;
+  }
+  .page .header .container .logo_parent {
+    text-align: right;
+    margin-bottom: 40px;
+  }
+  .page .header .container .header_menu_parent .header_menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .page footer .container .footer_social_parent .footer_logo img {
+    max-width: 140px;
+  }
+  .page footer .container .footer_social_parent .footer_social img {
+    max-width: 35px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 470px) {
+  .page {
+    padding-bottom: 900px;
+  }
+  .page footer .container .footer_menu .footer_menu_title {
+    text-align: center;
+  }
+  .page footer .container .footer_menu .footer_menu_list .footer_menu_item {
+    min-width: 100%;
+    text-align: center;
+  }
+}
