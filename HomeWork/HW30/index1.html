@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW30</title>
+</head>
+<body>
+    <div class="result"></div>
+    <script>
+        let result = document.querySelector(".result");
+        let userJob = {
+            name: "Marina",
+            lastName: "Marinina",
+            age: 30,
+            sallary: {
+                "sallary amount": "40000",
+                "working days": "20",
+                vacation: {
+                    "vacation pay": 5000,
+                    "vacation days": 24,
+                },
+            },
+            
+        };
+        
+        // let info = (obj) => {
+        //     for (let key in obj) {
+        //         (typeof obj[key] != 'object') ? result.innerText += `${key} - ${obj[key]} \n`: info(obj[key]);
+
+        // function info(obj) {
+        //     for (let key in obj) {
+        //         (typeof obj[key] != 'object') ? result.innerText += `${key} - ${obj[key]} \n`: info(obj[key]);
+        //     };
+        // };
+
+        function info(obj) {
+            for (let key in obj) {
+                (typeof obj[key] != 'object') ? result.innerText += `${key} - ${obj[key]} \n`: getKey(obj[key]);
+                
+                function getKey(obj) {
+                    for (let key in obj) {
+                        (typeof obj[key] != 'object') ? result.innerText += `${key} - ${obj[key]} \n`: getKey(obj[key]);
+                    }
+                }
+            };
+        };
+        
+        info(userJob);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW28</title>
+</head>
+<body>
+    <a href="index1.html">Home</a>
+
+    <canvas id="canvas"></canvas>
+    <div class="list"></div>
+
+    <script>
+        let list = document.querySelector(".list");
+        let range = 5000;
+        list.innerText += `Список рабочих с ЗП больше ${range} грн.: \n`;
+        styleText(list);
+        
+        const workers = [
+            {name:'Иван', lastName: "Иванов", age:34, salary: 14000},
+            {name:'Петр', lastName: "Петров", age:30, salary: 18000},
+            {name:'Вадим', lastName: "Вадимов", age:32, salary: 17000},
+            {name:'Андрей', lastName: "Андреев", age:44, salary: 4000},
+            {name:'Сергей', lastName: "Сергеев", age:26, salary: 100000},
+            {name:'Даша', lastName: "Дашина", age:25, salary: 7300},
+            {name:'Наталья', lastName: "Наташина", age:28, salary: 2500},
+            {name:'Егор', lastName: "Егоров", age:38, salary: 12500},
+            {name:'Илья', lastName: "Ильин", age:48, salary: 22500},
+            {name:'Игорь', lastName: "Игорев", age:40, salary: 3000}
+            ]
+            
+            .filter((person) => (person.salary > range) ? true: false)
+            .map((person, index) => (list.innerText += `${index + 1}. ${person.name} ${person.lastName} \n`));
+
+        function styleText(text) {
+            text.style.color = "darkblue";
+            text.style.fontSize = "18px";
+            text.style.margin = "20px";
+        }
+
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        canvas.width = "700";
+        canvas.height = "250";
+        
+        function drawMaze() {
+            ctx.strokeStyle = "darkblue";
+            ctx.lineWidth = "2";
+            let x = 10,
+                y = 10;
+
+            for (i = 200; i > 0; i-=20) {
+                ctx.beginPath();
+                ctx.lineTo(x, y);
+                x += 10;
+                ctx.lineTo(x + i, y);
+                ctx.lineTo(x + i, y + i);
+                ctx.lineTo(x, y + i);
+                y += 10;
+                ctx.lineTo(x, y);
+                ctx.stroke();
+                ctx.closePath();
+            }
+        };
+
+        function target() {
+            ctx.lineWidth = "1";
+            for (let i = 120; i > 11; i-=11) {
+                (i % 2 == 0) ? ctx.fillStyle = "white": ctx.fillStyle = "red";
+                ctx.beginPath();
+                ctx.arc(570, 120, i, 0, Math.PI*2);
+                ctx.arc(570, 120, (i-11), 0, Math.PI*2);
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = "white"; 
+                ctx.arc(570, 120, i/2, 0, Math.PI*2);
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.fillStyle = "black";
+                ctx.beginPath();
+                ctx.arc(570, 120, 4, 0, Math.PI*2);
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+
+        function drawTicTacToe () {
+            ctx.beginPath();
+            ctx.strokeStyle = "darkblue";
+            ctx.lineWidth = "3";
+
+            ctx.moveTo(300, 25);
+            ctx.lineTo(300, 25);
+            ctx.lineTo(300, 200);
+            
+            ctx.moveTo(370, 25);
+            ctx.lineTo(370, 25);
+            ctx.lineTo(370, 200);
+            
+            ctx.moveTo(240, 140);
+            ctx.lineTo(240, 140);
+            ctx.lineTo(430, 140);
+            
+            ctx.moveTo(240, 80);
+            ctx.lineTo(240, 80);
+            ctx.lineTo(430, 80);
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(385, 35);
+            ctx.lineTo(385, 35);
+            ctx.lineTo(420, 70);
+            
+            ctx.moveTo(420, 35);
+            ctx.lineTo(420, 35);
+            ctx.lineTo(385, 70);
+
+            ctx.moveTo(255, 35);
+            ctx.lineTo(255, 35);
+            ctx.lineTo(290, 70);
+            
+            ctx.moveTo(290, 35);
+            ctx.lineTo(290, 35);
+            ctx.lineTo(255, 70);
+
+            ctx.moveTo(385, 155);
+            ctx.lineTo(385, 155);
+            ctx.lineTo(420, 190);
+            
+            ctx.moveTo(420, 155);
+            ctx.lineTo(420, 155);
+            ctx.lineTo(385, 190);
+
+            ctx.moveTo(315, 155);
+            ctx.lineTo(315, 155);
+            ctx.lineTo(350, 190);
+            
+            ctx.moveTo(350, 155);
+            ctx.lineTo(350, 155);
+            ctx.lineTo(315, 190);
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.strokeStyle = "black";
+            ctx.arc(335, 50, 17, 0, Math.PI*2);
+            ctx.moveTo(350, 115);
+            ctx.arc(335, 115, 17, 0, Math.PI*2);
+            ctx.moveTo(285, 170);
+            ctx.arc(270, 170, 17, 0, Math.PI*2);
+            ctx.stroke();
+            ctx.closePath();
+        }
+
+        drawMaze();
+        drawTicTacToe();
+        target();
+
+
+
+        // CW28
+        const people = [
+            {name:'Олег', lastName: "Иванов", age:17, salary: 4000},
+            {name:'Татьяна', lastName: "Петрова", age:20, salary: 8000},
+            {name:'Марина', lastName: "Маринина", age:22, salary: 7000},
+            {name:'Андрей', lastName: "Сидоров", age:24, salary: 3400},
+            {name:'Сергей', lastName: "Сергеев", age:16, salary: 1000},
+            {name:'Даша', lastName: "Дашина", age:19, salary: 2300},
+            {name:'Наталья', lastName: "Наташина", age:18, salary: 2500}
+            ];
+
+        const students = people
+        .filter( person => {
+            if (person.name === "Татьяна" || person.name === "Олег") {
+                 return person;
+            };
+        })
+        .map((person, index) => {
+            console.log((`${index + 1}. ${person.name} ${person.lastName} (${person.age}лет), стипендия: ${person.salary}грн.`));
+        });
+
+        const amount = people.reduce((total, person) => {return total += person.salary}, 0);
+        console.log(`Общая сумма составляет: ${amount} грн.`);  
+
+        people.forEach((person, index) => console.log(`${index + 1}. ${person.name} ${person.lastName}`));
+    </script>
+</body>
+</html>

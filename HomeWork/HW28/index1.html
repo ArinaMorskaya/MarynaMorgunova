@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW28</title>
+    <link rel="stylesheet" href="vendor/bootstrap-4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-4.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <a href="index.html">index</a>
+    <footer style="background-color: blue; padding: 50px;" class="fixed-bottom"></footer>
+    <script>
+
+        // task1
+        let numbers = ["one", "two", "three", "four", "five"];
+        for (let number of numbers) {
+            console.log(number);
+        }
+
+        // task2
+        let letters = ["a", "b", "c", "d", "e", "f", "g"];
+        for (let i in letters) {
+            console.log("index: " + i , "value: " + letters[i]);
+        }
+
+        // task3
+        let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+        // for (let i = 0; i < days.length; i++) {
+        //     console.log(days[i]);
+        // }
+        // console.log("Array length: " + days.length + " elements");
+
+        // days.forEach(function(day, index, arr) {
+        //     console.log(day);
+        //     console.log(index);
+        //     console.log(arr);
+        // })
+
+        days.forEach(day => console.log(day))
+
+        let users = [{
+            "name" : "Marina",
+            "email": "qwerty@gmail.com",
+            "number": "0939140292"
+        },
+        {
+            "name" : "Arina",
+            "email": "qwerty@gmail.com",
+            "number": "0939140292"
+        }];
+        console.log(users);
+
+
+        // map
+        let newUsers = users.map(user =>{
+            return `${user.name} ${user.email}`;
+        });
+        console.log(newUsers.join("\n"));
+
+
+        // split, join
+        let text = "Каждый охотник желает знать где сидит фазан";
+        let arr = text.split("");
+        let new_text = arr.join("-");
+        console.log(text);
+        console.log(arr);
+        console.log(new_text);
+
+        // sum
+        let n = [1, 2, 3, 4, 5];
+        let sum = 0;
+        let res = n.forEach(num => { 
+           return sum += num;
+        });
+        console.log(sum);
+
+        // ----- reduce -----
+        let result = n.reduce((total, number) => {
+            return total += number;
+        }, 0);
+        console.log(result);
+
+        // ----- flat -----
+        let arr1 = [1, 2, [3, 4, [5]]].flat().flat();
+        console.log(arr1);
+
+        let arr11 = [1, 2, [3, 4, [5]]].flat(Infinity);
+        console.log(arr11);
+
+        let arr111 = [1, 2, [3, 4, [5, [6]]]].flat(2);
+        console.log(arr111);
+
+        // ---- every ---- возвращает true, если все соответствуют условию, иначе - false
+        let arr3 = [1, 2, 3, 4, 5];
+        result = arr3.every(element => element < 3);
+        console.log(result);
+
+        // ---- every -----
+        
+        function bigNumber(element,index,array){
+            return element  >= 10;
+        }
+        
+        let result2 = [30,5, 7,40,12].every(bigNumber);
+        console.log(result2);//false
+        
+        let result3 = [30,50, 11,40,12].every(bigNumber);
+        console.log(result3);//false
+
+        // ---- some ----- возвращает true, если хотя бы один элемент соответствует условию, иначе - false
+        let arr5 = [1, 2, 3, 4, 5];
+        result = arr3.some(element => element === 5);
+        console.log("some", result);
+
+        // --- concat ----
+        let arr6 = [1, 2, 3];
+        let arr7 = [11, 22, 33];
+        let newArr = arr6.concat(arr7);
+        console.log(newArr);
+
+        // ---- function ----
+        function hello () {
+            console.log("Hello!");
+        }
+        hello()
+
+        let helloWorld = () => console.log("Hello World!");
+        helloWorld()
+
+        // ---- slice ----
+        let arr8 = [1, 2, 3, 4];
+        console.log(arr8.slice(1,2));
+
+        // ----includes ----
+        let arr9 = [1, 2, 3, 4];
+        console.log(arr9.includes(9));
+
+        // ----sort----
+        let arr10 = [5, 3, 9, 7];
+        console.log(arr10.sort());
+
+        [1, -2, 15, 2, 0, 8].sort(function(a, b) {
+        console.log( a + " <> " + b );
+        });
+
+        let arr12 = [ 15, 22, 5 ];
+        arr12.sort(function(a, b) { return b - a; });
+        console.log(arr12);
+
+        // ---- split ----
+        let names = 'Вася, Петя, Маша';
+        let arr13 = names.split(', ');
+        console.log(arr13);
+
+        // ----copyWithin----
+        let arr14 = ['a', 'b', 'c', 'd', 'e'];
+        arr14.copyWithin(0, 3, 4);
+        console.log(arr14);
+
+        let arr15 = [0, 1, 2, 3, 4];
+        arr15.copyWithin(0, 3, 4);
+        console.log("copyWithin(0, 3, 4)", arr15);
+
+	
+
+        
+    </script>
+</body>
+</html>

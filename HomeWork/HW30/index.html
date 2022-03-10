@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW30</title>
+</head>
+<body>
+    <div class="Result"></div>
+    <div class="ResultFinish"></div>
+    <div class="ResultFinishArr"></div>
+    
+    <script>
+        let result = document.querySelector(".Result");
+        let resultFinish = document.querySelector(".ResultFinish");
+        let resultFinishArr = document.querySelector(".ResultFinishArr");
+
+        // task 1
+        let userJob = {
+            name: "Marina",
+            lastName: "Marinina",
+            age: 30,
+            sallary: {
+                amount: "40000",
+                "working days": "20",
+                vacation: {
+                    pay: 5000,
+                    days: 24,
+                },
+            },
+        };
+
+        let userJob2 = Object.assign({}, userJob);
+        userJob2.sallary = Object.assign({}, userJob.sallary);
+        userJob2.sallary.vacation = Object.assign({}, userJob.sallary.vacation);
+        userJob2.name = "Arina";
+        userJob2.lastName = "Arinina";
+        userJob2.age = 25;
+        userJob2.sallary.amount = "50000";
+        userJob2.sallary["working days"] = "22";
+        userJob2.sallary.vacation.pay = 7000;
+        userJob2.sallary.vacation.days = 10;
+       
+
+        let info = (obj, path) => {
+            for (let key in obj) {
+                (typeof obj[key] != 'object') ? path.innerText += `${key} - ${obj[key]} \n`: info(obj[key], path);
+            };
+            path.innerText += "\n";
+        };
+        
+        info(userJob, result);
+        info(userJob2, resultFinish);
+
+        // task2
+
+        let users = [{
+            name: "Ivan",
+            lastName: "Ivanov",
+            age: 30,
+            sallary: {
+                amount: "20000",
+                "working days": "20",
+                vacation: {
+                    pay: 3500,
+                    days: 14,
+                },
+            },
+        },
+        {
+            name: "Petr",
+            lastName: "Petrov",
+            age: 25,
+            sallary: {
+                amount: "17000",
+                "working days": "17",
+                vacation: {
+                    pay: 2900,
+                    days: 14,
+                },
+            },
+        },
+        {
+            name: "Semen",
+            lastName: "Semenov",
+            age: 37,
+            sallary: {
+                amount: "41000",
+                "working days": "22",
+                vacation: {
+                    pay: 5300,
+                    days: 24,
+                },
+            },
+        },
+        {
+            name: "Sergey",
+            lastName: "Sergreev",
+            age: 34,
+            sallary: {
+                amount: "31000",
+                "working days": "22",
+                vacation: {
+                    pay: 4000,
+                    days: 20,
+                },
+            },
+        },
+        {
+            name: "Vadim",
+            lastName: "Vadimov",
+            age: 27,
+            sallary: {
+                amount: "34000",
+                "working days": "20",
+                vacation: {
+                    pay: 7000,
+                    days: 24,
+                },
+            },
+        }];
+
+        console.log(users);
+        resultFinishArr.innerText += "Сумма отпускных сотрудников: \n"
+        users.map(user => resultFinishArr.innerText += ( `${user.name} ${user.lastName} (${user.sallary.vacation.days} дн.) - ${user.sallary.vacation.pay} грн. \n`));
+    </script>
+</body>
+</html>

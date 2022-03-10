@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW31</title>
+</head>
+<body>
+    <div class="users"></div>
+
+    <script>
+        let users = document.querySelector('.users');
+
+        function User(name, phone, email, status = "new user") {
+            this.name = name;
+            this.phone = phone;
+            this.email = email;
+            this.status = status;
+            this.date = new Date();
+
+            this.registration = () => {users.innerText += 
+                `имя: ${this.name},
+                телефон: ${this.phone},
+                почта: ${this.email},
+                дата регистрации: ${this.date.getDate()}.0${this.date.getMonth() + 1}.${this.date.getFullYear()} \n\n`;
+            }
+        };
+
+        let marina = new User("Marina", 0931234567, "asdf@gmail.com");
+        let arina = new User("arina", 099876543, "fasde@gmail.com");
+        marina.registration();
+        arina.registration();
+
+
+	function call(callback){
+        console.log('звоню');
+		setTimeout(function(){
+            callback();
+			console.log('ожидаю');
+		},1000);
+	}
+
+	function answer(){
+		setTimeout(function(){
+			console.log('мы вам перезвоним');
+		},1000);
+		setTimeout(function(){
+			console.log('перезваниваем');
+		},2000);
+	}
+
+    call(answer);
+
+
+    </script>
+</body>
+</html>

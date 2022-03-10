@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW33</title>
+</head>
+<body>
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        .task1 {
+            margin-bottom: 30px;
+        }
+        input {
+            border: 1px solid #ccc;
+            outline: none;
+            height: 25px;
+            width: 150px;
+        }
+        button {
+            width: 100px;
+            height: 30px;
+        }
+
+    </style>
+
+<div class="container">
+    <div class="task1">TASK 1:</div>
+    <div class="task3">TASK 3:
+        <form action="">
+            <input class="result" type="text" placeholder="Введите число от 1 до 10:">
+            <button class="btn" type="button">Send</button>
+        </form>
+        <div class="message"></div>
+    </div>
+</div>
+    <script>
+
+        // TASK 1
+        let date = new Date();
+		date.setFullYear(2020, 10, 12);
+        document.querySelector('.task1').innerText += date;
+
+        // TASK 2
+        let year = prompt('Введите год');
+        let this_year = new Date().getFullYear();
+        year == this_year ? alert('Текущий год!'): 
+        year > this_year ? alert('Будущее!') : 
+        (year < this_year && year != "")  ? alert('Прошлое!'): alert("Вы ввели не число");
+
+        // TASK 3
+        document.querySelector('.btn').onclick = () => {
+            let message = document.querySelector(".message");
+            let result = document.querySelector(".result").value;
+            let input = document.querySelector(".result");
+            
+            try {
+				if(result == "") throw 'Введите значение!';
+				if(isNaN(result)) throw 'Необходимо ввести число';
+				if(result < 1) throw 'Введите значение больше 1!';
+				if(result > 10) throw 'Введите значение меньше 10!';
+			} catch (error){
+				message.innerHTML = error;
+                input.style.borderColor = 'red'
+			};
+        };
+
+    </script>
+</body>
+</html>

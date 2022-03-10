@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW32</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="button">Start</button>
+        <h1 class="result"></h1>
+        <div class="treadmill"></div>
+        <div class="ball_parent">
+            <div class="ball ball_1"></div>
+            <div class="ball ball_2"></div>
+        </div>
+    </div>
+
+    <script>
+        // TASK 1
+
+        let point = 0;
+        let deg = 360;
+        let timer = new Date();
+        let ball = document.querySelector('.ball_1');
+        let ball_2 = document.querySelector('.ball_2');
+        let result = document.querySelector('.result');
+        
+        function move(){
+        ball.style.animationIterationCount = "0";
+        ball_2.style.animationIterationCount = "0";
+        let points = [[130, 0], [750, 0], [830, 40], [860, 100], [860, 150], [820, 200], 
+                    [750, 250], [700, 270], [600, 280], [200, 280], [130, 270], [80, 250], 
+                    [20, 200], [-10, 150], [-25, 100], [-20, 50], [20, 25], [150, 40]];
+        let x = points[point][0] + 'px';
+        let y = points[point][1] + 'px';
+
+
+		ball.style.left = x;
+		ball.style.bottom = y;
+        ball.style.transform = `rotate(${deg}deg )`;
+		ball_2.style.left = x;
+		ball_2.style.bottom = y;
+        ball_2.style.transform = `rotate(${deg}deg ) translateX(20px)`;
+        
+
+		if(x == '150px' && y == '40px'){
+            ball.style.animationIterationCount = "infinite";
+            timer -= new Date()
+			return result.innerText =`Время забега: ${Math.ceil(timer/-1000)}сек`;
+		}
+        point++;
+        deg -= 360;
+		setTimeout(move, 700);
+	};
+    document.querySelector('.button').onclick = move
+
+    // TASK 2
+
+    class Blog {
+        constructor(options){
+            this.title = options.title;
+            this.author = options.author;
+            this.date = options.date;
+            this.rating = options.rating;
+        }
+        voice() {
+            console.log(`${this.title}, автор: ${this.author}, рейтинг статьи: ${this.rating}, ${this.date} `);
+        }
+        filter(level) {
+            this.rating == level ? console.log(`Статьи с рейтингом ${level}: ${this.title}`):false;
+        }
+    }
+
+    const article = new Blog({
+        title: "Lorem",
+        author:"Ipsum",
+        date: new Date(),
+        rating: 5
+    });
+
+    article.voice();
+    article.filter(5);
+
+    class Blog2 extends Blog {
+        constructor(options){
+            super(options)
+            this.topic = options.topic;
+        }
+        filter(value){
+            super.filter();
+                this.topic == value ? console.log(`${this.title}`):console.log('Статей на данную тематику нет');
+        }
+        voice() {
+            console.log(`${this.title}, автор: ${this.author}, рейтинг статьи: ${this.rating}, ${this.date}, раздел: ${this.topic} `);
+        }
+	} 
+
+    const article2 = new Blog2({
+        title: "About HTML",
+        author:"Умный человек",
+        date: new Date(),
+        rating: 5,
+        topic: "It"
+    });
+
+    article2.voice();
+    article2.filter("It");
+
+    </script>
+</body>
+</html>
